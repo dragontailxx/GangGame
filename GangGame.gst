@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-67a0-c9e0-9601-50f0" name="GangGame" battleScribeVersion="2.03" revision="0.31" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" library="false" authorName="Dan Geldorp" authorContact="dangeldorp@hotmail.co.uk" publicationId="ad88-6f5d-213d-7b3f">
+<gameSystem id="sys-67a0-c9e0-9601-50f0" name="GangGame" battleScribeVersion="2.03" revision="0.32" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" library="false" authorName="Dan Geldorp" authorContact="dangeldorp@hotmail.co.uk" publicationId="ad88-6f5d-213d-7b3f">
   <categoryEntries>
     <categoryEntry name="Leadership" id="cb5e-bc93-5d28-9b12" hidden="false"/>
     <categoryEntry name="Heavy Infantry" id="d07e-43b7-5902-29f7" hidden="false"/>
@@ -16,25 +16,25 @@
     <categoryEntry name="Ammo Type" id="f231-ef0b-aa88-e585" hidden="false"/>
   </categoryEntries>
   <forceEntries>
-    <forceEntry name="Tournament Test" id="013b-b368-06a9-a2c5" hidden="false">
+    <forceEntry name="Tournament Test" id="013b-b368-06a9-a2c5" hidden="true">
       <categoryLinks>
-        <categoryLink name="Leader" hidden="false" id="4f68-fd62-f853-7ff8" targetId="cb5e-bc93-5d28-9b12">
+        <categoryLink name="Leadership" hidden="false" id="4f68-fd62-f853-7ff8" targetId="cb5e-bc93-5d28-9b12">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a63a-6083-5431-baf9"/>
             <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="aa4a-fd1a-a1c6-cb04"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Heavy" hidden="false" id="3ef9-b559-40a1-1520" targetId="d07e-43b7-5902-29f7">
+        <categoryLink name="Heavy Infantry" hidden="false" id="3ef9-b559-40a1-1520" targetId="d07e-43b7-5902-29f7">
           <constraints>
             <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="b58b-ffae-ca75-52c1"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Scout" hidden="false" id="c491-e1a1-7df2-181f" targetId="7652-2b97-75d8-7d4f">
+        <categoryLink name="Scouts" hidden="false" id="c491-e1a1-7df2-181f" targetId="7652-2b97-75d8-7d4f">
           <constraints>
             <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="be4d-97ac-9b67-c7b1"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Troop" hidden="false" id="6f9f-9160-6d32-c938" targetId="b8f9-9648-72b4-a3af">
+        <categoryLink name="Troops" hidden="false" id="6f9f-9160-6d32-c938" targetId="b8f9-9648-72b4-a3af">
           <constraints>
             <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="d325-e5b2-b89f-7b83"/>
           </constraints>
@@ -43,10 +43,10 @@
     </forceEntry>
     <forceEntry name="Free-Play" id="674c-d963-0cba-758f" hidden="false" childForcesLabel="TestForceName">
       <categoryLinks>
-        <categoryLink name="Leader" hidden="false" id="228f-3b34-e83a-73a4" targetId="cb5e-bc93-5d28-9b12"/>
-        <categoryLink name="Troop" hidden="false" id="bcf8-8068-7130-97d9" targetId="b8f9-9648-72b4-a3af"/>
-        <categoryLink name="Heavy" hidden="false" id="def2-5ab7-c4f6-a812" targetId="d07e-43b7-5902-29f7"/>
-        <categoryLink name="Scout" hidden="false" id="06d0-c3d2-2ca6-a44a" targetId="7652-2b97-75d8-7d4f"/>
+        <categoryLink name="Leadership" hidden="false" id="228f-3b34-e83a-73a4" targetId="cb5e-bc93-5d28-9b12"/>
+        <categoryLink name="Troops" hidden="false" id="bcf8-8068-7130-97d9" targetId="b8f9-9648-72b4-a3af"/>
+        <categoryLink name="Heavy Infantry" hidden="false" id="def2-5ab7-c4f6-a812" targetId="d07e-43b7-5902-29f7"/>
+        <categoryLink name="Scouts" hidden="false" id="06d0-c3d2-2ca6-a44a" targetId="7652-2b97-75d8-7d4f"/>
         <categoryLink name="Melee Weapons" hidden="false" id="a60e-5937-7bba-50f1" targetId="eb09-0dce-5f22-cf55"/>
         <categoryLink name="Ranged Weapons" hidden="false" id="bf86-317a-4b08-a919" targetId="a532-e48d-9b3e-c01f"/>
       </categoryLinks>
@@ -190,21 +190,22 @@
     </profileType>
   </profileTypes>
   <sharedSelectionEntries>
-    <selectionEntry type="model" import="true" name="Commander" hidden="false" id="f6d9-387f-ded6-84b3" defaultAmount="1">
+    <selectionEntry type="model" import="true" name="Commander" hidden="false" id="f6d9-387f-ded6-84b3" defaultAmount="">
       <costs>
         <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="175"/>
       </costs>
       <categoryLinks>
-        <categoryLink name="Leader" hidden="false" id="659c-cd43-34a3-a2ce" targetId="cb5e-bc93-5d28-9b12" primary="true"/>
+        <categoryLink name="Leadership" hidden="false" id="659c-cd43-34a3-a2ce" targetId="cb5e-bc93-5d28-9b12" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="Ranged Weapons" hidden="false" id="aca8-bc95-59bb-58f9" type="selectionEntryGroup" targetId="7195-d90d-9bb4-decd">
+        <entryLink import="true" name="Ranged Weapons" hidden="false" id="aca8-bc95-59bb-58f9" type="selectionEntryGroup" targetId="7195-d90d-9bb4-decd" sortIndex="2">
           <categoryLinks>
             <categoryLink name="Ranged Weapons" hidden="false" id="685b-fde6-7ff3-b442" targetId="a532-e48d-9b3e-c01f" primary="false"/>
           </categoryLinks>
         </entryLink>
-        <entryLink import="true" name="Melee Weapons" hidden="false" id="06ee-cf4e-e46e-d159" type="selectionEntryGroup" targetId="febd-38f2-1692-5ed9"/>
-        <entryLink import="true" name="Armour" hidden="false" id="a3ef-03f5-6d94-2f95" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3"/>
+        <entryLink import="true" name="Melee Weapons" hidden="false" id="06ee-cf4e-e46e-d159" type="selectionEntryGroup" targetId="febd-38f2-1692-5ed9" sortIndex="1"/>
+        <entryLink import="true" name="Armour &amp; Wargear" hidden="false" id="a3ef-03f5-6d94-2f95" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3" sortIndex="3"/>
+        <entryLink import="true" name="Wargear" hidden="false" id="4880-d4d8-f544-d3cf" type="selectionEntryGroup" targetId="a734-a608-2f60-0fa8" sortIndex="4"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Commander" id="6c4f-3d6b-5227-8bea" hidden="false" type="profile" targetId="0760-cf8a-4645-9b6e"/>
@@ -219,7 +220,7 @@
         <constraint type="max" value="1" field="133b-be98-400e-8717" scope="parent" shared="true" id="ecd7-f6c3-c042-4752"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Sergeant" hidden="false" id="2364-f48f-450a-8563" defaultAmount="1">
+    <selectionEntry type="model" import="true" name="Sergeant" hidden="false" id="2364-f48f-450a-8563" defaultAmount="">
       <costs>
         <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="125"/>
         <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
@@ -234,12 +235,13 @@
         <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
       </costs>
       <categoryLinks>
-        <categoryLink name="Leader" hidden="false" id="b5ac-9084-5bc0-1be6" targetId="cb5e-bc93-5d28-9b12" primary="true"/>
+        <categoryLink name="Leadership" hidden="false" id="b5ac-9084-5bc0-1be6" targetId="cb5e-bc93-5d28-9b12" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="Ranged Weapons" hidden="false" id="0304-7f38-c254-183a" type="selectionEntryGroup" targetId="7195-d90d-9bb4-decd"/>
-        <entryLink import="true" name="Melee Weapons" hidden="false" id="fd95-6303-0b7e-ae0f" type="selectionEntryGroup" targetId="febd-38f2-1692-5ed9"/>
-        <entryLink import="true" name="Armour" hidden="false" id="282f-f74f-c043-4d97" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3"/>
+        <entryLink import="true" name="Ranged Weapons" hidden="false" id="0304-7f38-c254-183a" type="selectionEntryGroup" targetId="7195-d90d-9bb4-decd" sortIndex="2"/>
+        <entryLink import="true" name="Melee Weapons" hidden="false" id="fd95-6303-0b7e-ae0f" type="selectionEntryGroup" targetId="febd-38f2-1692-5ed9" sortIndex="1"/>
+        <entryLink import="true" name="Armour &amp; Wargear" hidden="false" id="282f-f74f-c043-4d97" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3" sortIndex="3"/>
+        <entryLink import="true" name="Wargear" hidden="false" id="0a52-6afd-3eae-f01e" type="selectionEntryGroup" targetId="a734-a608-2f60-0fa8" sortIndex="4"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="10" field="e711-c529-9c5c-79e6" scope="self" shared="true" id="b632-7f58-a5fa-ff71"/>
@@ -254,7 +256,7 @@
         <infoLink name="Sergeant" id="9911-b3b9-9efe-e473" hidden="false" type="profile" targetId="0939-0353-27d7-9b2b"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Brute" hidden="false" id="167d-93b8-64f5-d436" defaultAmount="1">
+    <selectionEntry type="model" import="true" name="Brute" hidden="false" id="167d-93b8-64f5-d436" defaultAmount="">
       <costs>
         <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="95"/>
         <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
@@ -269,13 +271,13 @@
         <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
       </costs>
       <categoryLinks>
-        <categoryLink targetId="d07e-43b7-5902-29f7" id="7180-65bd-ab50-190c" primary="true" name="Heavy"/>
+        <categoryLink targetId="d07e-43b7-5902-29f7" id="7180-65bd-ab50-190c" primary="true" name="Heavy Infantry"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="Ranged Weapons" hidden="false" id="03e2-2171-5d3c-00b4" type="selectionEntryGroup" targetId="7195-d90d-9bb4-decd"/>
-        <entryLink import="true" name="Melee Weapons" hidden="false" id="37e1-bf92-7d62-a736" type="selectionEntryGroup" targetId="febd-38f2-1692-5ed9"/>
-        <entryLink import="true" name="Armour" hidden="false" id="91b5-31f6-726d-1fcd" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3"/>
-        <entryLink import="true" name="Equipment" hidden="false" id="d630-c313-5dd1-239e" type="selectionEntryGroup" targetId="a734-a608-2f60-0fa8"/>
+        <entryLink import="true" name="Ranged Weapons" hidden="false" id="03e2-2171-5d3c-00b4" type="selectionEntryGroup" targetId="7195-d90d-9bb4-decd" sortIndex="2"/>
+        <entryLink import="true" name="Melee Weapons" hidden="false" id="37e1-bf92-7d62-a736" type="selectionEntryGroup" targetId="febd-38f2-1692-5ed9" sortIndex="1"/>
+        <entryLink import="true" name="Armour" hidden="false" id="91b5-31f6-726d-1fcd" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3" sortIndex="3"/>
+        <entryLink import="true" name="Wargear" hidden="false" id="fbb8-b512-2a34-99b5" type="selectionEntryGroup" targetId="a734-a608-2f60-0fa8" sortIndex="4"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="8" field="e711-c529-9c5c-79e6" scope="self" shared="true" id="775f-5271-bb27-c9b9"/>
@@ -290,7 +292,7 @@
         <infoLink name="Brute" id="ea5c-261a-8713-299d" hidden="false" type="profile" targetId="60c9-9dd6-8f94-2133"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Grunt" hidden="false" id="c948-5c4b-f49d-3580" defaultAmount="1">
+    <selectionEntry type="model" import="true" name="Grunt" hidden="false" id="c948-5c4b-f49d-3580" defaultAmount="">
       <costs>
         <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="70"/>
         <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
@@ -305,12 +307,13 @@
         <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
       </costs>
       <categoryLinks>
-        <categoryLink targetId="b8f9-9648-72b4-a3af" id="1d89-78c8-2cf8-2524" primary="true" name="Troop"/>
+        <categoryLink targetId="b8f9-9648-72b4-a3af" id="1d89-78c8-2cf8-2524" primary="true" name="Troops"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="Ranged Weapons" hidden="false" id="8cbe-91d2-b830-61ae" type="selectionEntryGroup" targetId="7195-d90d-9bb4-decd"/>
-        <entryLink import="true" name="Melee Weapons" hidden="false" id="1de1-c379-8bce-5a8f" type="selectionEntryGroup" targetId="febd-38f2-1692-5ed9"/>
-        <entryLink import="true" name="Armour" hidden="false" id="6cf5-6ab5-7c7f-bbcd" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3"/>
+        <entryLink import="true" name="Ranged Weapons" hidden="false" id="8cbe-91d2-b830-61ae" type="selectionEntryGroup" targetId="7195-d90d-9bb4-decd" sortIndex="2"/>
+        <entryLink import="true" name="Melee Weapons" hidden="false" id="1de1-c379-8bce-5a8f" type="selectionEntryGroup" targetId="febd-38f2-1692-5ed9" sortIndex="1"/>
+        <entryLink import="true" name="Armour &amp; Wargear" hidden="false" id="6cf5-6ab5-7c7f-bbcd" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3" sortIndex="3"/>
+        <entryLink import="true" name="Wargear" hidden="false" id="4339-a789-3d9e-e63d" type="selectionEntryGroup" targetId="a734-a608-2f60-0fa8" sortIndex="4"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="6" field="e711-c529-9c5c-79e6" scope="self" shared="true" id="2dde-5fdb-c404-61ed"/>
@@ -325,7 +328,7 @@
         <infoLink name="Grunt" id="37e9-97e0-3b7d-9962" hidden="false" type="profile" targetId="cf74-ee5f-e2ef-eab1"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Scout" hidden="false" id="6ca5-2d78-4b8c-9190" defaultAmount="1">
+    <selectionEntry type="model" import="true" name="Scout" hidden="false" id="6ca5-2d78-4b8c-9190" defaultAmount="">
       <costs>
         <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="70"/>
         <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
@@ -340,12 +343,13 @@
         <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
       </costs>
       <categoryLinks>
-        <categoryLink targetId="7652-2b97-75d8-7d4f" id="51bf-554d-6b13-87a1" primary="true" name="Scout"/>
+        <categoryLink targetId="7652-2b97-75d8-7d4f" id="51bf-554d-6b13-87a1" primary="true" name="Scouts"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="Ranged Weapons" hidden="false" id="5f6c-6ac7-adc9-e0eb" type="selectionEntryGroup" targetId="7195-d90d-9bb4-decd"/>
-        <entryLink import="true" name="Melee Weapons" hidden="false" id="1818-4288-ad05-69df" type="selectionEntryGroup" targetId="febd-38f2-1692-5ed9"/>
-        <entryLink import="true" name="Armour" hidden="false" id="99eb-87df-1927-ec94" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3"/>
+        <entryLink import="true" name="Ranged Weapons" hidden="false" id="5f6c-6ac7-adc9-e0eb" type="selectionEntryGroup" targetId="7195-d90d-9bb4-decd" sortIndex="2"/>
+        <entryLink import="true" name="Melee Weapons" hidden="false" id="1818-4288-ad05-69df" type="selectionEntryGroup" targetId="febd-38f2-1692-5ed9" sortIndex="1"/>
+        <entryLink import="true" name="Armour &amp; Wargear" hidden="false" id="99eb-87df-1927-ec94" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3" sortIndex="3"/>
+        <entryLink import="true" name="Wargear" hidden="false" id="463c-7508-272b-ea1c" type="selectionEntryGroup" targetId="a734-a608-2f60-0fa8" sortIndex="4"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="4" field="e711-c529-9c5c-79e6" scope="self" shared="true" id="921b-0c71-af49-8d50"/>
@@ -2555,7 +2559,7 @@ Add an additional +2 Damage to Medium and Long range Damage rolls, lose any Cove
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Armour &amp; Wargear" id="d0ae-94e1-ee64-04e3" hidden="false" collapsible="true">
+    <selectionEntryGroup name="Armour" id="d0ae-94e1-ee64-04e3" hidden="false" collapsible="true">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Basic Clothes (Default)" hidden="false" id="0ce4-75b6-0a93-4581">
           <costs>
@@ -2962,41 +2966,6 @@ Melee-Resistant: {Attack} actions made against this Fighter have -2 to hit.</cha
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Buckler Shield" hidden="false" id="8769-ff4f-30fa-19d7">
-          <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="75"/>
-            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
-            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
-            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
-            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
-            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
-            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
-            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
-            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
-            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
-            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
-            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
-            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
-            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="1"/>
-            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
-            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
-            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
-            <cost name="Body" typeId="38ca-4add-42ed-6cb3" value="0"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c4e-5dd6-5eba-10b8"/>
-          </constraints>
-          <profiles>
-            <profile name="Buckler Shield" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="2f2b-e000-2dbd-6e01">
-              <characteristics>
-                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Shield: Roll Shield Armour Die in addition to the best Armour Die your Fighter has.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Buckler Shield" id="c54b-fe27-23a1-8f44" hidden="false" type="profile" targetId="d00c-fde9-5843-341f"/>
-          </infoLinks>
-        </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Metal Shield" hidden="false" id="6ac1-cc7b-e196-7e96">
           <costs>
             <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="100"/>
@@ -3032,76 +3001,10 @@ Melee-Resistant: {Attack} actions made against this Fighter have -2 to hit.</cha
             <infoLink name="Metal Shield" id="51e4-2e78-027b-acbf" hidden="false" type="profile" targetId="1749-4c6d-b5cd-5c9a"/>
           </infoLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Force Shield" hidden="false" id="5d9a-e3b4-e31c-43ff">
-          <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="200"/>
-            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
-            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
-            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
-            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
-            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
-            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
-            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
-            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
-            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
-            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
-            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
-            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
-            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="1"/>
-            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
-            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
-            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
-            <cost name="Body" typeId="38ca-4add-42ed-6cb3" value="0"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="97ff-ce50-f567-b50a"/>
-          </constraints>
-          <profiles>
-            <profile name="Force Shield" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="0fb7-b3df-43a5-eea5">
-              <characteristics>
-                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Force Shield: Roll Shield Armour Die in addition to the best Armour Die your Fighter has, this shield breaks and its Armour Die may not be used until end of the game if the Save is failed.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Force Shield" id="5069-7865-7819-a7f6" hidden="false" type="profile" targetId="bf7f-bda3-1fe8-a143"/>
-          </infoLinks>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Riot Shield" hidden="false" id="0132-1978-fb0e-91fc">
-          <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="100"/>
-            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
-            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
-            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="2"/>
-            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
-            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
-            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
-            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
-            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
-            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
-            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
-            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
-            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
-            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="1"/>
-            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
-            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
-            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
-            <cost name="Body" typeId="38ca-4add-42ed-6cb3" value="0"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="59a7-f8b1-f208-c885"/>
-          </constraints>
-          <profiles>
-            <profile name="Riot Shield" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="c3b0-fd77-c190-99d0">
-              <characteristics>
-                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Large Shield: Roll Shield Armour Die in addition to the best Armour Die your Fighter has. You may only use 1-Handed weapons alongside this shield.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Riot Shield" id="b64c-d71d-c40f-6661" hidden="false" type="profile" targetId="ba35-37af-12e9-3886"/>
-          </infoLinks>
-        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Wargear" id="a734-a608-2f60-0fa8" hidden="false">
+      <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Comms Pack" hidden="false" id="7152-3342-e2ff-7f52">
           <costs>
             <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="150"/>
@@ -3135,41 +3038,6 @@ Melee-Resistant: {Attack} actions made against this Fighter have -2 to hit.</cha
           </profiles>
           <infoLinks>
             <infoLink name="Comms Pack" id="6bcd-be02-cf23-babf" hidden="false" type="profile" targetId="570f-b970-f66c-440c"/>
-          </infoLinks>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Small-Arms Bandolier" hidden="false" id="5f97-aca5-1b96-6708">
-          <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="100"/>
-            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
-            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
-            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
-            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
-            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
-            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
-            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
-            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
-            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
-            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
-            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
-            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
-            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
-            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
-            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
-            <cost name="Other" typeId="0394-a001-b723-150e" value="1"/>
-            <cost name="Body" typeId="38ca-4add-42ed-6cb3" value="0"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2645-8f96-4d51-5e22"/>
-          </constraints>
-          <profiles>
-            <profile name="Small-Arms Bandolier" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="226f-2276-d67d-c9d4">
-              <characteristics>
-                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Quick-Draw: When triggering the {Overwatch Action}, you may in addition to your regular Action perform a {Fire Weapon} action with a 1-Handed Weapon the Fighter is equipped with that was not used in the primary {Overwatch Action}, you may choose new targets for the shots taken.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Small-Arms Bandolier" id="0c8c-fe29-0bfb-6844" hidden="false" type="profile" targetId="d59f-176d-fc77-729d"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Hand-Held Lifeform Detector" hidden="false" id="d686-c337-ee24-cd5d">
@@ -3243,9 +3111,148 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
             <infoLink name="Personal Teleporter" id="a2d3-f65a-cae7-2ea4" hidden="false" type="profile" targetId="e18a-a9b9-78d8-e35e"/>
           </infoLinks>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Small-Arms Bandolier" hidden="false" id="5f97-aca5-1b96-6708">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="100"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="1"/>
+            <cost name="Body" typeId="38ca-4add-42ed-6cb3" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2645-8f96-4d51-5e22"/>
+          </constraints>
+          <profiles>
+            <profile name="Small-Arms Bandolier" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="226f-2276-d67d-c9d4">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Quick-Draw: When triggering the {Overwatch Action}, you may in addition to your regular Action perform a {Fire Weapon} action with a 1-Handed Weapon the Fighter is equipped with that was not used in the primary {Overwatch Action}, you may choose new targets for the shots taken.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Small-Arms Bandolier" id="0c8c-fe29-0bfb-6844" hidden="false" type="profile" targetId="d59f-176d-fc77-729d"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Buckler Shield" hidden="false" id="8769-ff4f-30fa-19d7">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="75"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="1"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+            <cost name="Body" typeId="38ca-4add-42ed-6cb3" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c4e-5dd6-5eba-10b8"/>
+          </constraints>
+          <profiles>
+            <profile name="Buckler Shield" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="2f2b-e000-2dbd-6e01">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Shield: Roll Shield Armour Die in addition to the best Armour Die your Fighter has.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Buckler Shield" id="c54b-fe27-23a1-8f44" hidden="false" type="profile" targetId="d00c-fde9-5843-341f"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Force Shield" hidden="false" id="5d9a-e3b4-e31c-43ff">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="200"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="1"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+            <cost name="Body" typeId="38ca-4add-42ed-6cb3" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="97ff-ce50-f567-b50a"/>
+          </constraints>
+          <profiles>
+            <profile name="Force Shield" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="0fb7-b3df-43a5-eea5">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Force Shield: Roll Shield Armour Die in addition to the best Armour Die your Fighter has, this shield breaks and its Armour Die may not be used until end of the game if the Save is failed.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Force Shield" id="5069-7865-7819-a7f6" hidden="false" type="profile" targetId="bf7f-bda3-1fe8-a143"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Riot Shield" hidden="false" id="0132-1978-fb0e-91fc">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="100"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="2"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="1"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+            <cost name="Body" typeId="38ca-4add-42ed-6cb3" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="59a7-f8b1-f208-c885"/>
+          </constraints>
+          <profiles>
+            <profile name="Riot Shield" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="c3b0-fd77-c190-99d0">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Large Shield: Roll Shield Armour Die in addition to the best Armour Die your Fighter has. You may only use 1-Handed weapons alongside this shield.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Riot Shield" id="b64c-d71d-c40f-6661" hidden="false" type="profile" targetId="ba35-37af-12e9-3886"/>
+          </infoLinks>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Equipment" id="a734-a608-2f60-0fa8" hidden="false"/>
     <selectionEntryGroup name="Melee Weapons" id="febd-38f2-1692-5ed9" hidden="false" defaultSelectionEntryId="none">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Fists" hidden="false" id="4ef9-be9e-522a-68d6">
