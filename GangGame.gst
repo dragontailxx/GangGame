@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-67a0-c9e0-9601-50f0" name="GangGame" battleScribeVersion="2.03" revision="0.35" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" library="false" authorName="Dan Geldorp" authorContact="dangeldorp@hotmail.co.uk" publicationId="ad88-6f5d-213d-7b3f">
+<gameSystem id="sys-67a0-c9e0-9601-50f0" name="GangGame" battleScribeVersion="2.03" revision="0.36" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" library="false" authorName="Dan Geldorp" authorContact="dangeldorp@hotmail.co.uk" publicationId="ad88-6f5d-213d-7b3f">
   <categoryEntries>
     <categoryEntry name="Leadership" id="cb5e-bc93-5d28-9b12" hidden="false"/>
     <categoryEntry name="Heavy Infantry" id="d07e-43b7-5902-29f7" hidden="false"/>
@@ -2438,7 +2438,7 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
             <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="200"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
-            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="2"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="3"/>
             <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
             <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
             <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
@@ -2446,6 +2446,12 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <profiles>
             <profile name="HMG Short Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="929a-f720-77eb-b723">
@@ -2527,6 +2533,430 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
               </conditions>
             </modifier>
           </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="SMG" hidden="false" id="4762-ff32-3d26-91a2">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="200"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="SMG Short Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="fc17-1de8-f74d-3e73">
+              <characteristics>
+                <characteristic name="Range" typeId="74b3-40da-e1e7-a0cd">0-6</characteristic>
+                <characteristic name="Hit Die" typeId="8535-59d1-5bb4-28f4">D6/D8</characteristic>
+                <characteristic name="Damage" typeId="0f84-843e-3dcd-259d">D4+1</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="SMG Medium Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="a8e7-476b-30e0-2edf" noindex="false">
+              <characteristics>
+                <characteristic name="Range" typeId="74b3-40da-e1e7-a0cd">6-12</characteristic>
+                <characteristic name="Hit Die" typeId="8535-59d1-5bb4-28f4">D4/D6</characteristic>
+                <characteristic name="Damage" typeId="0f84-843e-3dcd-259d">D3</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="SMG Long Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="2ff5-5425-14ab-04a7">
+              <characteristics>
+                <characteristic name="Range" typeId="74b3-40da-e1e7-a0cd">12-24</characteristic>
+                <characteristic name="Hit Die" typeId="8535-59d1-5bb4-28f4">D4</characteristic>
+                <characteristic name="Damage" typeId="0f84-843e-3dcd-259d">D3</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="SMG" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="e247-a7c6-435b-a404">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">1H/2H: If using 2-handed, use the right-hand Hit Die and/or Damage Die values.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="SMG" typeId="dd56-9b53-8454-528c" typeName="Mount Points" hidden="false" id="3ba3-0805-f03e-e58c">
+              <characteristics>
+                <characteristic name="Top Rail" typeId="6c7a-f94b-5eaf-3741">1</characteristic>
+                <characteristic name="Bottom Rail" typeId="beb1-d4f1-7f3c-9d96">1</characteristic>
+                <characteristic name="Side Rail" typeId="9220-f00f-16a9-62d0">0</characteristic>
+                <characteristic name="Barrel" typeId="70bc-91e7-6dcd-2c98">1</characteristic>
+                <characteristic name="Loop Mount" typeId="bf66-c436-a902-9dc3">1</characteristic>
+                <characteristic name="Clip" typeId="8619-32a2-8ee6-968a">0</characteristic>
+                <characteristic name="Ammo Type" typeId="3a70-4dfd-04f7-708a">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Augments" hidden="false" id="c72d-1897-02d9-a80a" type="selectionEntryGroup" targetId="94d3-7965-3499-4f33"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="3" field="1d73-d711-6536-5884" scope="self" shared="true" id="28be-f626-475f-48b4" automatic="true"/>
+            <constraint type="max" value="1" field="4122-7839-8d70-c473" scope="self" shared="true" id="c330-6f1a-25be-fa41"/>
+            <constraint type="max" value="1" field="e576-e6dc-cbae-50f6" scope="self" shared="true" id="7ac6-b5e4-36b5-4cd4"/>
+            <constraint type="max" value="0" field="1dcb-84d9-1fa5-f1a6" scope="self" shared="true" id="5627-7cc1-477e-5a09"/>
+            <constraint type="max" value="1" field="ed38-c91c-daa5-ecf5" scope="self" shared="true" id="ca0a-8519-30f0-ec9a"/>
+            <constraint type="max" value="1" field="2b23-4ed4-8c68-b475" scope="self" shared="true" id="9bd5-e1fd-7620-1c2b"/>
+            <constraint type="max" value="0" field="0581-24af-f07e-509c" scope="self" shared="true" id="4f8d-700d-ccc5-15cf"/>
+            <constraint type="max" value="1" field="8f0c-3a10-3a29-926e" scope="self" shared="true" id="da6d-0e6e-ddf3-988f"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="SMG" id="f61e-7936-85b2-7217" hidden="false" type="profile" targetId="a628-6c6f-7b8c-3a87"/>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink name="Ranged Weapons" hidden="false" id="f793-3df9-b5b3-8247" targetId="a532-e48d-9b3e-c01f" primary="false"/>
+            <categoryLink name="Top Rail" hidden="false" id="93a0-3487-1410-fde5" targetId="01cf-c124-3460-b602" primary="false"/>
+            <categoryLink name="Bottom Rail" hidden="false" id="0e5a-fed2-8405-aa3f" targetId="c73e-ce9e-78ef-87f6" primary="false"/>
+            <categoryLink name="Barrel" hidden="false" id="0c84-00c2-7ef5-b8b1" targetId="8f49-bfa8-03ec-778b" primary="false"/>
+            <categoryLink name="Loop Mount" hidden="false" id="f9ff-5b2c-a267-a047" targetId="6f23-0325-dc27-785e" primary="false"/>
+            <categoryLink targetId="f231-ef0b-aa88-e585" id="e1c6-b1c4-fedd-339f" primary="false" name="Ammo Type"/>
+          </categoryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Frag Grenade Bundle" hidden="false" id="406e-a0ca-97c9-0ec8">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="20"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Frag Grenade Bundle Short Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="cae9-0c21-119e-1aca">
+              <characteristics>
+                <characteristic name="Range" typeId="74b3-40da-e1e7-a0cd">0-6</characteristic>
+                <characteristic name="Hit Die" typeId="8535-59d1-5bb4-28f4">D6</characteristic>
+                <characteristic name="Damage" typeId="0f84-843e-3dcd-259d">D10</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Frag Grenade Bundle Medium Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="721e-1511-b6e8-39f0" noindex="false">
+              <characteristics>
+                <characteristic name="Range" typeId="74b3-40da-e1e7-a0cd">6-9</characteristic>
+                <characteristic name="Hit Die" typeId="8535-59d1-5bb4-28f4">D4</characteristic>
+                <characteristic name="Damage" typeId="0f84-843e-3dcd-259d">D10</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Frag Grenade Bundle Long Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="0cf0-7246-2540-66b1">
+              <characteristics>
+                <characteristic name="Range" typeId="74b3-40da-e1e7-a0cd">9-12</characteristic>
+                <characteristic name="Hit Die" typeId="8535-59d1-5bb4-28f4">D3</characteristic>
+                <characteristic name="Damage" typeId="0f84-843e-3dcd-259d">D10</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Frag Grenade Bundle" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="2758-39f2-4b35-5518">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Uses(3): This weapon may only be used up to Uses(X) times per game.
+Blast(2): Fighters within (2) inches of hit target also count as hit.
+Scatter(3): Roll D12, scatter in clock-facing direction 3”, with 6PM facing thrower</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Frag Grenade Bundle" typeId="dd56-9b53-8454-528c" typeName="Mount Points" hidden="false" id="ab8d-4cfa-adf8-a875">
+              <characteristics>
+                <characteristic name="Top Rail" typeId="6c7a-f94b-5eaf-3741">0</characteristic>
+                <characteristic name="Bottom Rail" typeId="beb1-d4f1-7f3c-9d96">0</characteristic>
+                <characteristic name="Side Rail" typeId="9220-f00f-16a9-62d0">0</characteristic>
+                <characteristic name="Barrel" typeId="70bc-91e7-6dcd-2c98">0</characteristic>
+                <characteristic name="Loop Mount" typeId="bf66-c436-a902-9dc3">0</characteristic>
+                <characteristic name="Clip" typeId="8619-32a2-8ee6-968a">0</characteristic>
+                <characteristic name="Ammo Type" typeId="3a70-4dfd-04f7-708a">0</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Augments" hidden="false" id="9d42-0e21-5eb3-cfcc" type="selectionEntryGroup" targetId="94d3-7965-3499-4f33"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="0" field="1d73-d711-6536-5884" scope="self" shared="true" id="81ad-665d-705c-3afd" automatic="true"/>
+            <constraint type="max" value="0" field="4122-7839-8d70-c473" scope="self" shared="true" id="8287-c94c-0946-790e"/>
+            <constraint type="max" value="0" field="e576-e6dc-cbae-50f6" scope="self" shared="true" id="7fc4-8930-6c0a-5626"/>
+            <constraint type="max" value="0" field="1dcb-84d9-1fa5-f1a6" scope="self" shared="true" id="bb9a-7737-81a6-7d0c"/>
+            <constraint type="max" value="0" field="ed38-c91c-daa5-ecf5" scope="self" shared="true" id="ffbb-3796-766b-13fc"/>
+            <constraint type="max" value="0" field="2b23-4ed4-8c68-b475" scope="self" shared="true" id="fedb-fc49-a4c7-7e10"/>
+            <constraint type="max" value="0" field="0581-24af-f07e-509c" scope="self" shared="true" id="7a16-c0d8-4018-7a5a"/>
+            <constraint type="max" value="0" field="8f0c-3a10-3a29-926e" scope="self" shared="true" id="4c96-18fa-7a1c-313a"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="75c1-4f55-f204-6fc8"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Frag Grenade Bundle" id="ff24-6a68-0282-833e" hidden="false" type="profile" targetId="076e-ff2c-a1b2-7f1e"/>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink name="Ranged Weapons" hidden="false" id="ecba-273f-23b0-cdb5" targetId="a532-e48d-9b3e-c01f" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Smoke Grenade Bundle" hidden="false" id="650a-2ceb-62d6-96fb">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="20"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Smoke Grenade Bundle Short Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="55c1-a3ba-88ab-7eb5">
+              <characteristics>
+                <characteristic name="Range" typeId="74b3-40da-e1e7-a0cd">0-6</characteristic>
+                <characteristic name="Hit Die" typeId="8535-59d1-5bb4-28f4">D6</characteristic>
+                <characteristic name="Damage" typeId="0f84-843e-3dcd-259d">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Smoke Grenade Bundle Medium Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="bd03-9dee-b439-b148" noindex="false">
+              <characteristics>
+                <characteristic name="Range" typeId="74b3-40da-e1e7-a0cd">6-9</characteristic>
+                <characteristic name="Hit Die" typeId="8535-59d1-5bb4-28f4">D4</characteristic>
+                <characteristic name="Damage" typeId="0f84-843e-3dcd-259d">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Smoke Grenade Bundle Long Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="61b8-e090-6bcf-73ec">
+              <characteristics>
+                <characteristic name="Range" typeId="74b3-40da-e1e7-a0cd">9-12</characteristic>
+                <characteristic name="Hit Die" typeId="8535-59d1-5bb4-28f4">D3</characteristic>
+                <characteristic name="Damage" typeId="0f84-843e-3dcd-259d">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Smoke Grenade Bundle" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="e787-a893-815a-6dc0">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Uses(3): This weapon may only be used up to Uses(X) times per game.
+Environmental Effect: This weapon may target an unoccupied position.
+Scatter(3): Roll D12, scatter in clock-facing direction 3”, with 6PM facing thrower.
+Smoke: Instead of dealing damage, create Radius 3” Smoke at position that lasts 2 Rounds, grants Cover(3)</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Smoke Grenade Bundle" typeId="dd56-9b53-8454-528c" typeName="Mount Points" hidden="false" id="7317-d7c3-4168-5718">
+              <characteristics>
+                <characteristic name="Top Rail" typeId="6c7a-f94b-5eaf-3741">0</characteristic>
+                <characteristic name="Bottom Rail" typeId="beb1-d4f1-7f3c-9d96">0</characteristic>
+                <characteristic name="Side Rail" typeId="9220-f00f-16a9-62d0">0</characteristic>
+                <characteristic name="Barrel" typeId="70bc-91e7-6dcd-2c98">0</characteristic>
+                <characteristic name="Loop Mount" typeId="bf66-c436-a902-9dc3">0</characteristic>
+                <characteristic name="Clip" typeId="8619-32a2-8ee6-968a">0</characteristic>
+                <characteristic name="Ammo Type" typeId="3a70-4dfd-04f7-708a">0</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Augments" hidden="false" id="3851-74a1-2f41-da4a" type="selectionEntryGroup" targetId="94d3-7965-3499-4f33"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="0" field="1d73-d711-6536-5884" scope="self" shared="true" id="c048-a7ce-a8ec-599b" automatic="true"/>
+            <constraint type="max" value="0" field="4122-7839-8d70-c473" scope="self" shared="true" id="d93d-219b-ea95-5f2a"/>
+            <constraint type="max" value="0" field="e576-e6dc-cbae-50f6" scope="self" shared="true" id="f19e-694a-9935-98cd"/>
+            <constraint type="max" value="0" field="1dcb-84d9-1fa5-f1a6" scope="self" shared="true" id="fa89-b470-32f4-c133"/>
+            <constraint type="max" value="0" field="ed38-c91c-daa5-ecf5" scope="self" shared="true" id="a021-e721-dd50-0e0f"/>
+            <constraint type="max" value="0" field="2b23-4ed4-8c68-b475" scope="self" shared="true" id="a105-b82b-2602-e181"/>
+            <constraint type="max" value="0" field="0581-24af-f07e-509c" scope="self" shared="true" id="04cc-eba4-7e59-1fb9"/>
+            <constraint type="max" value="0" field="8f0c-3a10-3a29-926e" scope="self" shared="true" id="0a52-5581-d96b-2afb"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="77bb-f2e9-94b1-6d65"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Smoke Grenade Bundle" id="0ed4-eeaa-51b6-45ac" hidden="false" type="profile" targetId="0202-b8da-47dc-92a3"/>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink name="Ranged Weapons" hidden="false" id="d819-de91-deef-0fe0" targetId="a532-e48d-9b3e-c01f" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Flamethrower" hidden="false" id="83e3-0b2b-fb4b-7ee5">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="600"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="4"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Flamethrower Short Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="301b-d0ed-fa6b-0af6">
+              <characteristics>
+                <characteristic name="Range" typeId="74b3-40da-e1e7-a0cd">0-6</characteristic>
+                <characteristic name="Hit Die" typeId="8535-59d1-5bb4-28f4">D6</characteristic>
+                <characteristic name="Damage" typeId="0f84-843e-3dcd-259d">D12</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Flamethrower Medium Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="25dd-6720-e4c9-6354" noindex="false">
+              <characteristics>
+                <characteristic name="Range" typeId="74b3-40da-e1e7-a0cd">6-9</characteristic>
+                <characteristic name="Hit Die" typeId="8535-59d1-5bb4-28f4">D8</characteristic>
+                <characteristic name="Damage" typeId="0f84-843e-3dcd-259d">D12</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Flamethrower Long Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="5921-0f63-8793-1476">
+              <characteristics>
+                <characteristic name="Range" typeId="74b3-40da-e1e7-a0cd">9-18</characteristic>
+                <characteristic name="Hit Die" typeId="8535-59d1-5bb4-28f4">D6</characteristic>
+                <characteristic name="Damage" typeId="0f84-843e-3dcd-259d">D12</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Flamethrower" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="77da-5874-4d09-b608">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">2-Handed: Requires both hands to operate.
+Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls.
+Overheat: if 3+ {Shooting Actions} used to fire weapon in a turn, Unstable(3) roll.
+Uses(2): This weapon may only be used up to Uses(X) times per game.
+Cover Piercing(3): When rolling Hit Die, ignore Cover(X) equal to Cover Piercing(X)
+Fire Damage: See Weapon Damage Types Chart.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Flamethrower" typeId="dd56-9b53-8454-528c" typeName="Mount Points" hidden="false" id="bbc4-9657-0a2d-6e64">
+              <characteristics>
+                <characteristic name="Top Rail" typeId="6c7a-f94b-5eaf-3741">0</characteristic>
+                <characteristic name="Bottom Rail" typeId="beb1-d4f1-7f3c-9d96">0</characteristic>
+                <characteristic name="Side Rail" typeId="9220-f00f-16a9-62d0">0</characteristic>
+                <characteristic name="Barrel" typeId="70bc-91e7-6dcd-2c98">0</characteristic>
+                <characteristic name="Loop Mount" typeId="bf66-c436-a902-9dc3">0</characteristic>
+                <characteristic name="Clip" typeId="8619-32a2-8ee6-968a">0</characteristic>
+                <characteristic name="Ammo Type" typeId="3a70-4dfd-04f7-708a">0</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Augments" hidden="false" id="486b-82cc-ecab-b873" type="selectionEntryGroup" targetId="94d3-7965-3499-4f33"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="0" field="1d73-d711-6536-5884" scope="self" shared="true" id="2d63-a133-d626-c201" automatic="true"/>
+            <constraint type="max" value="0" field="4122-7839-8d70-c473" scope="self" shared="true" id="a01d-9aa3-002f-601f"/>
+            <constraint type="max" value="0" field="e576-e6dc-cbae-50f6" scope="self" shared="true" id="dd74-4297-1da5-f7f4"/>
+            <constraint type="max" value="0" field="1dcb-84d9-1fa5-f1a6" scope="self" shared="true" id="1860-1990-22a0-d11b"/>
+            <constraint type="max" value="0" field="ed38-c91c-daa5-ecf5" scope="self" shared="true" id="2246-5786-e43c-1288"/>
+            <constraint type="max" value="0" field="2b23-4ed4-8c68-b475" scope="self" shared="true" id="1b5c-315c-9958-8155"/>
+            <constraint type="max" value="0" field="0581-24af-f07e-509c" scope="self" shared="true" id="0d61-8a07-7395-3c95"/>
+            <constraint type="max" value="0" field="8f0c-3a10-3a29-926e" scope="self" shared="true" id="c86c-9ff0-6923-270d"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Flamethrower" id="4591-72e2-3517-675e" hidden="false" type="profile" targetId="5d6a-0648-4fc9-6a35"/>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink name="Ranged Weapons" hidden="false" id="767a-758c-2bb0-0009" targetId="a532-e48d-9b3e-c01f" primary="false"/>
+          </categoryLinks>
+          <modifiers>
+            <modifier type="decrement" value="1" field="8b03-2b2b-1e3f-9e8c" scope="parent" affects="profiles.Fighter">
+              <comment>Heavy rule</comment>
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Molotov Cocktail Bundle" hidden="false" id="3cfc-ad28-3172-99d3">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="20"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Molotov Cocktail Bundle Short Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="88d0-4a9a-4c2c-98cc">
+              <characteristics>
+                <characteristic name="Range" typeId="74b3-40da-e1e7-a0cd">0-6</characteristic>
+                <characteristic name="Hit Die" typeId="8535-59d1-5bb4-28f4">D6</characteristic>
+                <characteristic name="Damage" typeId="0f84-843e-3dcd-259d">D6</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Molotov Cocktail Bundle Medium Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="0441-1897-1490-e25d" noindex="false">
+              <characteristics>
+                <characteristic name="Range" typeId="74b3-40da-e1e7-a0cd">6-9</characteristic>
+                <characteristic name="Hit Die" typeId="8535-59d1-5bb4-28f4">D4</characteristic>
+                <characteristic name="Damage" typeId="0f84-843e-3dcd-259d">D6</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Molotov Cocktail Bundle Long Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="6801-389e-6f8b-9d5c">
+              <characteristics>
+                <characteristic name="Range" typeId="74b3-40da-e1e7-a0cd">9-12</characteristic>
+                <characteristic name="Hit Die" typeId="8535-59d1-5bb4-28f4">D3</characteristic>
+                <characteristic name="Damage" typeId="0f84-843e-3dcd-259d">D6</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Molotov Cocktail Bundle" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="b4af-877c-25f2-a8f7">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Uses(3): This weapon may only be used up to Uses(X) times per game.
+Blast(4): Fighters within (4) inches of hit target also count as hit.
+Scatter(3): Roll D12, scatter in clock-facing direction 3”, with 6PM facing thrower.
+Fire Damage: See Weapon Damage Types Chart.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Molotov Cocktail Bundle" typeId="dd56-9b53-8454-528c" typeName="Mount Points" hidden="false" id="c7af-23f2-b60c-1db9">
+              <characteristics>
+                <characteristic name="Top Rail" typeId="6c7a-f94b-5eaf-3741">0</characteristic>
+                <characteristic name="Bottom Rail" typeId="beb1-d4f1-7f3c-9d96">0</characteristic>
+                <characteristic name="Side Rail" typeId="9220-f00f-16a9-62d0">0</characteristic>
+                <characteristic name="Barrel" typeId="70bc-91e7-6dcd-2c98">0</characteristic>
+                <characteristic name="Loop Mount" typeId="bf66-c436-a902-9dc3">0</characteristic>
+                <characteristic name="Clip" typeId="8619-32a2-8ee6-968a">0</characteristic>
+                <characteristic name="Ammo Type" typeId="3a70-4dfd-04f7-708a">0</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Augments" hidden="false" id="307f-6af0-7775-9e59" type="selectionEntryGroup" targetId="94d3-7965-3499-4f33"/>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="0" field="1d73-d711-6536-5884" scope="self" shared="true" id="a8ef-af28-0590-2d94" automatic="true"/>
+            <constraint type="max" value="0" field="4122-7839-8d70-c473" scope="self" shared="true" id="efe1-ee47-fd8f-d92d"/>
+            <constraint type="max" value="0" field="e576-e6dc-cbae-50f6" scope="self" shared="true" id="3035-5956-7554-7fcc"/>
+            <constraint type="max" value="0" field="1dcb-84d9-1fa5-f1a6" scope="self" shared="true" id="18df-7631-164a-c906"/>
+            <constraint type="max" value="0" field="ed38-c91c-daa5-ecf5" scope="self" shared="true" id="258b-733a-b795-4dc3"/>
+            <constraint type="max" value="0" field="2b23-4ed4-8c68-b475" scope="self" shared="true" id="9eea-da14-ce9f-c215"/>
+            <constraint type="max" value="0" field="0581-24af-f07e-509c" scope="self" shared="true" id="e1b6-9f9a-fbcf-33ff"/>
+            <constraint type="max" value="0" field="8f0c-3a10-3a29-926e" scope="self" shared="true" id="8369-a904-2660-16c2"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="82c5-5e6d-ebad-e2a9"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Molotov Cocktail Bundle" id="1328-b140-215f-ea42" hidden="false" type="profile" targetId="f49e-84bf-1b80-c1ba"/>
+          </infoLinks>
+          <categoryLinks>
+            <categoryLink name="Ranged Weapons" hidden="false" id="91ed-8311-63a9-2957" targetId="a532-e48d-9b3e-c01f" primary="false"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
       <categoryLinks>
