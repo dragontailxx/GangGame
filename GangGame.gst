@@ -42,7 +42,7 @@
         </categoryLink>
       </categoryLinks>
     </forceEntry>
-    <forceEntry name="Free-Play" id="674c-d963-0cba-758f" hidden="false" childForcesLabel="">
+    <forceEntry name="Free-Play" id="674c-d963-0cba-758f" hidden="false">
       <categoryLinks>
         <categoryLink name="Leadership" hidden="false" id="228f-3b34-e83a-73a4" targetId="cb5e-bc93-5d28-9b12"/>
         <categoryLink name="Troops" hidden="false" id="bcf8-8068-7130-97d9" targetId="b8f9-9648-72b4-a3af"/>
@@ -212,12 +212,12 @@
       </infoLinks>
       <constraints>
         <constraint type="max" value="12" field="e711-c529-9c5c-79e6" scope="self" shared="true" id="6946-666b-369e-c5b6"/>
-        <constraint type="max" value="1" field="2aaf-7d74-1257-9a35" scope="parent" shared="true" id="8a67-c703-acd6-345a"/>
-        <constraint type="max" value="1" field="8e2e-8cb9-7c40-74bf" scope="parent" shared="true" id="8e39-39a2-ba43-81b1"/>
-        <constraint type="max" value="1" field="ba7d-937a-cac6-5009" scope="parent" shared="true" id="5478-ccee-4225-d37c"/>
-        <constraint type="max" value="1" field="25a6-b298-4d5b-927c" scope="parent" shared="true" id="a338-1850-8a89-c4d4"/>
-        <constraint type="max" value="1" field="0394-a001-b723-150e" scope="parent" shared="true" id="d33e-738e-0eab-a3a7"/>
-        <constraint type="max" value="1" field="133b-be98-400e-8717" scope="parent" shared="true" id="ecd7-f6c3-c042-4752"/>
+        <constraint type="max" value="1" field="2aaf-7d74-1257-9a35" scope="self" shared="true" id="8a67-c703-acd6-345a"/>
+        <constraint type="max" value="1" field="8e2e-8cb9-7c40-74bf" scope="self" shared="true" id="8e39-39a2-ba43-81b1"/>
+        <constraint type="max" value="1" field="ba7d-937a-cac6-5009" scope="self" shared="true" id="5478-ccee-4225-d37c"/>
+        <constraint type="max" value="1" field="25a6-b298-4d5b-927c" scope="self" shared="true" id="a338-1850-8a89-c4d4"/>
+        <constraint type="max" value="1" field="0394-a001-b723-150e" scope="self" shared="true" id="d33e-738e-0eab-a3a7"/>
+        <constraint type="max" value="1" field="133b-be98-400e-8717" scope="self" shared="true" id="ecd7-f6c3-c042-4752"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Sergeant" hidden="false" id="2364-f48f-450a-8563">
@@ -245,12 +245,12 @@
       </entryLinks>
       <constraints>
         <constraint type="max" value="10" field="e711-c529-9c5c-79e6" scope="self" shared="true" id="b632-7f58-a5fa-ff71"/>
-        <constraint type="max" value="1" field="2aaf-7d74-1257-9a35" scope="parent" shared="true" id="75dd-bbbf-292d-105c"/>
-        <constraint type="max" value="1" field="8e2e-8cb9-7c40-74bf" scope="parent" shared="true" id="aadd-5009-d426-1ca0"/>
-        <constraint type="max" value="1" field="ba7d-937a-cac6-5009" scope="parent" shared="true" id="7039-d061-cf8f-4501"/>
-        <constraint type="max" value="1" field="25a6-b298-4d5b-927c" scope="parent" shared="true" id="f433-b284-3004-ade9"/>
-        <constraint type="max" value="1" field="0394-a001-b723-150e" scope="parent" shared="true" id="20a5-6ad5-7ad0-2127"/>
-        <constraint type="max" value="1" field="133b-be98-400e-8717" scope="parent" shared="true" id="d401-66f0-9eff-2a2a"/>
+        <constraint type="max" value="1" field="2aaf-7d74-1257-9a35" scope="self" shared="true" id="75dd-bbbf-292d-105c"/>
+        <constraint type="max" value="1" field="8e2e-8cb9-7c40-74bf" scope="self" shared="true" id="aadd-5009-d426-1ca0"/>
+        <constraint type="max" value="1" field="ba7d-937a-cac6-5009" scope="self" shared="true" id="7039-d061-cf8f-4501"/>
+        <constraint type="max" value="1" field="25a6-b298-4d5b-927c" scope="self" shared="true" id="f433-b284-3004-ade9"/>
+        <constraint type="max" value="1" field="0394-a001-b723-150e" scope="self" shared="true" id="20a5-6ad5-7ad0-2127"/>
+        <constraint type="max" value="1" field="133b-be98-400e-8717" scope="self" shared="true" id="d401-66f0-9eff-2a2a"/>
       </constraints>
       <infoLinks>
         <infoLink name="Sergeant" id="9911-b3b9-9efe-e473" hidden="false" type="profile" targetId="0939-0353-27d7-9b2b"/>
@@ -281,12 +281,12 @@
       </entryLinks>
       <constraints>
         <constraint type="max" value="8" field="e711-c529-9c5c-79e6" scope="self" shared="true" id="775f-5271-bb27-c9b9"/>
-        <constraint type="max" value="1" field="2aaf-7d74-1257-9a35" scope="parent" shared="true" id="9a41-bdd9-ae24-fe92"/>
-        <constraint type="max" value="1" field="8e2e-8cb9-7c40-74bf" scope="parent" shared="true" id="8c7e-6861-dfe9-8e1f"/>
-        <constraint type="max" value="1" field="ba7d-937a-cac6-5009" scope="parent" shared="true" id="0bf3-a414-81a4-0ef1"/>
-        <constraint type="max" value="1" field="25a6-b298-4d5b-927c" scope="parent" shared="true" id="5968-dcbd-0f4e-ea5f"/>
-        <constraint type="max" value="1" field="0394-a001-b723-150e" scope="parent" shared="true" id="4f08-fefa-6433-51a2"/>
-        <constraint type="max" value="1" field="133b-be98-400e-8717" scope="parent" shared="true" id="0045-5a3d-77e1-8865"/>
+        <constraint type="max" value="1" field="2aaf-7d74-1257-9a35" scope="self" shared="true" id="9a41-bdd9-ae24-fe92"/>
+        <constraint type="max" value="1" field="8e2e-8cb9-7c40-74bf" scope="self" shared="true" id="8c7e-6861-dfe9-8e1f"/>
+        <constraint type="max" value="1" field="ba7d-937a-cac6-5009" scope="self" shared="true" id="0bf3-a414-81a4-0ef1"/>
+        <constraint type="max" value="1" field="25a6-b298-4d5b-927c" scope="self" shared="true" id="5968-dcbd-0f4e-ea5f"/>
+        <constraint type="max" value="1" field="0394-a001-b723-150e" scope="self" shared="true" id="4f08-fefa-6433-51a2"/>
+        <constraint type="max" value="1" field="133b-be98-400e-8717" scope="self" shared="true" id="0045-5a3d-77e1-8865"/>
       </constraints>
       <infoLinks>
         <infoLink name="Brute" id="ea5c-261a-8713-299d" hidden="false" type="profile" targetId="60c9-9dd6-8f94-2133"/>
@@ -317,12 +317,12 @@
       </entryLinks>
       <constraints>
         <constraint type="max" value="6" field="e711-c529-9c5c-79e6" scope="self" shared="true" id="2dde-5fdb-c404-61ed"/>
-        <constraint type="max" value="1" field="2aaf-7d74-1257-9a35" scope="parent" shared="true" id="d57d-570d-e464-70bb"/>
-        <constraint type="max" value="1" field="8e2e-8cb9-7c40-74bf" scope="parent" shared="true" id="8de3-84c7-c6d6-39c7"/>
-        <constraint type="max" value="1" field="ba7d-937a-cac6-5009" scope="parent" shared="true" id="4c93-4b75-8c3a-db54"/>
-        <constraint type="max" value="1" field="25a6-b298-4d5b-927c" scope="parent" shared="true" id="d075-44a0-3f9d-0c60"/>
-        <constraint type="max" value="1" field="0394-a001-b723-150e" scope="parent" shared="true" id="0888-f2f8-16bf-4ecb"/>
-        <constraint type="max" value="1" field="133b-be98-400e-8717" scope="parent" shared="true" id="4982-9700-7414-ba43"/>
+        <constraint type="max" value="1" field="2aaf-7d74-1257-9a35" scope="self" shared="true" id="d57d-570d-e464-70bb"/>
+        <constraint type="max" value="1" field="8e2e-8cb9-7c40-74bf" scope="self" shared="true" id="8de3-84c7-c6d6-39c7"/>
+        <constraint type="max" value="1" field="ba7d-937a-cac6-5009" scope="self" shared="true" id="4c93-4b75-8c3a-db54"/>
+        <constraint type="max" value="1" field="25a6-b298-4d5b-927c" scope="self" shared="true" id="d075-44a0-3f9d-0c60"/>
+        <constraint type="max" value="1" field="0394-a001-b723-150e" scope="self" shared="true" id="0888-f2f8-16bf-4ecb"/>
+        <constraint type="max" value="1" field="133b-be98-400e-8717" scope="self" shared="true" id="4982-9700-7414-ba43"/>
       </constraints>
       <infoLinks>
         <infoLink name="Grunt" id="37e9-97e0-3b7d-9962" hidden="false" type="profile" targetId="cf74-ee5f-e2ef-eab1"/>
@@ -353,12 +353,12 @@
       </entryLinks>
       <constraints>
         <constraint type="max" value="4" field="e711-c529-9c5c-79e6" scope="self" shared="true" id="921b-0c71-af49-8d50"/>
-        <constraint type="max" value="1" field="2aaf-7d74-1257-9a35" scope="parent" shared="true" id="494a-9163-ef6b-033b"/>
-        <constraint type="max" value="1" field="8e2e-8cb9-7c40-74bf" scope="parent" shared="true" id="06bc-01f3-c2ac-518e"/>
-        <constraint type="max" value="1" field="ba7d-937a-cac6-5009" scope="parent" shared="true" id="2d1d-135a-0682-bf30"/>
-        <constraint type="max" value="1" field="25a6-b298-4d5b-927c" scope="parent" shared="true" id="bfa9-6c5a-393f-57e0"/>
-        <constraint type="max" value="1" field="0394-a001-b723-150e" scope="parent" shared="true" id="ea08-f0ca-1e6e-2bf6"/>
-        <constraint type="max" value="1" field="133b-be98-400e-8717" scope="parent" shared="true" id="4819-d82a-8973-8dad"/>
+        <constraint type="max" value="1" field="2aaf-7d74-1257-9a35" scope="self" shared="true" id="494a-9163-ef6b-033b"/>
+        <constraint type="max" value="1" field="8e2e-8cb9-7c40-74bf" scope="self" shared="true" id="06bc-01f3-c2ac-518e"/>
+        <constraint type="max" value="1" field="ba7d-937a-cac6-5009" scope="self" shared="true" id="2d1d-135a-0682-bf30"/>
+        <constraint type="max" value="1" field="25a6-b298-4d5b-927c" scope="self" shared="true" id="bfa9-6c5a-393f-57e0"/>
+        <constraint type="max" value="1" field="0394-a001-b723-150e" scope="self" shared="true" id="ea08-f0ca-1e6e-2bf6"/>
+        <constraint type="max" value="1" field="133b-be98-400e-8717" scope="self" shared="true" id="4819-d82a-8973-8dad"/>
       </constraints>
       <infoLinks>
         <infoLink name="Scout" id="2a1a-b3f7-137c-699d" hidden="false" type="profile" targetId="e9ae-09a7-45fa-b608"/>
@@ -394,7 +394,7 @@
         <entryLink import="true" name="Vehicle Modifications" hidden="false" id="403a-0c8e-5a32-ae79" type="selectionEntryGroup" targetId="efa8-f0cb-d1bc-977d"/>
       </entryLinks>
       <constraints>
-        <constraint type="max" value="2" field="1d73-d711-6536-5884" scope="parent" shared="true" id="f224-7262-9b24-580b"/>
+        <constraint type="max" value="2" field="1d73-d711-6536-5884" scope="self" shared="true" id="f224-7262-9b24-580b"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Small Car Chassis" hidden="false" id="9c90-0b24-8887-2771" subType="mount">
@@ -428,7 +428,7 @@
         <entryLink import="true" name="Vehicle Modifications" hidden="false" id="d6b2-848a-c64e-7fd5" type="selectionEntryGroup" targetId="efa8-f0cb-d1bc-977d"/>
       </entryLinks>
       <constraints>
-        <constraint type="max" value="5" field="1d73-d711-6536-5884" scope="parent" shared="true" id="ac01-5527-d994-321f"/>
+        <constraint type="max" value="5" field="1d73-d711-6536-5884" scope="self" shared="true" id="ac01-5527-d994-321f"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Medium Car Chassis" hidden="false" id="b07b-c05d-79b5-c6c4" subType="mount">
@@ -462,7 +462,7 @@
         <entryLink import="true" name="Vehicle Modifications" hidden="false" id="b15e-fccb-16cd-bd4d" type="selectionEntryGroup" targetId="efa8-f0cb-d1bc-977d"/>
       </entryLinks>
       <constraints>
-        <constraint type="max" value="7" field="1d73-d711-6536-5884" scope="parent" shared="true" id="8892-2dca-38fd-61b8"/>
+        <constraint type="max" value="7" field="1d73-d711-6536-5884" scope="self" shared="true" id="8892-2dca-38fd-61b8"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Large Car Chassis" hidden="false" id="89b0-55e3-a3f7-e2e3" subType="mount">
@@ -496,43 +496,8 @@
         <entryLink import="true" name="Vehicle Modifications" hidden="false" id="28c4-c2c7-f500-4587" type="selectionEntryGroup" targetId="efa8-f0cb-d1bc-977d"/>
       </entryLinks>
       <constraints>
-        <constraint type="max" value="9" field="1d73-d711-6536-5884" scope="parent" shared="true" id="471a-6c5b-5102-1ae9"/>
+        <constraint type="max" value="9" field="1d73-d711-6536-5884" scope="self" shared="true" id="471a-6c5b-5102-1ae9"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Armoured Panel" hidden="false" id="f1e7-9281-791e-0044" defaultAmount="">
-      <costs>
-        <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="50"/>
-        <cost name="Augments" typeId="1d73-d711-6536-5884" value="1"/>
-        <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
-        <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
-        <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
-        <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
-        <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
-        <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
-        <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
-        <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
-        <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
-        <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
-        <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
-        <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
-        <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
-        <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
-        <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
-      </costs>
-      <profiles>
-        <profile name="Armoured Panel" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="d809-9be6-f534-bfaa">
-          <characteristics>
-            <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Weak Point Reduction(1): Reduce the Weak Point value of the Vehicle chassis by this amount.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink name="Armoured Panel" id="6ade-4fdd-c452-0ca9" hidden="false" type="profile" targetId="7fbb-fb45-94a9-6e92"/>
-      </infoLinks>
-      <modifiers>
-        <modifier type="decrement" value="1" field="4009-72b9-1af7-94f3" scope="parent" affects="profiles.Vehicle Chassis"/>
-        <modifier type="increment" value="10" field="8359-3729-b7b9-56c5" scope="parent" affects="profiles.Vehicle Chassis"/>
-      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
@@ -1430,9 +1395,7 @@ Activated model made a Sprint Action this turn   | +1
 Grapplehook                                                        | +2
 
 
-If the roll is failed, the activated model falls straight down, consult the Falling Universal Special Rule to determine damage. (D3 Damage per full Inch fallen vertically)
-
-</description>
+If the roll is failed, the activated model falls straight down, consult the Falling Universal Special Rule to determine damage. (D3 Damage per full Inch fallen vertically)</description>
     </rule>
     <rule name="Climb Action" id="f994-7eab-beea-c822" hidden="false">
       <description>A climbing action, activated model moves up to its movement stat in inches up or down an obstacle, usually a rough wall or vines or similar grabbable vertical terrain. You must be able to finish this move on a flat standable surface where the model’s base can safely stand to complete a climb.</description>
@@ -1475,9 +1438,7 @@ Leave successful rolls on the table visible to the opposing player.
 
 
 The opponent now rolls their Armour Die against each success and must equal or beat the rolled number to negate the damage, applying any Armour Piercing or other modifiers to the roll as appropriate.
-Finally, the Shooting Fighter rolls Damage dice as denoted on the Damage portion of the weapon’s stat sheet, applying any modifiers to Damage (ammunition types, resistances), and the opponent then marks this damage down against the Target Fighter’s Hit Points starting with any Hit Points their armour may have first.
-
-</description>
+Finally, the Shooting Fighter rolls Damage dice as denoted on the Damage portion of the weapon’s stat sheet, applying any modifiers to Damage (ammunition types, resistances), and the opponent then marks this damage down against the Target Fighter’s Hit Points starting with any Hit Points their armour may have first.</description>
       <alias>Fire Weapon Actions</alias>
       <alias>Fire Weapon</alias>
     </rule>
@@ -1514,9 +1475,7 @@ Leave successful rolls on the table visible to the opposing player.
 The opponent now rolls their Armour Die against each success and must equal or beat the rolled number to negate the damage, applying any Armour Piercing or other modifiers to the roll as appropriate.
 Finally, the Shooting Fighter rolls Damage dice as denoted on the Damage portion of the weapon’s stat sheet, applying any modifiers to Damage (ammunition types, resistances), and the opponent then marks this damage down against the Target Fighter’s Hit Points starting with any Hit Points their armour may have first.
 
-Functions identically to the Fire Weapon Action except you add the Unload value to the Shots value of the weapon. In addition place a Reload token next to the model to indicate a Reload action is required before the weapon can be fired again.
-
-</description>
+Functions identically to the Fire Weapon Action except you add the Unload value to the Shots value of the weapon. In addition place a Reload token next to the model to indicate a Reload action is required before the weapon can be fired again.</description>
     </rule>
     <rule name="Reload Action" id="ca90-daf7-523e-8304" hidden="false">
       <description>A reload Action clears any Jam or Reload associated with a weapon, clear any such tokens/effects.</description>
@@ -1541,9 +1500,7 @@ Target has Block Token | -2
 
 
 The opponent now rolls their Armour Die against each success and must equal or beat the rolled number to negate the damage, applying any Armour Piercing or other modifiers to the roll as appropriate.
-Finally the Attacking Fighter rolls Damage dice as denoted on the Damage portion of the weapon’s stat sheet, applying any modifiers to Damage (special rules, resistances) and the opponent then marks this damage down against the Target Fighter’s Hit Points starting with any Hit Points their armour may have first.
-
-</description>
+Finally the Attacking Fighter rolls Damage dice as denoted on the Damage portion of the weapon’s stat sheet, applying any modifiers to Damage (special rules, resistances) and the opponent then marks this damage down against the Target Fighter’s Hit Points starting with any Hit Points their armour may have first.</description>
       <alias>Attack Actions</alias>
     </rule>
     <rule name="Block Action" id="ffa3-8da0-fca5-ed47" hidden="false">
@@ -1568,9 +1525,7 @@ On a successful Hit with a regular Attack with this weapon, you may opt to foreg
 The Fighter gets ready to perform an Action at a to-be-determined moment in the future, place an Overwatch Token next to the Fighter to denote this.
 
 
-Between any Actions in future turns until this model Activates again, you may declare the Overwatch Action being performed by this model, at the end of the current Action another model is making, you immediately activate this Fighter, discard the Overwatch Token, and declare what Action the Fighter is performing (this can be any Action of cost 1 except another Overwatch Action). Fully resolve the Action, then return control of the turn to the original Activating model.
-
-</description>
+Between any Actions in future turns until this model Activates again, you may declare the Overwatch Action being performed by this model, at the end of the current Action another model is making, you immediately activate this Fighter, discard the Overwatch Token, and declare what Action the Fighter is performing (this can be any Action of cost 1 except another Overwatch Action). Fully resolve the Action, then return control of the turn to the original Activating model.</description>
     </rule>
     <rule name="Hunker Down Action" id="28f0-7bfc-2c3a-e588" hidden="false">
       <description>This Action ends the Fighter’s Activation.
@@ -1608,9 +1563,7 @@ Target friendly Fighter within 1” of the Activating Fighter, Roll a D3 and res
 A Fighter that performs a Flee action must meet the following conditions in order, and failure to meet any of the conditions means the Fighter immediately becomes “Freaked”, place a Freaked token near the model as a reminder.
 1) The Fighter must not end its movement closer in inches to any enemy model within 24” than when it started the Flee action.
 2) The Fighter must attempt to move as directly as terrain allows towards a friendly Fighter, becoming Freaked if this violates the first condition.
-3) The Figher must move its full Movement statistic plus another D3 inches in a direction that does not conflict with the previous conditions, becoming Freaked if this violates the first condition.
-
-</description>
+3) The Figher must move its full Movement statistic plus another D3 inches in a direction that does not conflict with the previous conditions, becoming Freaked if this violates the first condition.</description>
     </rule>
     <rule name="Fight or Flight Action" id="97a7-1a6e-9a35-32c0" hidden="false">
       <description>if a model is called upon to make a ‘Fight or Flight’ or FoF(X) action (Now marked as FoF from here on), they roll a D6, apply the below modifiers, and must beat the number provided (For example FoF(4) would be a 4+ FoF roll) or if failed, the Fighter must make a Flee Action.
@@ -4087,7 +4040,7 @@ Grapplehook: When performing a {Jump} Action gain +2 to the roll, or a {Climb} A
           <profiles>
             <profile name="Pintle Weapon Mount" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="f3f4-32bb-5553-be03">
               <characteristics>
-                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Weapon Mount: You may purchase and mount any ranged weapon from your Weapons list, including any Augmentations, and attach it to the vehicle. Mounting the weapon in such a way ignores the Heavy rule on the weapon.  </characteristic>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Weapon Mount: You may purchase and mount any ranged weapon from your Weapons list, including any Augmentations, and attach it to the vehicle. Mounting the weapon in such a way ignores the Heavy rule on the weapon.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -4181,7 +4134,7 @@ Ram: You may use the below statline for the Attack Action of the vehicle.</chara
             <modifier type="increment" value="20" field="8359-3729-b7b9-56c5" scope="parent" affects="profiles.Vehicle Chassis"/>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Armoured Panel" hidden="false" id="39d9-4640-13c0-6943" defaultAmount="">
+        <selectionEntry type="upgrade" import="true" name="Armoured Panel" hidden="false" id="39d9-4640-13c0-6943">
           <costs>
             <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="50"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="1"/>
@@ -4261,6 +4214,11 @@ Ram: You may use the below statline for the Attack Action of the vehicle.</chara
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="148c-08c6-e2e0-f021"/>
           </constraints>
         </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Skills" id="889a-dbfc-b346-64aa" hidden="false">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Advanced Driver" hidden="false" id="b330-2f2b-4c1b-90bd"/>
       </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
