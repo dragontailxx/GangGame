@@ -632,7 +632,7 @@
     </profile>
     <profile name="Red-Dot Sight" typeId="c390-b12f-4d8c-da1d" typeName="Weapon Augmentations" hidden="false" id="dd04-f75d-7eb7-84a1">
       <characteristics>
-        <characteristic name="Equip Location" typeId="b7d8-6364-8381-76a4">Top Rail, Side Raild</characteristic>
+        <characteristic name="Equip Location" typeId="b7d8-6364-8381-76a4">Top Rail, Side Rail</characteristic>
         <characteristic name="Augment Cost" typeId="1e5a-e3cc-ec84-9dda">1</characteristic>
       </characteristics>
     </profile>
