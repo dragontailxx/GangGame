@@ -15,6 +15,8 @@
     <categoryEntry name="Clip" id="d7f3-993f-816f-5c96" hidden="false"/>
     <categoryEntry name="Ammo Type" id="f231-ef0b-aa88-e585" hidden="false"/>
     <categoryEntry name="Support Vehicles" id="0ccd-9a15-4543-4e63" hidden="false"/>
+    <categoryEntry name="Weapons Training" id="c8ef-affe-6532-747e" hidden="false"/>
+    <categoryEntry name="Advanced Weapons Training" id="597b-4f6d-e603-d578" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="Tournament Test" id="013b-b368-06a9-a2c5" hidden="true">
@@ -206,6 +208,7 @@
         <entryLink import="true" name="Melee Weapons" hidden="false" id="06ee-cf4e-e46e-d159" type="selectionEntryGroup" targetId="febd-38f2-1692-5ed9" sortIndex="1"/>
         <entryLink import="true" name="Armour" hidden="false" id="a3ef-03f5-6d94-2f95" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3" sortIndex="3"/>
         <entryLink import="true" name="Wargear" hidden="false" id="4880-d4d8-f544-d3cf" type="selectionEntryGroup" targetId="a734-a608-2f60-0fa8" sortIndex="4"/>
+        <entryLink import="true" name="Skills" hidden="false" id="6c4b-a1ca-d243-9d06" type="selectionEntryGroup" targetId="889a-dbfc-b346-64aa" sortIndex="5"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Commander" id="6c4f-3d6b-5227-8bea" hidden="false" type="profile" targetId="0760-cf8a-4645-9b6e"/>
@@ -242,6 +245,7 @@
         <entryLink import="true" name="Melee Weapons" hidden="false" id="fd95-6303-0b7e-ae0f" type="selectionEntryGroup" targetId="febd-38f2-1692-5ed9" sortIndex="1"/>
         <entryLink import="true" name="Armour" hidden="false" id="282f-f74f-c043-4d97" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3" sortIndex="3"/>
         <entryLink import="true" name="Wargear" hidden="false" id="0a52-6afd-3eae-f01e" type="selectionEntryGroup" targetId="a734-a608-2f60-0fa8" sortIndex="4"/>
+        <entryLink import="true" name="Skills" hidden="false" id="e1ee-e0f3-cd84-192a" type="selectionEntryGroup" targetId="889a-dbfc-b346-64aa" sortIndex="5"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="10" field="e711-c529-9c5c-79e6" scope="self" shared="true" id="b632-7f58-a5fa-ff71"/>
@@ -278,6 +282,7 @@
         <entryLink import="true" name="Melee Weapons" hidden="false" id="37e1-bf92-7d62-a736" type="selectionEntryGroup" targetId="febd-38f2-1692-5ed9" sortIndex="1"/>
         <entryLink import="true" name="Armour" hidden="false" id="91b5-31f6-726d-1fcd" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3" sortIndex="3"/>
         <entryLink import="true" name="Wargear" hidden="false" id="fbb8-b512-2a34-99b5" type="selectionEntryGroup" targetId="a734-a608-2f60-0fa8" sortIndex="4"/>
+        <entryLink import="true" name="Skills" hidden="false" id="283e-0f8c-bfb1-9abc" type="selectionEntryGroup" targetId="889a-dbfc-b346-64aa" sortIndex="5"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="8" field="e711-c529-9c5c-79e6" scope="self" shared="true" id="775f-5271-bb27-c9b9"/>
@@ -314,6 +319,7 @@
         <entryLink import="true" name="Melee Weapons" hidden="false" id="1de1-c379-8bce-5a8f" type="selectionEntryGroup" targetId="febd-38f2-1692-5ed9" sortIndex="1"/>
         <entryLink import="true" name="Armour" hidden="false" id="6cf5-6ab5-7c7f-bbcd" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3" sortIndex="3"/>
         <entryLink import="true" name="Wargear" hidden="false" id="4339-a789-3d9e-e63d" type="selectionEntryGroup" targetId="a734-a608-2f60-0fa8" sortIndex="4"/>
+        <entryLink import="true" name="Skills" hidden="false" id="ecd5-5d8c-667c-be54" type="selectionEntryGroup" targetId="889a-dbfc-b346-64aa" sortIndex="5"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="6" field="e711-c529-9c5c-79e6" scope="self" shared="true" id="2dde-5fdb-c404-61ed"/>
@@ -350,6 +356,7 @@
         <entryLink import="true" name="Melee Weapons" hidden="false" id="1818-4288-ad05-69df" type="selectionEntryGroup" targetId="febd-38f2-1692-5ed9" sortIndex="1"/>
         <entryLink import="true" name="Armour" hidden="false" id="99eb-87df-1927-ec94" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3" sortIndex="3"/>
         <entryLink import="true" name="Wargear" hidden="false" id="463c-7508-272b-ea1c" type="selectionEntryGroup" targetId="a734-a608-2f60-0fa8" sortIndex="4"/>
+        <entryLink import="true" name="Skills" hidden="false" id="e52f-8c16-f585-eea6" type="selectionEntryGroup" targetId="889a-dbfc-b346-64aa" sortIndex="5"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="4" field="e711-c529-9c5c-79e6" scope="self" shared="true" id="921b-0c71-af49-8d50"/>
@@ -843,14 +850,7 @@ Post-Game Effect:After a game, a Scavenger gang rolls 1D20 for each surviving ga
     <profile name="Combat Master" typeId="d7ec-fc85-aeff-2e55" typeName="Skills" hidden="false" id="dd54-937c-2d48-62fb">
       <characteristics>
         <characteristic name="Cost" typeId="d686-ab23-e3a2-c874">0</characteristic>
-        <characteristic name="Effect" typeId="e2d5-45ff-fa8d-91c1">A single Leader role Fighter in your Gang can be given this Skill for free.
-A Commander can during their activation grant another Fighter within 12” one free Action, the target Fighter immediately Activates, completes the Action as per the action’s rules, then passes Activation back to the Commander.
-
-
-In addition, while the Commander is alive, any friendly Fighter required to make a FoF(X) roll within 12” of the Commander does so at +2 to its roll.
-
-
-If the Commander dies, all friendly Fighters within 12” of the Commander must make a FoF(6) check.</characteristic>
+        <characteristic name="Effect" typeId="e2d5-45ff-fa8d-91c1">A Fighter with Combat Master may re-roll any failed Attack Action hit rolls (you cannot re-roll a re-roll).</characteristic>
       </characteristics>
     </profile>
     <profile name="Dual Wield" typeId="d7ec-fc85-aeff-2e55" typeName="Skills" hidden="false" id="1802-6eaa-d9b2-54fd">
@@ -883,8 +883,7 @@ If any of the weapons being used have a 1H/2H rule you must use the 1H profile o
     <profile name="Advanced Driver" typeId="d7ec-fc85-aeff-2e55" typeName="Skills" hidden="false" id="9274-c5fb-8f1e-d49a">
       <characteristics>
         <characteristic name="Cost" typeId="d686-ab23-e3a2-c874">200</characteristic>
-        <characteristic name="Effect" typeId="e2d5-45ff-fa8d-91c1">A Fighter with Sneaky remains Sneaky until an enemy Fighter has unimpeded Line of Sight to them and is within 18” (Unimpeded line of sight being a situation where the Fighter has no cover bonuses granted to it by the environment such as them being out in the open), or if they use a Fire Weapon action with a Weapon that is not Suppressed, at which point they are no longer Sneaky.
-While a Fighter is Sneaky, they cannot be the target of Shooting or Aim actions.</characteristic>
+        <characteristic name="Effect" typeId="e2d5-45ff-fa8d-91c1">Requires Driver Skill - Fighters with Advanced Driver skill can perform Drive actions on vehicles with the Complicated Controls rule.</characteristic>
       </characteristics>
     </profile>
     <profile name="Weapons Training" typeId="d7ec-fc85-aeff-2e55" typeName="Skills" hidden="false" id="2450-f915-d44a-e8ed">
@@ -1291,6 +1290,19 @@ While a Fighter is Sneaky, they cannot be the target of Shooting or Aim actions.
         <characteristic name="Rarity" typeId="6b8e-ddd6-8899-7ef7">Common</characteristic>
       </characteristics>
     </profile>
+    <profile name="Commander" typeId="d7ec-fc85-aeff-2e55" typeName="Skills" hidden="false" id="493f-c334-3fe1-8fa0">
+      <characteristics>
+        <characteristic name="Cost" typeId="d686-ab23-e3a2-c874">0</characteristic>
+        <characteristic name="Effect" typeId="e2d5-45ff-fa8d-91c1">A single Leader role Fighter in your Gang can be given this Skill for free.
+A Commander can during their activation grant another Fighter within 12” one free Action, the target Fighter immediately Activates, completes the Action as per the action’s rules, then passes Activation back to the Commander.
+
+
+In addition, while the Commander is alive, any friendly Fighter required to make a FoF(X) roll within 12” of the Commander does so at +2 to its roll.
+
+
+If the Commander dies, all friendly Fighters within 12” of the Commander must make a FoF(6) check.</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
   <sharedRules>
     <rule name="Freaked" id="2821-3212-682b-aebb" hidden="false">
@@ -1669,6 +1681,9 @@ Friendly Commander within 12” (Doesn’t stack with Leader modifier) | +2 to r
           </infoLinks>
           <categoryLinks>
             <categoryLink targetId="a532-e48d-9b3e-c01f" id="f75e-ae2e-77f9-d935" primary="false" name="Ranged Weapons"/>
+            <categoryLink targetId="01cf-c124-3460-b602" id="8d2e-3e99-43cd-1649" primary="false" name="Top Rail"/>
+            <categoryLink targetId="8f49-bfa8-03ec-778b" id="db94-44f5-9927-624d" primary="false" name="Barrel"/>
+            <categoryLink targetId="d7f3-993f-816f-5c96" id="24fc-1b9d-6892-d1cf" primary="false" name="Clip"/>
           </categoryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Shotgun" hidden="false" id="a698-cbcd-7ddd-e2a5">
@@ -1727,7 +1742,11 @@ Variable Ammo: Choose what type of Ammo to fire before making the Action.
             </profile>
           </profiles>
           <entryLinks>
-            <entryLink import="true" name="Augments" hidden="false" id="70a7-15ae-96bb-c2f2" type="selectionEntryGroup" targetId="94d3-7965-3499-4f33"/>
+            <entryLink import="true" name="Augments" hidden="false" id="70a7-15ae-96bb-c2f2" type="selectionEntryGroup" targetId="94d3-7965-3499-4f33">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden" affects="acf8-8ebe-1e09-fcb9"/>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <constraints>
             <constraint type="max" value="1" field="1d73-d711-6536-5884" scope="self" shared="true" id="643b-a0f5-84fa-9068" automatic="true"/>
@@ -1744,9 +1763,13 @@ Variable Ammo: Choose what type of Ammo to fire before making the Action.
           </infoLinks>
           <categoryLinks>
             <categoryLink targetId="a532-e48d-9b3e-c01f" id="13f9-7c21-1a67-3ab2" primary="false" name="Ranged Weapons"/>
+            <categoryLink targetId="01cf-c124-3460-b602" id="063a-3a49-4fd7-6734" primary="false" name="Top Rail"/>
+            <categoryLink targetId="e1dd-d417-9193-a481" id="1549-8da9-416b-d0bf" primary="false" name="Side Rail"/>
+            <categoryLink targetId="8f49-bfa8-03ec-778b" id="7feb-a435-b67b-b22c" primary="false" name="Barrel"/>
+            <categoryLink targetId="f231-ef0b-aa88-e585" id="fca9-055e-27dc-bf9e" primary="false" name="Ammo Type"/>
           </categoryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Auto Rifle" hidden="false" id="ec08-5ad2-a6bb-ca41">
+        <selectionEntry type="upgrade" import="true" name="Auto Rifle" hidden="true" id="ec08-5ad2-a6bb-ca41">
           <costs>
             <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="80"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
@@ -1818,7 +1841,22 @@ Variable Ammo: Choose what type of Ammo to fire before making the Action.
           </infoLinks>
           <categoryLinks>
             <categoryLink targetId="a532-e48d-9b3e-c01f" id="93e9-cd35-83fc-6897" primary="false" name="Ranged Weapons"/>
+            <categoryLink targetId="01cf-c124-3460-b602" id="4809-8de5-f7c3-9ba6" primary="false" name="Top Rail"/>
+            <categoryLink targetId="c73e-ce9e-78ef-87f6" id="c810-69e0-dba9-6586" primary="false" name="Bottom Rail"/>
+            <categoryLink targetId="e1dd-d417-9193-a481" id="3f0f-67ba-f04d-e4a2" primary="false" name="Side Rail"/>
+            <categoryLink targetId="8f49-bfa8-03ec-778b" id="2f36-eba9-a3f0-2b15" primary="false" name="Barrel"/>
+            <categoryLink targetId="6f23-0325-dc27-785e" id="bc48-bde5-c096-2f44" primary="false" name="Loop Mount"/>
+            <categoryLink targetId="d7f3-993f-816f-5c96" id="3474-d4bc-254b-9dc5" primary="false" name="Clip"/>
+            <categoryLink targetId="f231-ef0b-aa88-e585" id="bedc-ef57-f86d-37e3" primary="false" name="Ammo Type"/>
+            <categoryLink targetId="c8ef-affe-6532-747e" id="6984-a5ff-a912-8db5" primary="false" name="Weapons Training"/>
           </categoryLinks>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="521b-d4ea-16bb-6532" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Bow" hidden="false" id="2fec-df6d-4d50-b3dc">
           <costs>
@@ -1892,9 +1930,11 @@ Variable Ammo: Choose what type of Ammo to fire before making the Action.
           </infoLinks>
           <categoryLinks>
             <categoryLink targetId="a532-e48d-9b3e-c01f" id="5714-b99e-14c1-cf5e" primary="false" name="Ranged Weapons"/>
+            <categoryLink targetId="e1dd-d417-9193-a481" id="b7c6-1209-f61d-24f6" primary="false" name="Side Rail"/>
+            <categoryLink targetId="f231-ef0b-aa88-e585" id="d193-20c9-3314-a807" primary="false" name="Ammo Type"/>
           </categoryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Bolt Action Rifle" hidden="false" id="41ab-fc3d-b8be-07b6">
+        <selectionEntry type="upgrade" import="true" name="Bolt Action Rifle" hidden="true" id="41ab-fc3d-b8be-07b6">
           <costs>
             <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="150"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
@@ -1968,7 +2008,22 @@ Armour Piercing(1): When target rolls Armour Die, apply Armour Piercing(X) negat
           </infoLinks>
           <categoryLinks>
             <categoryLink targetId="a532-e48d-9b3e-c01f" id="4910-6818-6dd5-6a23" primary="false" name="Ranged Weapons"/>
+            <categoryLink targetId="01cf-c124-3460-b602" id="be4d-3050-5f66-19a6" primary="false" name="Top Rail"/>
+            <categoryLink targetId="c73e-ce9e-78ef-87f6" id="3e45-8dcc-a1ed-eedd" primary="false" name="Bottom Rail"/>
+            <categoryLink targetId="e1dd-d417-9193-a481" id="300b-ad00-6d2a-1abe" primary="false" name="Side Rail"/>
+            <categoryLink targetId="8f49-bfa8-03ec-778b" id="1400-929d-a63f-249e" primary="false" name="Barrel"/>
+            <categoryLink targetId="6f23-0325-dc27-785e" id="e405-6aba-4f9f-89ba" primary="false" name="Loop Mount"/>
+            <categoryLink targetId="d7f3-993f-816f-5c96" id="c3a0-fb43-5995-cf26" primary="false" name="Clip"/>
+            <categoryLink targetId="f231-ef0b-aa88-e585" id="4797-18f5-1e04-6fc9" primary="false" name="Ammo Type"/>
+            <categoryLink targetId="c8ef-affe-6532-747e" id="97ea-7f93-6b04-5c3f" primary="false" name="Weapons Training"/>
           </categoryLinks>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="521b-d4ea-16bb-6532" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Oil Pipe Gun" hidden="false" id="c703-7c97-5879-ca9d">
           <costs>
@@ -2042,9 +2097,13 @@ Armour Piercing(1): When target rolls Armour Die, apply Armour Piercing(X) negat
           </infoLinks>
           <categoryLinks>
             <categoryLink targetId="a532-e48d-9b3e-c01f" id="75c3-0545-800e-f0d9" primary="false" name="Ranged Weapons"/>
+            <categoryLink targetId="8f49-bfa8-03ec-778b" id="6995-fc1d-bb99-91e8" primary="false" name="Barrel"/>
+            <categoryLink targetId="6f23-0325-dc27-785e" id="eb52-8774-af5b-ec0f" primary="false" name="Loop Mount"/>
+            <categoryLink targetId="d7f3-993f-816f-5c96" id="1263-c643-939e-62ed" primary="false" name="Clip"/>
+            <categoryLink targetId="f231-ef0b-aa88-e585" id="daae-1baa-e78f-7ace" primary="false" name="Ammo Type"/>
           </categoryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Rail Rifle" hidden="false" id="3200-c34b-f12e-1f0a">
+        <selectionEntry type="upgrade" import="true" name="Rail Rifle" hidden="true" id="3200-c34b-f12e-1f0a">
           <costs>
             <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="1000"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
@@ -2122,6 +2181,8 @@ Heavy: -1 Inch to {Movement Actions} and -1 to {Jump Action} rolls</characterist
           </infoLinks>
           <categoryLinks>
             <categoryLink targetId="a532-e48d-9b3e-c01f" id="6e26-e492-a804-61df" primary="false" name="Ranged Weapons"/>
+            <categoryLink targetId="c8ef-affe-6532-747e" id="d150-832c-b589-d592" primary="false" name="Weapons Training"/>
+            <categoryLink targetId="597b-4f6d-e603-d578" id="b992-a883-f9c2-642d" primary="false" name="Advanced Weapons Training"/>
           </categoryLinks>
           <modifiers>
             <modifier type="decrement" value="1" field="8b03-2b2b-1e3f-9e8c" scope="parent" affects="profiles.Fighter">
@@ -2130,9 +2191,14 @@ Heavy: -1 Inch to {Movement Actions} and -1 to {Jump Action} rolls</characterist
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="bd1d-4a5c-1b44-5d32" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Minigun" hidden="false" id="7759-8fd0-d3e7-bfd9">
+        <selectionEntry type="upgrade" import="true" name="Minigun" hidden="true" id="7759-8fd0-d3e7-bfd9">
           <costs>
             <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="500"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
@@ -2189,11 +2255,7 @@ Overheat: if 3+ {Shooting Actions} used to fire weapon in a turn, Unstable(3) ro
             </profile>
           </profiles>
           <entryLinks>
-            <entryLink import="true" name="Augments" hidden="false" id="a0cd-8650-286c-2c69" type="selectionEntryGroup" targetId="94d3-7965-3499-4f33">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden"/>
-              </modifiers>
-            </entryLink>
+            <entryLink import="true" name="Augments" hidden="false" id="a0cd-8650-286c-2c69" type="selectionEntryGroup" targetId="94d3-7965-3499-4f33"/>
           </entryLinks>
           <constraints>
             <constraint type="max" value="0" field="1d73-d711-6536-5884" scope="self" shared="true" id="0651-c495-73e4-c14a" automatic="true"/>
@@ -2210,6 +2272,7 @@ Overheat: if 3+ {Shooting Actions} used to fire weapon in a turn, Unstable(3) ro
           </infoLinks>
           <categoryLinks>
             <categoryLink targetId="a532-e48d-9b3e-c01f" id="742c-5a84-4815-98e0" primary="false" name="Ranged Weapons"/>
+            <categoryLink targetId="c8ef-affe-6532-747e" id="7124-0d3c-dfb6-2317" primary="false" name="Weapons Training"/>
           </categoryLinks>
           <modifiers>
             <modifier type="decrement" value="1" field="8b03-2b2b-1e3f-9e8c" scope="parent" affects="profiles.Fighter">
@@ -2218,9 +2281,14 @@ Overheat: if 3+ {Shooting Actions} used to fire weapon in a turn, Unstable(3) ro
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="521b-d4ea-16bb-6532" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="LMG" hidden="false" id="2957-aa79-5ab4-a179">
+        <selectionEntry type="upgrade" import="true" name="LMG" hidden="true" id="2957-aa79-5ab4-a179">
           <costs>
             <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="200"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
@@ -2294,6 +2362,11 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
           </infoLinks>
           <categoryLinks>
             <categoryLink targetId="a532-e48d-9b3e-c01f" id="8d25-da9f-571c-7f5b" primary="false" name="Ranged Weapons"/>
+            <categoryLink targetId="01cf-c124-3460-b602" id="3b4f-b8a0-6bd8-eda4" primary="false" name="Top Rail"/>
+            <categoryLink targetId="c73e-ce9e-78ef-87f6" id="6376-857b-b663-94e4" primary="false" name="Bottom Rail"/>
+            <categoryLink targetId="8f49-bfa8-03ec-778b" id="f8c3-b736-21d7-8205" primary="false" name="Barrel"/>
+            <categoryLink targetId="6f23-0325-dc27-785e" id="66bc-8fcb-3417-e79a" primary="false" name="Loop Mount"/>
+            <categoryLink targetId="c8ef-affe-6532-747e" id="6f98-9798-3f97-2ce9" primary="false" name="Weapons Training"/>
           </categoryLinks>
           <modifiers>
             <modifier type="decrement" value="1" field="8b03-2b2b-1e3f-9e8c" scope="parent" affects="profiles.Fighter" position="0">
@@ -2302,9 +2375,14 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="521b-d4ea-16bb-6532" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="HMG" hidden="false" id="57fc-2c18-ca1f-7b9f">
+        <selectionEntry type="upgrade" import="true" name="HMG" hidden="true" id="57fc-2c18-ca1f-7b9f">
           <costs>
             <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="200"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
@@ -2379,6 +2457,11 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
           </infoLinks>
           <categoryLinks>
             <categoryLink targetId="a532-e48d-9b3e-c01f" id="1818-f32e-bdb7-9712" primary="false" name="Ranged Weapons"/>
+            <categoryLink targetId="01cf-c124-3460-b602" id="c9a2-cca5-0f3a-598d" primary="false" name="Top Rail"/>
+            <categoryLink targetId="c73e-ce9e-78ef-87f6" id="830f-5f58-5303-62c8" primary="false" name="Bottom Rail"/>
+            <categoryLink targetId="8f49-bfa8-03ec-778b" id="7117-a648-03dd-bf4c" primary="false" name="Barrel"/>
+            <categoryLink targetId="6f23-0325-dc27-785e" id="706c-60cc-d3f1-b6fc" primary="false" name="Loop Mount"/>
+            <categoryLink targetId="c8ef-affe-6532-747e" id="2be4-be6b-9eec-7479" primary="false" name="Weapons Training"/>
           </categoryLinks>
           <modifiers>
             <modifier type="decrement" value="1" field="8b03-2b2b-1e3f-9e8c" scope="parent" affects="profiles.Fighter" position="0">
@@ -2386,6 +2469,11 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
               </repeats>
+            </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="521b-d4ea-16bb-6532" shared="true"/>
+              </conditions>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -2396,7 +2484,7 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
     </selectionEntryGroup>
     <selectionEntryGroup name="Augments" id="94d3-7965-3499-4f33" hidden="false" collapsible="true">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Sniper Scope" hidden="false" id="a019-dcc6-fd9b-4675">
+        <selectionEntry type="upgrade" import="true" name="Sniper Scope" hidden="true" id="a019-dcc6-fd9b-4675">
           <infoLinks>
             <infoLink name="Sniper Scope" id="8bc4-4a4a-7272-9b56" hidden="false" type="profile" targetId="193f-4db7-de29-2365"/>
           </infoLinks>
@@ -2430,9 +2518,14 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
             <modifier type="append" value="Sniper Scope
 " field="1d75-1c91-283c-7821" scope="parent" affects="profiles.Rules" join="
 "/>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01cf-c124-3460-b602" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Combat Scope (Top Rail)" hidden="false" id="d2f0-cdc1-5d57-4e19">
+        <selectionEntry type="upgrade" import="true" name="Combat Scope (Top Rail)" hidden="true" id="d2f0-cdc1-5d57-4e19">
           <infoLinks>
             <infoLink name="Combat Scope" id="f187-f39d-95c6-8345" hidden="false" type="profile" targetId="1953-d1cd-9dce-f316"/>
           </infoLinks>
@@ -2465,9 +2558,14 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
           <modifiers>
             <modifier type="append" value="Combat Scope" field="1d75-1c91-283c-7821" scope="parent" affects="profiles.Rules" join="
 "/>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01cf-c124-3460-b602" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Combat Scope (Side Rail)" hidden="false" id="df3f-64dd-80f3-3ebd">
+        <selectionEntry type="upgrade" import="true" name="Combat Scope (Side Rail)" hidden="true" id="df3f-64dd-80f3-3ebd">
           <infoLinks>
             <infoLink name="Combat Scope" id="c29d-ec54-e43d-ddc1" hidden="false" type="profile" targetId="1953-d1cd-9dce-f316"/>
           </infoLinks>
@@ -2501,9 +2599,14 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
             <modifier type="append" value="Combat Scope
 " field="1d75-1c91-283c-7821" scope="parent" affects="profiles.Rules" join="
 "/>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e1dd-d417-9193-a481" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Red-Dot Sight (Side Rail)" hidden="false" id="ae21-b225-056b-a849">
+        <selectionEntry type="upgrade" import="true" name="Red-Dot Sight (Side Rail)" hidden="true" id="ae21-b225-056b-a849">
           <infoLinks>
             <infoLink name="Red-Dot Sight" id="569a-5b16-f6c5-34d2" hidden="false" type="profile" targetId="dd04-f75d-7eb7-84a1"/>
           </infoLinks>
@@ -2537,9 +2640,14 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
             <modifier type="append" value="Red-Dot Sight
 " field="1d75-1c91-283c-7821" scope="parent" affects="profiles.Rules" join="
 "/>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="e1dd-d417-9193-a481" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Red-Dot Sight (Top Rail)" hidden="false" id="d1f7-e914-2328-b4e9">
+        <selectionEntry type="upgrade" import="true" name="Red-Dot Sight (Top Rail)" hidden="true" id="d1f7-e914-2328-b4e9">
           <infoLinks>
             <infoLink name="Red-Dot Sight" id="124c-ba4e-675a-c5b6" hidden="false" type="profile" targetId="dd04-f75d-7eb7-84a1"/>
           </infoLinks>
@@ -2573,9 +2681,14 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
             <modifier type="append" value="Red-Dot Sight
 " field="1d75-1c91-283c-7821" scope="parent" affects="profiles.Rules" join="
 "/>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="01cf-c124-3460-b602" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Bipod" hidden="false" id="dfec-7480-16fe-1b14">
+        <selectionEntry type="upgrade" import="true" name="Bipod" hidden="true" id="dfec-7480-16fe-1b14">
           <infoLinks>
             <infoLink name="Bipod" id="0f90-aab0-dc4c-e785" hidden="false" type="profile" targetId="25ff-fa7c-9cdf-10b2"/>
           </infoLinks>
@@ -2608,9 +2721,14 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
           <modifiers>
             <modifier type="append" value="Bipod" field="1d75-1c91-283c-7821" scope="parent" affects="profiles.Rules" join="
 "/>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="c73e-ce9e-78ef-87f6" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Underslung Grenade Launcher" hidden="false" id="8249-f679-77eb-6503">
+        <selectionEntry type="upgrade" import="true" name="Underslung Grenade Launcher" hidden="true" id="8249-f679-77eb-6503">
           <infoLinks>
             <infoLink name="Underslung Grenade Launcher" id="60dd-3949-95d3-7856" hidden="false" type="profile" targetId="85a9-5b04-3195-89d4"/>
             <infoLink name="Underslung Grenade Launcher" id="94fa-6634-6206-a317" hidden="false" type="profile" targetId="c618-1b83-746d-de35"/>
@@ -2673,9 +2791,14 @@ Weapon Mod: This weapon stat line is for a Weapon Augmentation.</characteristic>
             <modifier type="append" value="Underslung Grenade Launcher
 " field="1d75-1c91-283c-7821" scope="parent" affects="profiles.Rules" join="
 "/>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="c73e-ce9e-78ef-87f6" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Extended Magazine" hidden="false" id="c3c6-e149-0a40-966c">
+        <selectionEntry type="upgrade" import="true" name="Extended Magazine" hidden="true" id="c3c6-e149-0a40-966c">
           <infoLinks>
             <infoLink name="Extended Magazine" id="18bd-ff6c-fbd8-93cc" hidden="false" type="profile" targetId="a07d-73d4-410c-e3ae"/>
           </infoLinks>
@@ -2709,9 +2832,14 @@ Weapon Mod: This weapon stat line is for a Weapon Augmentation.</characteristic>
             <modifier type="increment" value="2" field="6569-d6b5-7d8e-e968" scope="parent" affects="1a84-7092-7781-5bc4.profiles.Ranged Weapons"/>
             <modifier type="append" value="Extended Magazine" field="1d75-1c91-283c-7821" scope="parent" affects="profiles.Rules" join="
 "/>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="d7f3-993f-816f-5c96" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Suppressor" hidden="false" id="6b48-2c48-7ad9-55bc">
+        <selectionEntry type="upgrade" import="true" name="Suppressor" hidden="true" id="6b48-2c48-7ad9-55bc">
           <infoLinks>
             <infoLink name="Suppressor" id="2e18-b1f5-e1ee-c362" hidden="false" type="profile" targetId="4c3d-d8f4-4639-ca68"/>
           </infoLinks>
@@ -2745,9 +2873,14 @@ Weapon Mod: This weapon stat line is for a Weapon Augmentation.</characteristic>
             <modifier type="append" value="Suppressor
 " field="1d75-1c91-283c-7821" scope="parent" affects="profiles.Rules" join="
 "/>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8f49-bfa8-03ec-778b" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Short Barrel" hidden="false" id="8c48-b758-fe25-5b68">
+        <selectionEntry type="upgrade" import="true" name="Short Barrel" hidden="true" id="8c48-b758-fe25-5b68">
           <infoLinks>
             <infoLink name="Short Barrel" id="4b7c-2e74-3cf7-159c" hidden="false" type="profile" targetId="a1e5-9dd4-8b69-8f7d"/>
           </infoLinks>
@@ -2782,9 +2915,14 @@ Weapon Mod: This weapon stat line is for a Weapon Augmentation.</characteristic>
             <modifier type="append" value="1" field="8535-59d1-5bb4-28f4" scope="parent" affects="profiles.Range Statline" join="-"/>
             <modifier type="append" value="Short Barrel" field="1d75-1c91-283c-7821" scope="parent" affects="profiles.Rules" join="
 "/>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8f49-bfa8-03ec-778b" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Armour Piercing Rounds" hidden="false" id="769a-906a-d34f-ccd8">
+        <selectionEntry type="upgrade" import="true" name="Armour Piercing Rounds" hidden="true" id="769a-906a-d34f-ccd8">
           <infoLinks>
             <infoLink name="Armour Piercing Rounds" id="dfcf-b293-534b-0a1a" hidden="false" type="profile" targetId="080e-f6b9-c416-3681"/>
           </infoLinks>
@@ -2819,9 +2957,14 @@ Weapon Mod: This weapon stat line is for a Weapon Augmentation.</characteristic>
 "/>
             <modifier type="append" value="Armour Piercing Rounds" field="1d75-1c91-283c-7821" scope="parent" affects="profiles.Rules" join="
 "/>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="f231-ef0b-aa88-e585" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Long Barrel" hidden="false" id="1d0f-3f9d-7b52-da15">
+        <selectionEntry type="upgrade" import="true" name="Long Barrel" hidden="true" id="1d0f-3f9d-7b52-da15">
           <infoLinks>
             <infoLink name="Long Barrel" id="2663-950d-9897-27fd" hidden="false" type="profile" targetId="c2f8-752f-7e01-f467"/>
           </infoLinks>
@@ -2859,9 +3002,14 @@ If this Augmentation is lost in any way, the benefit to the Mount Points value i
             <modifier type="append" value="1" field="8535-59d1-5bb4-28f4" scope="parent" affects="profiles.Range Statline" join="+"/>
             <modifier type="append" value="Long Barrel" field="1d75-1c91-283c-7821" scope="parent" affects="profiles.Rules" join="
 "/>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="8f49-bfa8-03ec-778b" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Solid Slug Rounds" hidden="false" id="acf8-8ebe-1e09-fcb9">
+        <selectionEntry type="upgrade" import="true" name="Solid Slug Rounds" hidden="true" id="acf8-8ebe-1e09-fcb9">
           <infoLinks>
             <infoLink name="Solid Slug Rounds" id="496c-ac61-e6ed-4d98" hidden="false" type="profile" targetId="baf0-b2b4-6245-b021"/>
           </infoLinks>
@@ -2897,7 +3045,7 @@ Add an additional +2 Damage to Medium and Long range Damage rolls, lose any Cove
 "/>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Sling" hidden="false" id="0885-eb41-7681-3548">
+        <selectionEntry type="upgrade" import="true" name="Sling" hidden="true" id="0885-eb41-7681-3548">
           <infoLinks>
             <infoLink name="Sling" id="5120-273a-0c76-097c" hidden="false" type="profile" targetId="ed90-99e3-24a8-6455"/>
           </infoLinks>
@@ -2930,6 +3078,11 @@ Add an additional +2 Damage to Medium and Long range Damage rolls, lose any Cove
           <modifiers>
             <modifier type="append" value="Sling" field="1d75-1c91-283c-7821" scope="parent" affects="profiles.Rules" join="
 "/>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f23-0325-dc27-785e" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
       </selectionEntries>
@@ -4001,6 +4154,7 @@ Grapplehook: When performing a {Jump} Action gain +2 to the roll, or a {Climb} A
           </infoLinks>
           <categoryLinks>
             <categoryLink targetId="eb09-0dce-5f22-cf55" id="7162-2fe8-2373-6737" primary="false" name="Melee Weapons"/>
+            <categoryLink targetId="c8ef-affe-6532-747e" id="8470-6b8c-1f53-db9f" primary="false" name="Weapons Training"/>
           </categoryLinks>
         </selectionEntry>
       </selectionEntries>
@@ -4218,7 +4372,538 @@ Ram: You may use the below statline for the Attack Action of the vehicle.</chara
     </selectionEntryGroup>
     <selectionEntryGroup name="Skills" id="889a-dbfc-b346-64aa" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Advanced Driver" hidden="false" id="b330-2f2b-4c1b-90bd"/>
+        <selectionEntry type="upgrade" import="true" name="Advanced Driver" hidden="false" id="b330-2f2b-4c1b-90bd">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="200"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="952f-2f4d-ac0c-f789"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Advanced Driver" id="8559-8344-b47a-e8c8" hidden="false" type="profile" targetId="9274-c5fb-8f1e-d49a"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Advanced Driver" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="536f-6436-0b6c-ca8a">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Requires Driver Skill - Fighters with Advanced Driver skill can perform Drive actions on vehicles with the Complicated Controls rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Advanced Weapons Training" hidden="false" id="bd1d-4a5c-1b44-5d32">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="300"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="10be-92de-be66-afa6"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Advanced Weapons Training" id="e620-9e56-e645-62b7" hidden="false" type="profile" targetId="8cbc-0efa-5fee-1415"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Advanced Weapons Training" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="c74e-cd1e-2f9d-10bf">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Requires Weapons Training Skill - Fighters with Advanced Weapons Training can use weapons with the Complicated Controls special rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Aggressive Fighter" hidden="false" id="b595-4028-ba2f-834b">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="50"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="ee1a-06e6-388d-31c6"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Aggressive Fighter" id="9286-7059-3f72-ed0a" hidden="false" type="profile" targetId="9a5a-2c7b-cef0-7510"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Aggressive Fighter" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="701e-2d7a-358f-3101">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Attack actions made by a Fighter with Aggressive Fighter have a +2 To Hit modifier, Attack actions made against a Fighter with Aggressive Fighter have a +1 To Hit modifier.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Beast Master" hidden="false" id="ffd8-0a7f-d8ea-948e">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="200"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="4890-d448-dbba-ad69"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Beast Master" id="b40d-94ae-183d-c279" hidden="false" type="profile" targetId="02ea-0836-1933-0b42"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Beast Master" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="f4c4-076b-868a-9ca8">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">This Fighter may use 1 AP to command a friendly Beast role Fighter to perform one Movement action and one Attack action per activation.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Combat Master" hidden="false" id="5a34-4536-b813-768d">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="100"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="c75f-d6ff-8680-fab0"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Combat Master" id="3f86-1b1d-474c-bc9b" hidden="false" type="profile" targetId="dd54-937c-2d48-62fb"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Combat Master" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="3028-055d-4418-9166">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">A Fighter with Combat Master may re-roll any failed Attack Action hit rolls (you cannot re-roll a re-roll).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Defensive Fighter" hidden="false" id="8380-fba9-fa2b-a5ff">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="50"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="ce1d-eadd-c9a5-2a58"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Defensive Fighter" id="b26f-ce9c-8f63-29d4" hidden="false" type="profile" targetId="5ca7-2c8c-168a-acfa"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Defensive Fighter" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="4ff0-c554-4300-2e02">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Attack actions made against a Fighter with Defensive Fighter have a -2 To Hit modifier applied.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Driver" hidden="false" id="4389-12c1-170d-4da1">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="120"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="24ba-7824-8609-4606"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Driver" id="e946-c5d6-39ec-bccf" hidden="false" type="profile" targetId="5a07-9362-8d49-ada2"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Driver" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="626f-a042-1008-f5b5">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Fighters with the Driver skill are not required to roll on the Drive Results table when performing Drive actions.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Dual Wield" hidden="false" id="2b08-fad3-a86f-5034">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="100"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="d20f-0931-d0c5-c5e6"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Dual Wield" id="0bdd-5594-12b8-9466" hidden="false" type="profile" targetId="1802-6eaa-d9b2-54fd"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Dual Wield" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="adc0-0a3c-84cd-6057">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">A Fighter with Dual Wield may perform a Shooting or Attack action with two or more 1-Handed weapons simultaneously up to the number of hands the Fighter has (normally 2), rolling the Hit dice for all of these as part of the single Shooting or Attack action. For an Attack Action that would mean both weapons would get to use all the Attacks a Unit has (a Fighter with 3 attacks makes 3 attacks each with each weapon)
+
+
+If any of the weapons being used have a 1H/2H rule you must use the 1H profile options for this attack.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Marksman" hidden="false" id="6e7e-0dfa-deeb-b827">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="350"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="8a98-840c-3a59-dbef"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Marksman" id="07be-490f-cba4-b719" hidden="false" type="profile" targetId="d14f-5dd8-0110-9787"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Marksman" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="48a4-7fd5-3fea-ac5e">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Requires Weapons Training Skill - Fighters with the Marksman skill may perform an Aim Action for free prior to resolving the To Hit roll on a Shooting action.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Medic" hidden="false" id="50bb-9568-7257-f2f6">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="200"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="5041-4fd3-1baa-14ff"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Medic" id="3701-8916-aed6-ad34" hidden="false" type="profile" targetId="fc6d-1beb-8049-09f4"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Medic" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="e148-84d5-a57d-05d9">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">A Fighter with the Medic trait can perform the Patch Up Misc. Action.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Parkour" hidden="false" id="aea3-96c1-6b90-e5d4">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="250"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="97f2-fe77-53f9-3658"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Parkour" id="2075-50bf-cfcf-8a7b" hidden="false" type="profile" targetId="f7d9-91c9-858d-34dc"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Parkour" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="a852-fa3e-349a-ef51">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">A Fighter with the Parkour skill reduces the movement required to scale or climb down terrain in a Climb Action by 2”. This benefit is reduced to 1” if the Fighter is using any Heavy equipment.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Pilot" hidden="false" id="6d4e-7ba3-c482-12da">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="500"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="c64e-68cc-6726-2b52"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Pilot" id="ab1f-72b3-7979-786c" hidden="false" type="profile" targetId="bc68-97b8-1cd9-58d0"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Pilot" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="d91a-5f39-0c02-9886">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Requires Driver Skill - Fighters with the Pilot skill may operate vehicles with the Flying rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Sneaky" hidden="false" id="fb03-ebac-d1c5-7bb3">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="50"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="8e5f-5941-2205-6c99"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Sneaky" id="06a7-8ff8-838e-5d46" hidden="false" type="profile" targetId="8778-9a96-320d-bae8"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Sneaky" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="5cc6-b5e1-6dab-06d7">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">A Fighter with Sneaky remains Sneaky until an enemy Fighter has unimpeded Line of Sight to them and is within 18” (Unimpeded line of sight being a situation where the Fighter has no cover bonuses granted to it by the environment such as them being out in the open), or if they use a Fire Weapon action with a Weapon that is not Suppressed, at which point they are no longer Sneaky. 
+While a Fighter is Sneaky, they cannot be the target of Shooting or Aim actions.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Weapons Training" hidden="false" id="521b-d4ea-16bb-6532">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="150"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="a7e8-c36c-53cf-fbda"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Weapons Training" id="f5cb-4fa3-b4f9-d2ba" hidden="false" type="profile" targetId="2450-f915-d44a-e8ed"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Weapons Training" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="eefe-613f-2675-0c8e">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Fighters with Weapons Training skill can use weapons marked with the Weapons Training requirement.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Commander" hidden="true" id="b7a9-01c9-2839-c78a">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="0"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="86ef-bd09-831b-8c98" includeChildSelections="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Commander" id="2d5f-7c34-d29c-d547" hidden="false" type="profile" targetId="493f-c334-3fe1-8fa0"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Commander" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="57f6-ed12-7104-c70b">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">A single Leader role Fighter in your Gang can be given this Skill for free.
+A Commander can during their activation grant another Fighter within 12” one free Action, the target Fighter immediately Activates, completes the Action as per the action’s rules, then passes Activation back to the Commander.
+
+
+
+
+In addition, while the Commander is alive, any friendly Fighter required to make a FoF(X) roll within 12” of the Commander does so at +2 to its roll.
+
+
+
+
+If the Commander dies, all friendly Fighters within 12” of the Commander must make a FoF(6) check.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="cb5e-bc93-5d28-9b12" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
