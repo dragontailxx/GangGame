@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-67a0-c9e0-9601-50f0" name="GangGame" battleScribeVersion="2.03" revision="0.34" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" library="false" authorName="Dan Geldorp" authorContact="dangeldorp@hotmail.co.uk" publicationId="ad88-6f5d-213d-7b3f">
+<gameSystem id="sys-67a0-c9e0-9601-50f0" name="GangGame" battleScribeVersion="2.03" revision="0.35" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" library="false" authorName="Dan Geldorp" authorContact="dangeldorp@hotmail.co.uk" publicationId="ad88-6f5d-213d-7b3f">
   <categoryEntries>
     <categoryEntry name="Leadership" id="cb5e-bc93-5d28-9b12" hidden="false"/>
     <categoryEntry name="Heavy Infantry" id="d07e-43b7-5902-29f7" hidden="false"/>
@@ -17,39 +17,16 @@
     <categoryEntry name="Support Vehicles" id="0ccd-9a15-4543-4e63" hidden="false"/>
     <categoryEntry name="Weapons Training" id="c8ef-affe-6532-747e" hidden="false"/>
     <categoryEntry name="Advanced Weapons Training" id="597b-4f6d-e603-d578" hidden="false"/>
+    <categoryEntry name="Beast" id="1092-f191-0c34-07c2" hidden="false"/>
   </categoryEntries>
   <forceEntries>
-    <forceEntry name="Tournament Test" id="013b-b368-06a9-a2c5" hidden="true">
-      <categoryLinks>
-        <categoryLink name="Leadership" hidden="false" id="4f68-fd62-f853-7ff8" targetId="cb5e-bc93-5d28-9b12">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a63a-6083-5431-baf9"/>
-            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="aa4a-fd1a-a1c6-cb04"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Heavy Infantry" hidden="false" id="3ef9-b559-40a1-1520" targetId="d07e-43b7-5902-29f7">
-          <constraints>
-            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="b58b-ffae-ca75-52c1"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Scouts" hidden="false" id="c491-e1a1-7df2-181f" targetId="7652-2b97-75d8-7d4f">
-          <constraints>
-            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="be4d-97ac-9b67-c7b1"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Troops" hidden="false" id="6f9f-9160-6d32-c938" targetId="b8f9-9648-72b4-a3af">
-          <constraints>
-            <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="d325-e5b2-b89f-7b83"/>
-          </constraints>
-        </categoryLink>
-      </categoryLinks>
-    </forceEntry>
     <forceEntry name="Free-Play" id="674c-d963-0cba-758f" hidden="false">
       <categoryLinks>
         <categoryLink name="Leadership" hidden="false" id="228f-3b34-e83a-73a4" targetId="cb5e-bc93-5d28-9b12"/>
         <categoryLink name="Troops" hidden="false" id="bcf8-8068-7130-97d9" targetId="b8f9-9648-72b4-a3af"/>
         <categoryLink name="Heavy Infantry" hidden="false" id="def2-5ab7-c4f6-a812" targetId="d07e-43b7-5902-29f7"/>
         <categoryLink name="Scouts" hidden="false" id="06d0-c3d2-2ca6-a44a" targetId="7652-2b97-75d8-7d4f"/>
+        <categoryLink name="Beast" hidden="false" id="8c98-e2b9-0359-a6f0" targetId="1092-f191-0c34-07c2"/>
         <categoryLink name="Support Vehicles" hidden="false" id="49ac-5e6b-6a1d-c3ee" targetId="0ccd-9a15-4543-4e63"/>
       </categoryLinks>
     </forceEntry>
@@ -505,6 +482,44 @@
       <constraints>
         <constraint type="max" value="9" field="1d73-d711-6536-5884" scope="self" shared="true" id="471a-6c5b-5102-1ae9"/>
       </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Attack Dog" hidden="false" id="5afa-184d-adb6-4018">
+      <infoLinks>
+        <infoLink name="Attack Dog" id="f7f6-d64c-264a-2763" hidden="false" type="profile" targetId="5aa2-fb90-3768-bd1b"/>
+        <infoLink name="Bite" id="d14a-6b3b-7872-c336" hidden="false" type="profile" targetId="556c-632e-45df-9d36"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink targetId="1092-f191-0c34-07c2" id="cbe6-19ab-8d71-ab11" primary="true" name="Beast"/>
+      </categoryLinks>
+      <costs>
+        <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="60"/>
+        <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+        <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+        <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+        <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+        <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+        <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+        <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+        <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+        <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+        <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+        <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+        <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+        <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+        <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+        <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+        <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+      </costs>
+      <profiles>
+        <profile name="Body" typeId="bcc1-36ed-a44f-edfe" typeName="Armour" hidden="false" id="fa5c-dbd9-560e-7a86">
+          <characteristics>
+            <characteristic name="Armour Die" typeId="e235-9970-9d5a-0178">D4</characteristic>
+            <characteristic name="Hit Points" typeId="428f-096c-33f0-07fd">0</characteristic>
+            <characteristic name="Equip Location" typeId="b210-9eec-dddc-89b3">Body</characteristic>
+            <characteristic name="Weight" typeId="d25a-1e8c-1f21-07df">0</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
@@ -1303,6 +1318,26 @@ In addition, while the Commander is alive, any friendly Fighter required to make
 If the Commander dies, all friendly Fighters within 12” of the Commander must make a FoF(6) check.</characteristic>
       </characteristics>
     </profile>
+    <profile name="Attack Dog" typeId="1d9c-3e34-744d-df69" typeName="Fighter" hidden="false" id="5aa2-fb90-3768-bd1b">
+      <characteristics>
+        <characteristic name="Movement" typeId="8b03-2b2b-1e3f-9e8c">8</characteristic>
+        <characteristic name="Attacks" typeId="48db-1484-31cc-c897">4</characteristic>
+        <characteristic name="Actions" typeId="770b-5749-fb29-af08">1</characteristic>
+        <characteristic name="Commands" typeId="5300-f1ab-4a01-9177">0</characteristic>
+        <characteristic name="Carry Capacity" typeId="b909-646d-9f9a-e776">0</characteristic>
+        <characteristic name="Hit Points" typeId="999e-9097-31a1-24ba">12</characteristic>
+        <characteristic name="Role" typeId="e80b-30a1-2c7a-4969">Beast</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Bite" typeId="4f40-6fb0-2015-6c17" typeName="Melee Weapons" hidden="false" id="556c-632e-45df-9d36">
+      <characteristics>
+        <characteristic name="Range in Inches" typeId="adcf-9600-a1dc-d5b0">0.5</characteristic>
+        <characteristic name="Hit Die" typeId="c1e1-5b88-a353-ca3b">D8</characteristic>
+        <characteristic name="Damage" typeId="bab8-bd4b-e3c0-27b3">D6</characteristic>
+        <characteristic name="Weight" typeId="78b8-63af-31da-bfc6">-</characteristic>
+        <characteristic name="Rarity" typeId="6b8e-ddd6-8899-7ef7">-</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
   <sharedRules>
     <rule name="Freaked" id="2821-3212-682b-aebb" hidden="false">
@@ -1606,6 +1641,7 @@ Friendly Commander within 12” (Doesn’t stack with Leader modifier) | +2 to r
     <entryLink import="true" name="Small Car Chassis" hidden="false" id="5096-32d3-672c-5dbd" targetId="9c90-0b24-8887-2771" type="selectionEntry"/>
     <entryLink import="true" name="Large Car Chassis" hidden="false" id="c366-aaa3-d090-fbc0" targetId="89b0-55e3-a3f7-e2e3" type="selectionEntry"/>
     <entryLink import="true" name="Medium Car Chassis" hidden="false" id="a5be-64c2-6db0-7f06" targetId="b07b-c05d-79b5-c6c4" type="selectionEntry"/>
+    <entryLink import="true" name="Attack Dog" hidden="false" id="8e31-bb51-012e-ca79" targetId="5afa-184d-adb6-4018" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Ranged Weapons" id="7195-d90d-9bb4-decd" hidden="false" defaultSelectionEntryId="none" collapsible="true">
@@ -4123,7 +4159,7 @@ Uses(3): This weapon may only be used up to Uses(X) times per game.</characteris
             <categoryLink targetId="eb09-0dce-5f22-cf55" id="b2c1-b230-7156-8462" primary="false" name="Melee Weapons"/>
           </categoryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Whip" hidden="false" id="3c5e-5949-7d48-dda2">
+        <selectionEntry type="upgrade" import="true" name="Whip" hidden="true" id="3c5e-5949-7d48-dda2">
           <costs>
             <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="150"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
@@ -4156,6 +4192,13 @@ Grapplehook: When performing a {Jump} Action gain +2 to the roll, or a {Climb} A
             <categoryLink targetId="eb09-0dce-5f22-cf55" id="7162-2fe8-2373-6737" primary="false" name="Melee Weapons"/>
             <categoryLink targetId="c8ef-affe-6532-747e" id="8470-6b8c-1f53-db9f" primary="false" name="Weapons Training"/>
           </categoryLinks>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="521b-d4ea-16bb-6532" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <categoryLinks>
@@ -4372,7 +4415,7 @@ Ram: You may use the below statline for the Attack Action of the vehicle.</chara
     </selectionEntryGroup>
     <selectionEntryGroup name="Skills" id="889a-dbfc-b346-64aa" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Advanced Driver" hidden="false" id="b330-2f2b-4c1b-90bd">
+        <selectionEntry type="upgrade" import="true" name="Advanced Driver" hidden="true" id="b330-2f2b-4c1b-90bd">
           <costs>
             <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="200"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
@@ -4405,8 +4448,15 @@ Ram: You may use the below statline for the Attack Action of the vehicle.</chara
               </characteristics>
             </profile>
           </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="4389-12c1-170d-4da1" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Advanced Weapons Training" hidden="false" id="bd1d-4a5c-1b44-5d32">
+        <selectionEntry type="upgrade" import="true" name="Advanced Weapons Training" hidden="true" id="bd1d-4a5c-1b44-5d32">
           <costs>
             <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="300"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
@@ -4439,6 +4489,13 @@ Ram: You may use the below statline for the Attack Action of the vehicle.</chara
               </characteristics>
             </profile>
           </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="521b-d4ea-16bb-6532" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Aggressive Fighter" hidden="false" id="b595-4028-ba2f-834b">
           <costs>
