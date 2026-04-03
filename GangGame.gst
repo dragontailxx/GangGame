@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-67a0-c9e0-9601-50f0" name="GangGame" battleScribeVersion="2.03" revision="0.32" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" library="false" authorName="Dan Geldorp" authorContact="dangeldorp@hotmail.co.uk" publicationId="ad88-6f5d-213d-7b3f">
+<gameSystem id="sys-67a0-c9e0-9601-50f0" name="GangGame" battleScribeVersion="2.03" revision="0.34" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" library="false" authorName="Dan Geldorp" authorContact="dangeldorp@hotmail.co.uk" publicationId="ad88-6f5d-213d-7b3f">
   <categoryEntries>
     <categoryEntry name="Leadership" id="cb5e-bc93-5d28-9b12" hidden="false"/>
     <categoryEntry name="Heavy Infantry" id="d07e-43b7-5902-29f7" hidden="false"/>
@@ -14,6 +14,7 @@
     <categoryEntry name="Loop Mount" id="6f23-0325-dc27-785e" hidden="false"/>
     <categoryEntry name="Clip" id="d7f3-993f-816f-5c96" hidden="false"/>
     <categoryEntry name="Ammo Type" id="f231-ef0b-aa88-e585" hidden="false"/>
+    <categoryEntry name="Support Vehicles" id="0ccd-9a15-4543-4e63" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="Tournament Test" id="013b-b368-06a9-a2c5" hidden="true">
@@ -41,14 +42,13 @@
         </categoryLink>
       </categoryLinks>
     </forceEntry>
-    <forceEntry name="Free-Play" id="674c-d963-0cba-758f" hidden="false" childForcesLabel="TestForceName">
+    <forceEntry name="Free-Play" id="674c-d963-0cba-758f" hidden="false" childForcesLabel="">
       <categoryLinks>
         <categoryLink name="Leadership" hidden="false" id="228f-3b34-e83a-73a4" targetId="cb5e-bc93-5d28-9b12"/>
         <categoryLink name="Troops" hidden="false" id="bcf8-8068-7130-97d9" targetId="b8f9-9648-72b4-a3af"/>
         <categoryLink name="Heavy Infantry" hidden="false" id="def2-5ab7-c4f6-a812" targetId="d07e-43b7-5902-29f7"/>
         <categoryLink name="Scouts" hidden="false" id="06d0-c3d2-2ca6-a44a" targetId="7652-2b97-75d8-7d4f"/>
-        <categoryLink name="Melee Weapons" hidden="false" id="a60e-5937-7bba-50f1" targetId="eb09-0dce-5f22-cf55"/>
-        <categoryLink name="Ranged Weapons" hidden="false" id="bf86-317a-4b08-a919" targetId="a532-e48d-9b3e-c01f"/>
+        <categoryLink name="Support Vehicles" hidden="false" id="49ac-5e6b-6a1d-c3ee" targetId="0ccd-9a15-4543-4e63"/>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
@@ -64,12 +64,12 @@
     <costType name="Barrel" id="ed38-c91c-daa5-ecf5" defaultCostLimit="-1" hidden="false"/>
     <costType name="Ammo Type" id="8f0c-3a10-3a29-926e" defaultCostLimit="-1" hidden="false"/>
     <costType name="Loop Mount" id="2b23-4ed4-8c68-b475" defaultCostLimit="-1" hidden="false"/>
-    <costType name="Head" id="2aaf-7d74-1257-9a35" defaultCostLimit="-1"/>
-    <costType name="Body" id="133b-be98-400e-8717" defaultCostLimit="-1"/>
-    <costType name="Arms" id="8e2e-8cb9-7c40-74bf" defaultCostLimit="-1"/>
-    <costType name="Legs" id="ba7d-937a-cac6-5009" defaultCostLimit="-1"/>
-    <costType name="Back" id="25a6-b298-4d5b-927c" defaultCostLimit="-1"/>
-    <costType name="Other" id="0394-a001-b723-150e" defaultCostLimit="-1"/>
+    <costType name="Head" id="2aaf-7d74-1257-9a35" defaultCostLimit="-1" hidden="false"/>
+    <costType name="Body" id="133b-be98-400e-8717" defaultCostLimit="-1" hidden="false"/>
+    <costType name="Arms" id="8e2e-8cb9-7c40-74bf" defaultCostLimit="-1" hidden="false"/>
+    <costType name="Legs" id="ba7d-937a-cac6-5009" defaultCostLimit="-1" hidden="false"/>
+    <costType name="Back" id="25a6-b298-4d5b-927c" defaultCostLimit="-1" hidden="false"/>
+    <costType name="Other" id="0394-a001-b723-150e" defaultCostLimit="-1" hidden="false"/>
   </costTypes>
   <profileTypes>
     <profileType name="Fighter" id="1d9c-3e34-744d-df69" hidden="false" kind="model" sortIndex="1">
@@ -79,7 +79,7 @@
         <characteristicType name="Actions" id="770b-5749-fb29-af08"/>
         <characteristicType name="Commands" id="5300-f1ab-4a01-9177"/>
         <characteristicType name="Carry Capacity" id="b909-646d-9f9a-e776"/>
-        <characteristicType name="HitPoints" id="999e-9097-31a1-24ba"/>
+        <characteristicType name="Hit Points" id="999e-9097-31a1-24ba"/>
         <characteristicType name="Role" id="e80b-30a1-2c7a-4969"/>
       </characteristicTypes>
     </profileType>
@@ -136,21 +136,21 @@
     </profileType>
     <profileType name="Vehicle Chassis" id="95ad-d417-c087-7bc1" hidden="false" sortIndex="11">
       <characteristicTypes>
-        <characteristicType name="Height" id="690f-16a6-5c86-2c22"/>
-        <characteristicType name="Width" id="a2b8-5d57-6c6b-86b2"/>
-        <characteristicType name="Length" id="aa7a-a7c4-ff07-e681"/>
         <characteristicType name="Crew" id="16cb-b6e6-1e9c-592f"/>
         <characteristicType name="Movement" id="5601-303a-6360-4765"/>
         <characteristicType name="Hit Points" id="8359-3729-b7b9-56c5"/>
         <characteristicType name="Weak Points" id="4009-72b9-1af7-94f3"/>
         <characteristicType name="Max Turn Angle" id="6642-7e63-48bd-cb76"/>
         <characteristicType name="Armour Die" id="554c-177b-0f84-47f6"/>
+        <characteristicType name="Augments" id="c69d-870b-fef5-cace"/>
       </characteristicTypes>
     </profileType>
     <profileType name="Vehicle Modifications" id="0fa7-b0d3-b558-6d39" hidden="false" sortIndex="12">
       <characteristicTypes>
         <characteristicType name="Armour Die" id="bcfc-6bc8-2077-3123"/>
         <characteristicType name="Hit Points" id="e0e7-26bd-eaab-6dd7"/>
+        <characteristicType name="Weak Point Reduction" id="e7b1-145b-f5a4-d0ad"/>
+        <characteristicType name="Augment Cost" id="3e47-48ed-edef-e554"/>
       </characteristicTypes>
     </profileType>
     <profileType name="Range Statline" id="2093-3134-a66d-5e77" hidden="false" kind="model" sortIndex="4">
@@ -160,19 +160,19 @@
         <characteristicType name="Damage" id="0f84-843e-3dcd-259d"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Rules" id="e743-5edc-19d0-134a" hidden="false" kind="rule">
+    <profileType name="Rules" id="e743-5edc-19d0-134a" hidden="false" kind="rule" sortIndex="15">
       <characteristicTypes>
         <characteristicType name="Rules" id="1d75-1c91-283c-7821" kind="longText"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Chassis Sizing" id="a3cf-9e03-0054-e34c" hidden="false">
+    <profileType name="Chassis Sizing" id="a3cf-9e03-0054-e34c" hidden="false" sortIndex="13">
       <characteristicTypes>
         <characteristicType name="Height" id="c197-4c82-b807-77a5"/>
         <characteristicType name="Width" id="6342-aa2a-5e70-4386"/>
         <characteristicType name="Length" id="0e54-9ad3-e292-b53f"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Mount Points" id="dd56-9b53-8454-528c" hidden="false" kind="model">
+    <profileType name="Mount Points" id="dd56-9b53-8454-528c" hidden="false" kind="model" sortIndex="14">
       <characteristicTypes>
         <characteristicType name="Top Rail" id="6c7a-f94b-5eaf-3741"/>
         <characteristicType name="Bottom Rail" id="beb1-d4f1-7f3c-9d96"/>
@@ -190,7 +190,7 @@
     </profileType>
   </profileTypes>
   <sharedSelectionEntries>
-    <selectionEntry type="model" import="true" name="Commander" hidden="false" id="f6d9-387f-ded6-84b3" defaultAmount="">
+    <selectionEntry type="model" import="true" name="Commander" hidden="false" id="f6d9-387f-ded6-84b3">
       <costs>
         <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="175"/>
       </costs>
@@ -204,7 +204,7 @@
           </categoryLinks>
         </entryLink>
         <entryLink import="true" name="Melee Weapons" hidden="false" id="06ee-cf4e-e46e-d159" type="selectionEntryGroup" targetId="febd-38f2-1692-5ed9" sortIndex="1"/>
-        <entryLink import="true" name="Armour &amp; Wargear" hidden="false" id="a3ef-03f5-6d94-2f95" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3" sortIndex="3"/>
+        <entryLink import="true" name="Armour" hidden="false" id="a3ef-03f5-6d94-2f95" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3" sortIndex="3"/>
         <entryLink import="true" name="Wargear" hidden="false" id="4880-d4d8-f544-d3cf" type="selectionEntryGroup" targetId="a734-a608-2f60-0fa8" sortIndex="4"/>
       </entryLinks>
       <infoLinks>
@@ -220,7 +220,7 @@
         <constraint type="max" value="1" field="133b-be98-400e-8717" scope="parent" shared="true" id="ecd7-f6c3-c042-4752"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Sergeant" hidden="false" id="2364-f48f-450a-8563" defaultAmount="">
+    <selectionEntry type="model" import="true" name="Sergeant" hidden="false" id="2364-f48f-450a-8563">
       <costs>
         <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="125"/>
         <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
@@ -240,7 +240,7 @@
       <entryLinks>
         <entryLink import="true" name="Ranged Weapons" hidden="false" id="0304-7f38-c254-183a" type="selectionEntryGroup" targetId="7195-d90d-9bb4-decd" sortIndex="2"/>
         <entryLink import="true" name="Melee Weapons" hidden="false" id="fd95-6303-0b7e-ae0f" type="selectionEntryGroup" targetId="febd-38f2-1692-5ed9" sortIndex="1"/>
-        <entryLink import="true" name="Armour &amp; Wargear" hidden="false" id="282f-f74f-c043-4d97" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3" sortIndex="3"/>
+        <entryLink import="true" name="Armour" hidden="false" id="282f-f74f-c043-4d97" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3" sortIndex="3"/>
         <entryLink import="true" name="Wargear" hidden="false" id="0a52-6afd-3eae-f01e" type="selectionEntryGroup" targetId="a734-a608-2f60-0fa8" sortIndex="4"/>
       </entryLinks>
       <constraints>
@@ -256,7 +256,7 @@
         <infoLink name="Sergeant" id="9911-b3b9-9efe-e473" hidden="false" type="profile" targetId="0939-0353-27d7-9b2b"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Brute" hidden="false" id="167d-93b8-64f5-d436" defaultAmount="">
+    <selectionEntry type="model" import="true" name="Brute" hidden="false" id="167d-93b8-64f5-d436">
       <costs>
         <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="95"/>
         <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
@@ -292,7 +292,7 @@
         <infoLink name="Brute" id="ea5c-261a-8713-299d" hidden="false" type="profile" targetId="60c9-9dd6-8f94-2133"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Grunt" hidden="false" id="c948-5c4b-f49d-3580" defaultAmount="">
+    <selectionEntry type="model" import="true" name="Grunt" hidden="false" id="c948-5c4b-f49d-3580">
       <costs>
         <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="70"/>
         <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
@@ -312,7 +312,7 @@
       <entryLinks>
         <entryLink import="true" name="Ranged Weapons" hidden="false" id="8cbe-91d2-b830-61ae" type="selectionEntryGroup" targetId="7195-d90d-9bb4-decd" sortIndex="2"/>
         <entryLink import="true" name="Melee Weapons" hidden="false" id="1de1-c379-8bce-5a8f" type="selectionEntryGroup" targetId="febd-38f2-1692-5ed9" sortIndex="1"/>
-        <entryLink import="true" name="Armour &amp; Wargear" hidden="false" id="6cf5-6ab5-7c7f-bbcd" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3" sortIndex="3"/>
+        <entryLink import="true" name="Armour" hidden="false" id="6cf5-6ab5-7c7f-bbcd" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3" sortIndex="3"/>
         <entryLink import="true" name="Wargear" hidden="false" id="4339-a789-3d9e-e63d" type="selectionEntryGroup" targetId="a734-a608-2f60-0fa8" sortIndex="4"/>
       </entryLinks>
       <constraints>
@@ -328,7 +328,7 @@
         <infoLink name="Grunt" id="37e9-97e0-3b7d-9962" hidden="false" type="profile" targetId="cf74-ee5f-e2ef-eab1"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Scout" hidden="false" id="6ca5-2d78-4b8c-9190" defaultAmount="">
+    <selectionEntry type="model" import="true" name="Scout" hidden="false" id="6ca5-2d78-4b8c-9190">
       <costs>
         <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="70"/>
         <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
@@ -348,7 +348,7 @@
       <entryLinks>
         <entryLink import="true" name="Ranged Weapons" hidden="false" id="5f6c-6ac7-adc9-e0eb" type="selectionEntryGroup" targetId="7195-d90d-9bb4-decd" sortIndex="2"/>
         <entryLink import="true" name="Melee Weapons" hidden="false" id="1818-4288-ad05-69df" type="selectionEntryGroup" targetId="febd-38f2-1692-5ed9" sortIndex="1"/>
-        <entryLink import="true" name="Armour &amp; Wargear" hidden="false" id="99eb-87df-1927-ec94" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3" sortIndex="3"/>
+        <entryLink import="true" name="Armour" hidden="false" id="99eb-87df-1927-ec94" type="selectionEntryGroup" targetId="d0ae-94e1-ee64-04e3" sortIndex="3"/>
         <entryLink import="true" name="Wargear" hidden="false" id="463c-7508-272b-ea1c" type="selectionEntryGroup" targetId="a734-a608-2f60-0fa8" sortIndex="4"/>
       </entryLinks>
       <constraints>
@@ -363,6 +363,176 @@
       <infoLinks>
         <infoLink name="Scout" id="2a1a-b3f7-137c-699d" hidden="false" type="profile" targetId="e9ae-09a7-45fa-b608"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Motorcycle" hidden="false" id="177d-97eb-345c-4b3f" subType="mount">
+      <costs>
+        <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="100"/>
+        <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+        <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+        <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+        <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+        <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+        <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+        <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+        <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+        <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+        <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+        <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+        <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+        <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+        <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+        <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink targetId="0ccd-9a15-4543-4e63" id="5239-bdc1-0bf5-2f1c" primary="true" name="Support Vehicles"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Motorcycle" id="3ade-383b-efbc-d23a" hidden="false" type="profile" targetId="ff99-d317-f8c5-dc59"/>
+        <infoLink name="Ram" id="de48-9088-47e3-e1fe" hidden="false" type="profile" targetId="0529-3ede-9166-0d96"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Vehicle Modifications" hidden="false" id="403a-0c8e-5a32-ae79" type="selectionEntryGroup" targetId="efa8-f0cb-d1bc-977d"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="2" field="1d73-d711-6536-5884" scope="parent" shared="true" id="f224-7262-9b24-580b"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Small Car Chassis" hidden="false" id="9c90-0b24-8887-2771" subType="mount">
+      <costs>
+        <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="250"/>
+        <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+        <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+        <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+        <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+        <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+        <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+        <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+        <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+        <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+        <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+        <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+        <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+        <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+        <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+        <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+        <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Support Vehicles" hidden="false" id="c535-6cbb-8504-4150" targetId="0ccd-9a15-4543-4e63" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Small Car Chassis" id="2d11-e49e-a045-a6f6" hidden="false" type="profile" targetId="5da7-5dcb-c343-4dbd"/>
+        <infoLink name="Ram" id="5206-561d-cb2a-0854" hidden="false" type="profile" targetId="0529-3ede-9166-0d96"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Vehicle Modifications" hidden="false" id="d6b2-848a-c64e-7fd5" type="selectionEntryGroup" targetId="efa8-f0cb-d1bc-977d"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="5" field="1d73-d711-6536-5884" scope="parent" shared="true" id="ac01-5527-d994-321f"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Medium Car Chassis" hidden="false" id="b07b-c05d-79b5-c6c4" subType="mount">
+      <costs>
+        <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="500"/>
+        <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+        <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+        <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+        <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+        <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+        <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+        <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+        <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+        <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+        <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+        <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+        <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+        <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+        <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+        <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+        <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Support Vehicles" hidden="false" id="c428-e194-3486-9438" targetId="0ccd-9a15-4543-4e63" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Medium Car Chassis" id="c500-9969-937c-7316" hidden="false" type="profile" targetId="bb64-b7ec-5969-550d"/>
+        <infoLink name="Ram" id="f5d1-0a6e-d431-0aba" hidden="false" type="profile" targetId="0529-3ede-9166-0d96"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Vehicle Modifications" hidden="false" id="b15e-fccb-16cd-bd4d" type="selectionEntryGroup" targetId="efa8-f0cb-d1bc-977d"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="7" field="1d73-d711-6536-5884" scope="parent" shared="true" id="8892-2dca-38fd-61b8"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Large Car Chassis" hidden="false" id="89b0-55e3-a3f7-e2e3" subType="mount">
+      <costs>
+        <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="750"/>
+        <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+        <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+        <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+        <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+        <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+        <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+        <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+        <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+        <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+        <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+        <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+        <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+        <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+        <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+        <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+        <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Support Vehicles" hidden="false" id="b0b6-4fa0-914f-a898" targetId="0ccd-9a15-4543-4e63" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Large Car Chassis" id="2a84-4631-8cbe-b7c8" hidden="false" type="profile" targetId="c6b2-2f62-36a1-6145"/>
+        <infoLink name="Ram" id="0cca-d27c-d6a2-bc15" hidden="false" type="profile" targetId="0529-3ede-9166-0d96"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Vehicle Modifications" hidden="false" id="28c4-c2c7-f500-4587" type="selectionEntryGroup" targetId="efa8-f0cb-d1bc-977d"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="9" field="1d73-d711-6536-5884" scope="parent" shared="true" id="471a-6c5b-5102-1ae9"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Armoured Panel" hidden="false" id="f1e7-9281-791e-0044" defaultAmount="">
+      <costs>
+        <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="50"/>
+        <cost name="Augments" typeId="1d73-d711-6536-5884" value="1"/>
+        <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+        <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+        <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+        <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+        <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+        <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+        <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+        <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+        <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+        <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+        <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+        <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+        <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+        <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+        <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+      </costs>
+      <profiles>
+        <profile name="Armoured Panel" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="d809-9be6-f534-bfaa">
+          <characteristics>
+            <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Weak Point Reduction(1): Reduce the Weak Point value of the Vehicle chassis by this amount.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Armoured Panel" id="6ade-4fdd-c452-0ca9" hidden="false" type="profile" targetId="7fbb-fb45-94a9-6e92"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="4009-72b9-1af7-94f3" scope="parent" affects="profiles.Vehicle Chassis"/>
+        <modifier type="increment" value="10" field="8359-3729-b7b9-56c5" scope="parent" affects="profiles.Vehicle Chassis"/>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
@@ -382,7 +552,7 @@
         <characteristic name="Actions" typeId="770b-5749-fb29-af08">4</characteristic>
         <characteristic name="Commands" typeId="5300-f1ab-4a01-9177">3</characteristic>
         <characteristic name="Carry Capacity" typeId="b909-646d-9f9a-e776">12</characteristic>
-        <characteristic name="HitPoints" typeId="999e-9097-31a1-24ba">35</characteristic>
+        <characteristic name="Hit Points" typeId="999e-9097-31a1-24ba">35</characteristic>
         <characteristic name="Role" typeId="e80b-30a1-2c7a-4969">Leadership</characteristic>
       </characteristics>
     </profile>
@@ -393,7 +563,7 @@
         <characteristic name="Actions" typeId="770b-5749-fb29-af08">2</characteristic>
         <characteristic name="Commands" typeId="5300-f1ab-4a01-9177">2</characteristic>
         <characteristic name="Carry Capacity" typeId="b909-646d-9f9a-e776">10</characteristic>
-        <characteristic name="HitPoints" typeId="999e-9097-31a1-24ba">25</characteristic>
+        <characteristic name="Hit Points" typeId="999e-9097-31a1-24ba">25</characteristic>
         <characteristic name="Role" typeId="e80b-30a1-2c7a-4969">Leadership</characteristic>
       </characteristics>
     </profile>
@@ -404,7 +574,7 @@
         <characteristic name="Actions" typeId="770b-5749-fb29-af08">2</characteristic>
         <characteristic name="Commands" typeId="5300-f1ab-4a01-9177">0</characteristic>
         <characteristic name="Carry Capacity" typeId="b909-646d-9f9a-e776">6</characteristic>
-        <characteristic name="HitPoints" typeId="999e-9097-31a1-24ba">15</characteristic>
+        <characteristic name="Hit Points" typeId="999e-9097-31a1-24ba">15</characteristic>
         <characteristic name="Role" typeId="e80b-30a1-2c7a-4969">Troops</characteristic>
       </characteristics>
     </profile>
@@ -415,7 +585,7 @@
         <characteristic name="Actions" typeId="770b-5749-fb29-af08">3</characteristic>
         <characteristic name="Commands" typeId="5300-f1ab-4a01-9177">0</characteristic>
         <characteristic name="Carry Capacity" typeId="b909-646d-9f9a-e776">8</characteristic>
-        <characteristic name="HitPoints" typeId="999e-9097-31a1-24ba">20</characteristic>
+        <characteristic name="Hit Points" typeId="999e-9097-31a1-24ba">20</characteristic>
         <characteristic name="Role" typeId="e80b-30a1-2c7a-4969">Heavy Infantry</characteristic>
       </characteristics>
     </profile>
@@ -426,7 +596,7 @@
         <characteristic name="Actions" typeId="770b-5749-fb29-af08">3</characteristic>
         <characteristic name="Commands" typeId="5300-f1ab-4a01-9177">0</characteristic>
         <characteristic name="Carry Capacity" typeId="b909-646d-9f9a-e776">4</characteristic>
-        <characteristic name="HitPoints" typeId="999e-9097-31a1-24ba">12</characteristic>
+        <characteristic name="Hit Points" typeId="999e-9097-31a1-24ba">12</characteristic>
         <characteristic name="Role" typeId="e80b-30a1-2c7a-4969">Scouts</characteristic>
       </characteristics>
     </profile>
@@ -1045,6 +1215,117 @@ While a Fighter is Sneaky, they cannot be the target of Shooting or Aim actions.
         <characteristic name="Weight" typeId="1566-7246-45c4-5904">1</characteristic>
       </characteristics>
     </profile>
+    <profile name="Pintle Weapon Mount" typeId="0fa7-b0d3-b558-6d39" typeName="Vehicle Modifications" hidden="false" id="55b0-894e-d2a0-11f0">
+      <characteristics>
+        <characteristic name="Armour Die" typeId="bcfc-6bc8-2077-3123">-</characteristic>
+        <characteristic name="Hit Points" typeId="e0e7-26bd-eaab-6dd7">0</characteristic>
+        <characteristic name="Weak Point Reduction" typeId="e7b1-145b-f5a4-d0ad">0</characteristic>
+        <characteristic name="Augment Cost" typeId="3e47-48ed-edef-e554">1</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Armoured Panel" typeId="0fa7-b0d3-b558-6d39" typeName="Vehicle Modifications" hidden="false" id="7fbb-fb45-94a9-6e92">
+      <characteristics>
+        <characteristic name="Armour Die" typeId="bcfc-6bc8-2077-3123">D8</characteristic>
+        <characteristic name="Hit Points" typeId="e0e7-26bd-eaab-6dd7">10</characteristic>
+        <characteristic name="Weak Point Reduction" typeId="e7b1-145b-f5a4-d0ad">1</characteristic>
+        <characteristic name="Augment Cost" typeId="3e47-48ed-edef-e554">1</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Hover Panels" typeId="0fa7-b0d3-b558-6d39" typeName="Vehicle Modifications" hidden="false" id="06f8-91de-5dbd-ddef">
+      <characteristics>
+        <characteristic name="Armour Die" typeId="bcfc-6bc8-2077-3123">-</characteristic>
+        <characteristic name="Hit Points" typeId="e0e7-26bd-eaab-6dd7">0</characteristic>
+        <characteristic name="Weak Point Reduction" typeId="e7b1-145b-f5a4-d0ad">0</characteristic>
+        <characteristic name="Augment Cost" typeId="3e47-48ed-edef-e554">2</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Bulldozer Scoop" typeId="0fa7-b0d3-b558-6d39" typeName="Vehicle Modifications" hidden="false" id="e8fe-3f3c-8632-8bbd">
+      <characteristics>
+        <characteristic name="Armour Die" typeId="bcfc-6bc8-2077-3123">D12</characteristic>
+        <characteristic name="Hit Points" typeId="e0e7-26bd-eaab-6dd7">20</characteristic>
+        <characteristic name="Weak Point Reduction" typeId="e7b1-145b-f5a4-d0ad">2</characteristic>
+        <characteristic name="Augment Cost" typeId="3e47-48ed-edef-e554">3</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Spiked Panel" typeId="0fa7-b0d3-b558-6d39" typeName="Vehicle Modifications" hidden="false" id="b0bc-e058-32b8-8bc3">
+      <characteristics>
+        <characteristic name="Armour Die" typeId="bcfc-6bc8-2077-3123">D6</characteristic>
+        <characteristic name="Hit Points" typeId="e0e7-26bd-eaab-6dd7">5</characteristic>
+        <characteristic name="Weak Point Reduction" typeId="e7b1-145b-f5a4-d0ad">1</characteristic>
+        <characteristic name="Augment Cost" typeId="3e47-48ed-edef-e554">1</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Large Car Chassis" typeId="95ad-d417-c087-7bc1" typeName="Vehicle Chassis" hidden="false" id="c6b2-2f62-36a1-6145">
+      <characteristics>
+        <characteristic name="Crew" typeId="16cb-b6e6-1e9c-592f">1 Driver | 0-1 Passengers</characteristic>
+        <characteristic name="Movement" typeId="5601-303a-6360-4765">18</characteristic>
+        <characteristic name="Hit Points" typeId="8359-3729-b7b9-56c5">25</characteristic>
+        <characteristic name="Weak Points" typeId="4009-72b9-1af7-94f3">6</characteristic>
+        <characteristic name="Max Turn Angle" typeId="6642-7e63-48bd-cb76">90</characteristic>
+        <characteristic name="Armour Die" typeId="554c-177b-0f84-47f6">D4</characteristic>
+        <characteristic name="Augments" typeId="c69d-870b-fef5-cace">9</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Small Car Chassis" typeId="95ad-d417-c087-7bc1" typeName="Vehicle Chassis" hidden="false" id="5da7-5dcb-c343-4dbd">
+      <characteristics>
+        <characteristic name="Crew" typeId="16cb-b6e6-1e9c-592f">1 Driver | 0-3 Passengers</characteristic>
+        <characteristic name="Movement" typeId="5601-303a-6360-4765">12</characteristic>
+        <characteristic name="Hit Points" typeId="8359-3729-b7b9-56c5">50</characteristic>
+        <characteristic name="Weak Points" typeId="4009-72b9-1af7-94f3">3</characteristic>
+        <characteristic name="Max Turn Angle" typeId="6642-7e63-48bd-cb76">90</characteristic>
+        <characteristic name="Armour Die" typeId="554c-177b-0f84-47f6">D4</characteristic>
+        <characteristic name="Augments" typeId="c69d-870b-fef5-cace">5</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Motorcycle" typeId="95ad-d417-c087-7bc1" typeName="Vehicle Chassis" hidden="false" id="ff99-d317-f8c5-dc59">
+      <characteristics>
+        <characteristic name="Crew" typeId="16cb-b6e6-1e9c-592f">1 Driver | 0-1 Passengers</characteristic>
+        <characteristic name="Movement" typeId="5601-303a-6360-4765">18</characteristic>
+        <characteristic name="Hit Points" typeId="8359-3729-b7b9-56c5">25</characteristic>
+        <characteristic name="Weak Points" typeId="4009-72b9-1af7-94f3">4</characteristic>
+        <characteristic name="Max Turn Angle" typeId="6642-7e63-48bd-cb76">180</characteristic>
+        <characteristic name="Armour Die" typeId="554c-177b-0f84-47f6">D4</characteristic>
+        <characteristic name="Augments" typeId="c69d-870b-fef5-cace">2</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Medium Car Chassis" typeId="95ad-d417-c087-7bc1" typeName="Vehicle Chassis" hidden="false" id="bb64-b7ec-5969-550d">
+      <characteristics>
+        <characteristic name="Crew" typeId="16cb-b6e6-1e9c-592f">1 Driver | 0-5 Passengers</characteristic>
+        <characteristic name="Movement" typeId="5601-303a-6360-4765">12</characteristic>
+        <characteristic name="Hit Points" typeId="8359-3729-b7b9-56c5">100</characteristic>
+        <characteristic name="Weak Points" typeId="4009-72b9-1af7-94f3">4</characteristic>
+        <characteristic name="Max Turn Angle" typeId="6642-7e63-48bd-cb76">90</characteristic>
+        <characteristic name="Armour Die" typeId="554c-177b-0f84-47f6">D4</characteristic>
+        <characteristic name="Augments" typeId="c69d-870b-fef5-cace">7</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Spiked Panel Ram" typeId="4f40-6fb0-2015-6c17" typeName="Melee Weapons" hidden="false" id="745f-e163-94ef-2d3a">
+      <characteristics>
+        <characteristic name="Range in Inches" typeId="adcf-9600-a1dc-d5b0">0.5</characteristic>
+        <characteristic name="Hit Die" typeId="c1e1-5b88-a353-ca3b">D10</characteristic>
+        <characteristic name="Damage" typeId="bab8-bd4b-e3c0-27b3">D12</characteristic>
+        <characteristic name="Weight" typeId="78b8-63af-31da-bfc6">-</characteristic>
+        <characteristic name="Rarity" typeId="6b8e-ddd6-8899-7ef7">Common</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Ram" typeId="4f40-6fb0-2015-6c17" typeName="Melee Weapons" hidden="false" id="0529-3ede-9166-0d96">
+      <characteristics>
+        <characteristic name="Range in Inches" typeId="adcf-9600-a1dc-d5b0">0.5</characteristic>
+        <characteristic name="Hit Die" typeId="c1e1-5b88-a353-ca3b">D10</characteristic>
+        <characteristic name="Damage" typeId="bab8-bd4b-e3c0-27b3">D6</characteristic>
+        <characteristic name="Weight" typeId="78b8-63af-31da-bfc6">-</characteristic>
+        <characteristic name="Rarity" typeId="6b8e-ddd6-8899-7ef7">Common</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Bulldozer Scoop Ram" typeId="4f40-6fb0-2015-6c17" typeName="Melee Weapons" hidden="false" id="ae76-954b-35f1-cf6e">
+      <characteristics>
+        <characteristic name="Range in Inches" typeId="adcf-9600-a1dc-d5b0">0.5</characteristic>
+        <characteristic name="Hit Die" typeId="c1e1-5b88-a353-ca3b">D12</characteristic>
+        <characteristic name="Damage" typeId="bab8-bd4b-e3c0-27b3">D12+2</characteristic>
+        <characteristic name="Weight" typeId="78b8-63af-31da-bfc6">-</characteristic>
+        <characteristic name="Rarity" typeId="6b8e-ddd6-8899-7ef7">Common</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
   <sharedRules>
     <rule name="Freaked" id="2821-3212-682b-aebb" hidden="false">
@@ -1123,10 +1404,219 @@ Roll+X | Effect
 8-9 | The equipment encounters a major issue, the equipment gains a Jam token. The Fighter’s Activation ends immediately due to the panic.
 10+ | The equipment explodes, weapons becomes Damaged and equipment becomes unusable for the rest of the game.Take a hit against your HP equal to a Short-Range Damage roll for the weapon, minus any resistances from Armour, or alternatively if this is equipment and not a weapon, take D4 Damage minus resistances from Armour.</description>
     </rule>
-    <rule name="Fight or Flight(X)" id="e5c8-e72f-557f-228b" hidden="false">
-      <alias>FoF</alias>
+    <rule name="Movement Actions" id="e6da-0576-fc6c-d1cd" hidden="false">
+      <description>Move Action, Sprint Action, Jump Action, Climb Action, Drive Action</description>
+    </rule>
+    <rule name="Shooting Actions" id="1f4f-bd91-d808-0413" hidden="false">
+      <description>Fire Weapon Action, Unload Weapon Action, Reload Action, Aim Action</description>
+    </rule>
+    <rule name="Combat Actions" id="b1a7-6809-e2cc-cfe6" hidden="false">
+      <description>Attack Action, Block Action, Shove Action, Disarm Action</description>
+    </rule>
+    <rule name="Misc Actions" id="4fef-29dd-d91a-5710" hidden="false">
+      <description>Overwatch Action, Hunker Down Action, Calm Self Action, Calm Ally Action, Activate Action, Patch Up Action, Flee Action, Fight or Flight</description>
+    </rule>
+    <rule name="Move Action" id="3383-6166-adf7-cd9e" hidden="false">
+      <description>A standard move action, activated model moves up to its movement stat in inches. Ladders and stairs may be traversed as if they are flat ground, measure distance up/down these.</description>
+    </rule>
+    <rule name="Sprint Action" id="f8f8-3285-38ef-4e5f" hidden="false">
+      <description>A sprinting move action, activated model moves up to its movement stat in inches plus an additional D6 inches. In addition mark the activated model as having Sprinted until its next activation, all shooting actions made against this model until its next activation have a -1 to the Hit roll applied (the -1 is not cumulative)</description>
+    </rule>
+    <rule name="Jump Action" id="43ec-d9ee-700b-76ce" hidden="false">
+      <description>A jump move action, activated model leaps horizontally to cross a gap greater than 1” in size. Make a D6 die roll, applying the below modifiers to the roll, and get 2 or greater.
+Condition                                                             | Modifier
+For every full 2” gap between locations               | -1
+Activated model made a Sprint Action this turn   | +1
+Grapplehook                                                        | +2
+
+
+If the roll is failed, the activated model falls straight down, consult the Falling Universal Special Rule to determine damage. (D3 Damage per full Inch fallen vertically)
+
+</description>
+    </rule>
+    <rule name="Climb Action" id="f994-7eab-beea-c822" hidden="false">
+      <description>A climbing action, activated model moves up to its movement stat in inches up or down an obstacle, usually a rough wall or vines or similar grabbable vertical terrain. You must be able to finish this move on a flat standable surface where the model’s base can safely stand to complete a climb.</description>
+    </rule>
+    <rule name="Drive Action" id="8da0-300f-e2a3-c7cb" hidden="false">
+      <description>A driving action, activated model that is occupying a vehicle may attempt to drive the vehicle.
+If the driving model has the Driver skill, no die roll is required to do so, however a model that lacks the Driver skill must roll D6 against the below chart to determine if they succeed in doing so.
+Roll | Result
+6+   | Vehicle moves as defined below.
+5     | Vehicle moves as defined below.
+4     | Vehicle moves as defined below, subtracting 1 from its Movement.
+3     | Vehicle moves as defined below, subtracting 2 from its Movement.
+2     | Vehicle stalls and cannot move this Action, it can be re-attempted with further Actions.
+1     | Vehicle stalls and cannot move this Round, it can be re-attempted in subsequent Rounds.
+0     | Vehicle stalls and cannot move until a model with the Driver skill uses an Activate action to “assess the damage” and repair the vehicle.
+
+
+Drive: The vehicle moves up to its movement stat in inches, and may turn up to its Turn statistic in degrees at any point during the movement.</description>
+      <alias>Drive</alias>
+    </rule>
+    <rule name="Fire Weapon Action" id="348c-dea9-5554-1a08" hidden="false">
+      <description>- Declare the Target(s) of your weapon’s shots, take a number of dice of type and quantity equal to the Weapon’s range chart and Shots value (see Equipment &gt; Ranged Weapons). For example a Pistol at range 0-6 Inches uses a D6 to hit, and has two shots, grab two D6.
+
+
+- To hit the targeted model roll each Die and apply modifiers to establish the result, a natural roll of 1 always fails. A result of 3+ hits the Target.
+
+
+Condition                                                            | Modifier
+Aim Action against Target Fighter                      | +1
+Target Fighter has Sprinted since its last turn    | -1
+Shooting Fighter has Sprinted this turn              | -1
+Target Fighter is in Combat (within Attack range of an opposing model’s melee weapons) | -2
+Target is in Light Cover                                      | -1
+Target is in Medium Cover                                 | -2
+Target is in Heavy Cover                                    | -3
+Target has Hunker Down token                          | -2
+
+
+Leave successful rolls on the table visible to the opposing player.
+
+
+The opponent now rolls their Armour Die against each success and must equal or beat the rolled number to negate the damage, applying any Armour Piercing or other modifiers to the roll as appropriate.
+Finally, the Shooting Fighter rolls Damage dice as denoted on the Damage portion of the weapon’s stat sheet, applying any modifiers to Damage (ammunition types, resistances), and the opponent then marks this damage down against the Target Fighter’s Hit Points starting with any Hit Points their armour may have first.
+
+</description>
+      <alias>Fire Weapon Actions</alias>
+      <alias>Fire Weapon</alias>
+    </rule>
+    <rule name="Unload Weapon" id="917b-ccd2-d3d2-700c" hidden="false">
+      <description>This Action ends the Fighter’s Activation.
+
+- Declare the Target(s) of your weapon’s shots, take a number of dice of type and quantity equal to the Weapon’s range chart and Shots value plus Unload value. (see Equipment &gt; Ranged Weapons). For example a Pistol at range 0-6 Inches uses a D6 to hit, and has two shots, plus another 3 Unload shots, grab five D6.
+
+
+
+
+- To hit the targeted model roll each Die and apply modifiers to establish the result, a natural roll of 1 always fails. A result of 3+ hits the Target.
+
+
+
+Condition                                                             | Modifier
+Aim Action against Target Fighter                        | +1
+Target Fighter has Sprinted since its last turn     | -1
+Shooting Fighter has Sprinted this turn               | -1
+Target Fighter is in Combat (within Attack range of an opposing model’s melee weapons)  | -2
+Target is in Light Cover                                       | -1
+Target is in Medium Cover                                  | -2
+Target is in Heavy Cover                                    | -3
+Target has Hunker Down token                           | -2
+
+
+
+
+Leave successful rolls on the table visible to the opposing player.
+
+
+
+
+The opponent now rolls their Armour Die against each success and must equal or beat the rolled number to negate the damage, applying any Armour Piercing or other modifiers to the roll as appropriate.
+Finally, the Shooting Fighter rolls Damage dice as denoted on the Damage portion of the weapon’s stat sheet, applying any modifiers to Damage (ammunition types, resistances), and the opponent then marks this damage down against the Target Fighter’s Hit Points starting with any Hit Points their armour may have first.
+
+Functions identically to the Fire Weapon Action except you add the Unload value to the Shots value of the weapon. In addition place a Reload token next to the model to indicate a Reload action is required before the weapon can be fired again.
+
+</description>
+    </rule>
+    <rule name="Reload Action" id="ca90-daf7-523e-8304" hidden="false">
+      <description>A reload Action clears any Jam or Reload associated with a weapon, clear any such tokens/effects.</description>
+    </rule>
+    <rule name="Aim Action" id="1d3f-681b-3b0a-0381" hidden="false">
+      <description>The Aim Action allows a Fighter to “aim” at a specific target. Declare what model the Fighter is targeting. All Shooting Actions against the target gains +1 to Hit Rolls (as shown in the Modifiers in that action)</description>
+    </rule>
+    <rule name="Attack Action" id="1f0b-cdae-266f-288f" hidden="false">
+      <description>Select Weapon(s) for each Attack your Fighter is making, and declare where these attacks will be directed.
+To hit the Targeted model, roll each Die and apply modifiers to establish the result, a natural roll of 1 always fails. A result of 3+ hits the Target.
+
+
+Condition |  Modifier
+Attack is an Overwatch Action | +1
+Attacking Fighter has Sprinted this turn | +1
+Combat Expert Skill | +2
+Target is in Light Cover | -1
+Target is in Medium Cover | -2
+Target is in Heavy Cover | -3
+Target has Hunker Down token | -2
+Target has Block Token | -2
+
+
+The opponent now rolls their Armour Die against each success and must equal or beat the rolled number to negate the damage, applying any Armour Piercing or other modifiers to the roll as appropriate.
+Finally the Attacking Fighter rolls Damage dice as denoted on the Damage portion of the weapon’s stat sheet, applying any modifiers to Damage (special rules, resistances) and the opponent then marks this damage down against the Target Fighter’s Hit Points starting with any Hit Points their armour may have first.
+
+</description>
+      <alias>Attack Actions</alias>
+    </rule>
+    <rule name="Block Action" id="ffa3-8da0-fca5-ed47" hidden="false">
+      <description>This Action ends the Fighter’s Activation.
+
+
+Place a Block Token by the Fighter as a reminder, until this Fighter next activates enemy Fighters get -2 to Hit the Fighter with the Attack Action. Discard the Block Token the next time the Fighter activates.</description>
+    </rule>
+    <rule name="Shove Action" id="cd64-c060-9f91-046e" hidden="false">
+      <description>The Fighter attempts to shove the target up to 2” away, roll an Attack roll as per the Attack action, using the “Fists” melee weapon, on a successful hit the targeted Fighter is moved up to 2” in a direction of your choice, should this result in them being put in a position where the model cannot stand safely on its base, it must “Fall” to the ground. Consult the Falling Universal Special Rule to determine damage dealt. (D3 Damage per full Inch fallen vertically)</description>
+    </rule>
+    <rule name="Disarm Action" id="29e0-34a7-d08e-d9ac" hidden="false">
+      <description>This Action may only be used if an Ability, Skill, Trait, or other rule determines you can do so.
+
+
+On a successful Hit with a regular Attack with this weapon, you may opt to forego potential damage against the opponent to instead attempt disarming the opponent of their weapon. Instead of moving onto the Damage step of a melee attack, both yours and your opponent’s model in this fight roll off, adding any regular combat modifiers as if performing the Hit step both ways (eg +2 for combat export etc), and the higher total wins, if the attacker has a higher number the player may choose a weapon the opponent has and “disarm” them of it until they perform an Activate action to pick it back up, mark the location the Disarm occurred, the Activate action can only be taken while within 2” of the marker.</description>
+    </rule>
+    <rule name="Overwatch Action" id="0185-4ad0-9cd0-1bd7" hidden="false">
+      <description>This Action ends the Fighter’s Activation.
+
+
+The Fighter gets ready to perform an Action at a to-be-determined moment in the future, place an Overwatch Token next to the Fighter to denote this.
+
+
+Between any Actions in future turns until this model Activates again, you may declare the Overwatch Action being performed by this model, at the end of the current Action another model is making, you immediately activate this Fighter, discard the Overwatch Token, and declare what Action the Fighter is performing (this can be any Action of cost 1 except another Overwatch Action). Fully resolve the Action, then return control of the turn to the original Activating model.
+
+</description>
+    </rule>
+    <rule name="Hunker Down Action" id="28f0-7bfc-2c3a-e588" hidden="false">
+      <description>This Action ends the Fighter’s Activation.
+
+
+Place a Hunker Down token by the Fighter. Until the Fighter next activates they receive +2 to their Cover, as denoted in the Modifiers on Shooting, Unload, and Attack actions “Target has Hunker Down Token | -2”.</description>
+    </rule>
+    <rule name="Calm Self Action" id="0850-4437-c28a-ca82" hidden="false">
+      <description>This Action may only be attempted once per Activation of the Fighter. 
+
+
+Make a FoF(5) roll to attempt to restore a Fighter from their Freaked status. As denoted in the “Fight or Flight” Universal Special Rule, failure causes the model to perform a Flee Action instead.</description>
+    </rule>
+    <rule name="Calm Ally Action" id="1240-35e6-f12f-a2d6" hidden="false">
+      <description>Target Fighter within 12” makes a FoF(4) roll, if the Fighter using this Action is a Leader add +1 to the roll. As denoted in the “Fight or Flight” Universal Special Rule, failure causes the model to perform a Flee Action instead.</description>
+    </rule>
+    <rule name="Activate Action" id="dd01-036a-fe1a-272e" hidden="false">
+      <description>Fighter interacts with a button, activates a lever, detonates a remote explosive, repairs a car engine, or some other miscellaneous interaction described in the specific instance of the Activate Action. Some Activate Actions may require additional Skills/Traits such as Driver to perform and will be denoted in the specific instance of the Action.
+This action may not be performed while in Combat. (a model is considered to be in Combat while it is within the Attack range of a melee weapon equipped by an enemy model).</description>
+    </rule>
+    <rule name="In Combat" id="b79c-0636-77ec-e321" hidden="false">
+      <description>A model is considered to be in Combat while it is within the Attack range of a melee weapon equipped by an enemy model</description>
+      <alias>Combat</alias>
+    </rule>
+    <rule name="Patch Up Action" id="fe6a-d517-15bc-1789" hidden="false">
+      <description>This Action may only be used if a Skill/Trait says the Fighter may use it. 
+
+
+Target friendly Fighter within 1” of the Activating Fighter, Roll a D3 and restore that many Hit Points to the Target Fighter (this has no effect on Armour Hit Points, and may not exceed the Fighter’s original starting Hit Points).</description>
+    </rule>
+    <rule name="Flee Action" id="3dfe-0593-4715-4ad6" hidden="false">
+      <description>This action may only be used when another Action/Skill/Trait says it can/must be.
+
+
+A Fighter that performs a Flee action must meet the following conditions in order, and failure to meet any of the conditions means the Fighter immediately becomes “Freaked”, place a Freaked token near the model as a reminder.
+1) The Fighter must not end its movement closer in inches to any enemy model within 24” than when it started the Flee action.
+2) The Fighter must attempt to move as directly as terrain allows towards a friendly Fighter, becoming Freaked if this violates the first condition.
+3) The Figher must move its full Movement statistic plus another D3 inches in a direction that does not conflict with the previous conditions, becoming Freaked if this violates the first condition.
+
+</description>
+    </rule>
+    <rule name="Fight or Flight Action" id="97a7-1a6e-9a35-32c0" hidden="false">
       <description>if a model is called upon to make a ‘Fight or Flight’ or FoF(X) action (Now marked as FoF from here on), they roll a D6, apply the below modifiers, and must beat the number provided (For example FoF(4) would be a 4+ FoF roll) or if failed, the Fighter must make a Flee Action.
 Listed to the right are modifiers to the FoF roll number.
+
+
 
 
 Condition | Modifier
@@ -1137,6 +1627,8 @@ Enemy model(s) within 4” (stacks) | -1 to roll
 Friendly Leader model(s) within 12” | +1 to roll
 Brave Trait | +2 to roll
 Friendly Commander within 12” (Doesn’t stack with Leader modifier) | +2 to roll</description>
+      <alias>FoF</alias>
+      <alias>Fight or Flight(X)</alias>
     </rule>
   </sharedRules>
   <entryLinks>
@@ -1145,9 +1637,13 @@ Friendly Commander within 12” (Doesn’t stack with Leader modifier) | +2 to r
     <entryLink import="true" name="Brute" hidden="false" id="56b4-6ceb-4291-a4c9" targetId="167d-93b8-64f5-d436" type="selectionEntry"/>
     <entryLink import="true" name="Grunt" hidden="false" id="0278-5933-428d-ecb4" targetId="c948-5c4b-f49d-3580" type="selectionEntry"/>
     <entryLink import="true" name="Scout" hidden="false" id="4d1c-9a44-cb0e-3f5e" targetId="6ca5-2d78-4b8c-9190" type="selectionEntry"/>
+    <entryLink import="true" name="Motorcycle" hidden="false" id="38f3-4534-1f10-5749" targetId="177d-97eb-345c-4b3f" type="selectionEntry"/>
+    <entryLink import="true" name="Small Car Chassis" hidden="false" id="5096-32d3-672c-5dbd" targetId="9c90-0b24-8887-2771" type="selectionEntry"/>
+    <entryLink import="true" name="Large Car Chassis" hidden="false" id="c366-aaa3-d090-fbc0" targetId="89b0-55e3-a3f7-e2e3" type="selectionEntry"/>
+    <entryLink import="true" name="Medium Car Chassis" hidden="false" id="a5be-64c2-6db0-7f06" targetId="b07b-c05d-79b5-c6c4" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup name="Ranged Weapons" id="7195-d90d-9bb4-decd" hidden="false" defaultSelectionEntryId="none">
+    <selectionEntryGroup name="Ranged Weapons" id="7195-d90d-9bb4-decd" hidden="false" defaultSelectionEntryId="none" collapsible="true">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Pistol" hidden="false" id="75f3-c4f5-57a6-a597">
           <costs>
@@ -1677,6 +2173,9 @@ Heavy: -1 Inch to {Movement Actions} and -1 to {Jump Action} rolls</characterist
           <modifiers>
             <modifier type="decrement" value="1" field="8b03-2b2b-1e3f-9e8c" scope="parent" affects="profiles.Fighter">
               <comment>Heavy rule</comment>
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
+              </repeats>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -1762,6 +2261,9 @@ Overheat: if 3+ {Shooting Actions} used to fire weapon in a turn, Unstable(3) ro
           <modifiers>
             <modifier type="decrement" value="1" field="8b03-2b2b-1e3f-9e8c" scope="parent" affects="profiles.Fighter">
               <comment>Heavy rule</comment>
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
+              </repeats>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -1843,6 +2345,9 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
           <modifiers>
             <modifier type="decrement" value="1" field="8b03-2b2b-1e3f-9e8c" scope="parent" affects="profiles.Fighter" position="0">
               <comment>Heavy rule</comment>
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
+              </repeats>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -1925,93 +2430,10 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
           <modifiers>
             <modifier type="decrement" value="1" field="8b03-2b2b-1e3f-9e8c" scope="parent" affects="profiles.Fighter" position="0">
               <comment>Heavy rule</comment>
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
+              </repeats>
             </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="MinigunTest" hidden="false" id="e2ca-ccfb-5a6b-fc86">
-          <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="500"/>
-            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
-            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
-            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="4"/>
-            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
-            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
-            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
-            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
-            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
-            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
-            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
-          </costs>
-          <profiles>
-            <profile name="Minigun Short Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="f68f-7a1a-b9ad-3ad1">
-              <characteristics>
-                <characteristic name="Range" typeId="74b3-40da-e1e7-a0cd">0-6</characteristic>
-                <characteristic name="Hit Die" typeId="8535-59d1-5bb4-28f4">D6</characteristic>
-                <characteristic name="Damage" typeId="0f84-843e-3dcd-259d">D4</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Minigun Medium Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="0118-e7b2-d993-c613" noindex="false">
-              <characteristics>
-                <characteristic name="Range" typeId="74b3-40da-e1e7-a0cd">6-12</characteristic>
-                <characteristic name="Hit Die" typeId="8535-59d1-5bb4-28f4">D3</characteristic>
-                <characteristic name="Damage" typeId="0f84-843e-3dcd-259d">D4</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Minigun Long Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="b2d9-12ca-1fa9-5bed">
-              <characteristics>
-                <characteristic name="Range" typeId="74b3-40da-e1e7-a0cd">12+</characteristic>
-                <characteristic name="Hit Die" typeId="8535-59d1-5bb4-28f4">D2</characteristic>
-                <characteristic name="Damage" typeId="0f84-843e-3dcd-259d">D4</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Minigun" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="417f-64da-91da-bb35">
-              <characteristics>
-                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">2-Handed: Requires both hands to operate.
-Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls
-Weapons Training: Requires the [Weapons Training] trait to use.
-Overheat: if 3+ {Shooting Actions} used to fire weapon in a turn, Unstable(3) roll.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Minigun" typeId="dd56-9b53-8454-528c" typeName="Mount Points" hidden="false" id="f096-bb40-e714-e022">
-              <characteristics>
-                <characteristic name="Top Rail" typeId="6c7a-f94b-5eaf-3741">0</characteristic>
-                <characteristic name="Bottom Rail" typeId="beb1-d4f1-7f3c-9d96">0</characteristic>
-                <characteristic name="Side Rail" typeId="9220-f00f-16a9-62d0">0</characteristic>
-                <characteristic name="Barrel" typeId="70bc-91e7-6dcd-2c98">0</characteristic>
-                <characteristic name="Loop Mount" typeId="bf66-c436-a902-9dc3">0</characteristic>
-                <characteristic name="Clip" typeId="8619-32a2-8ee6-968a">0</characteristic>
-                <characteristic name="Ammo Type" typeId="3a70-4dfd-04f7-708a">0</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <entryLinks>
-            <entryLink import="true" name="Augments" hidden="false" id="116e-494c-6841-3f0c" type="selectionEntryGroup" targetId="94d3-7965-3499-4f33">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden"/>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-          <constraints>
-            <constraint type="max" value="0" field="1d73-d711-6536-5884" scope="self" shared="true" id="dba0-034b-92ef-5014" automatic="true"/>
-            <constraint type="max" value="0" field="4122-7839-8d70-c473" scope="self" shared="true" id="afc3-93f0-52bf-6db1"/>
-            <constraint type="max" value="0" field="e576-e6dc-cbae-50f6" scope="self" shared="true" id="d2ee-df21-64eb-09a1"/>
-            <constraint type="max" value="0" field="1dcb-84d9-1fa5-f1a6" scope="self" shared="true" id="e1a2-13b3-86c4-c86b"/>
-            <constraint type="max" value="0" field="ed38-c91c-daa5-ecf5" scope="self" shared="true" id="842f-31cf-6241-a654"/>
-            <constraint type="max" value="0" field="2b23-4ed4-8c68-b475" scope="self" shared="true" id="2003-39a6-0204-ad43"/>
-            <constraint type="max" value="0" field="0581-24af-f07e-509c" scope="self" shared="true" id="1e6e-2b07-1ad0-1dc1"/>
-            <constraint type="max" value="0" field="8f0c-3a10-3a29-926e" scope="self" shared="true" id="6533-776b-0399-ddba"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Minigun" id="0441-eea3-dbf6-8672" hidden="false" type="profile" targetId="c576-35c9-288b-acab"/>
-          </infoLinks>
-          <categoryLinks>
-            <categoryLink targetId="a532-e48d-9b3e-c01f" id="50d7-63be-4474-6c71" primary="false" name="Ranged Weapons"/>
-          </categoryLinks>
-          <modifiers>
-            <modifier type="decrement" value="1" field="8b03-2b2b-1e3f-9e8c" scope="parent" affects="profiles.Fighter">
-              <comment>Heavy rule</comment>
-            </modifier>
-            <modifier type="set" value="true" field="hidden"/>
           </modifiers>
         </selectionEntry>
       </selectionEntries>
@@ -2019,7 +2441,7 @@ Overheat: if 3+ {Shooting Actions} used to fire weapon in a turn, Unstable(3) ro
         <categoryLink targetId="a532-e48d-9b3e-c01f" id="e87f-cd53-7649-f33c" primary="false" name="Ranged Weapons"/>
       </categoryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Augments" id="94d3-7965-3499-4f33" hidden="false">
+    <selectionEntryGroup name="Augments" id="94d3-7965-3499-4f33" hidden="false" collapsible="true">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Sniper Scope" hidden="false" id="a019-dcc6-fd9b-4675">
           <infoLinks>
@@ -2630,6 +3052,9 @@ Add an additional +2 Damage to Medium and Long range Damage rolls, lose any Cove
           <infoLinks>
             <infoLink name="Kevlar Helmet" id="0685-6460-f5e8-1a0f" hidden="false" type="profile" targetId="b8b4-0793-e1ea-acbb"/>
           </infoLinks>
+          <modifiers>
+            <modifier type="increment" value="5" field="999e-9097-31a1-24ba" scope="parent" affects="profiles.Fighter"/>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Combat Membrane" hidden="false" id="34d3-133b-8652-3f23">
           <costs>
@@ -2665,6 +3090,9 @@ Add an additional +2 Damage to Medium and Long range Damage rolls, lose any Cove
           <infoLinks>
             <infoLink name="Combat Membrane" id="79ff-e604-1c24-e26f" hidden="false" type="profile" targetId="7001-5284-8df0-37d6"/>
           </infoLinks>
+          <modifiers>
+            <modifier type="increment" value="5" field="999e-9097-31a1-24ba" scope="parent" affects="profiles.Fighter"/>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Kevlar Vest" hidden="false" id="878e-8dc6-0ea1-46c8">
           <costs>
@@ -2700,6 +3128,9 @@ Add an additional +2 Damage to Medium and Long range Damage rolls, lose any Cove
           <infoLinks>
             <infoLink name="Kevlar Vest" id="c36f-55c9-60d5-0cec" hidden="false" type="profile" targetId="9f40-de1e-1eba-a453"/>
           </infoLinks>
+          <modifiers>
+            <modifier type="increment" value="5" field="999e-9097-31a1-24ba" scope="parent" affects="profiles.Fighter"/>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Light Metal Chestplate" hidden="false" id="9d92-e847-ad0b-4549">
           <costs>
@@ -2735,6 +3166,9 @@ Add an additional +2 Damage to Medium and Long range Damage rolls, lose any Cove
           <infoLinks>
             <infoLink name="Light Metal Chestplate" id="4286-89dc-0690-0164" hidden="false" type="profile" targetId="59a9-9ee3-fbd6-1f7b"/>
           </infoLinks>
+          <modifiers>
+            <modifier type="increment" value="10" field="999e-9097-31a1-24ba" scope="parent" affects="profiles.Fighter"/>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Stab Vest" hidden="false" id="fae7-2bd3-9a6a-986a">
           <costs>
@@ -2805,6 +3239,9 @@ Add an additional +2 Damage to Medium and Long range Damage rolls, lose any Cove
           <infoLinks>
             <infoLink name="Light Metal Helmet" id="bc38-6f67-6867-f3bd" hidden="false" type="profile" targetId="e83a-ec5a-5c47-bd96"/>
           </infoLinks>
+          <modifiers>
+            <modifier type="increment" value="5" field="999e-9097-31a1-24ba" scope="parent" affects="profiles.Fighter"/>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Composite Chestplate" hidden="false" id="f878-11fc-8080-b629">
           <costs>
@@ -2844,6 +3281,7 @@ Add an additional +2 Damage to Medium and Long range Damage rolls, lose any Cove
             <modifier type="decrement" value="1" field="8b03-2b2b-1e3f-9e8c" scope="parent" affects="profiles.Fighter" position="0">
               <comment>Heavy rule</comment>
             </modifier>
+            <modifier type="increment" value="12" field="999e-9097-31a1-24ba" scope="parent" affects="profiles.Fighter"/>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Power-Assist Chestplate" hidden="false" id="7f64-45d5-67ed-12eb">
@@ -2885,6 +3323,7 @@ Melee-Resistant: {Attack} actions made against this Fighter have -2 to hit.</cha
             <modifier type="decrement" value="1" field="8b03-2b2b-1e3f-9e8c" scope="parent" affects="profiles.Fighter" position="0">
               <comment>Heavy rule</comment>
             </modifier>
+            <modifier type="increment" value="15" field="999e-9097-31a1-24ba" scope="parent" affects="profiles.Fighter"/>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Power-Assist Arms" hidden="false" id="f7e5-d120-14fa-effb">
@@ -2924,6 +3363,7 @@ Melee-Resistant: {Attack} actions made against this Fighter have -2 to hit.</cha
           <modifiers>
             <modifier type="append" value="+6" field="bab8-bd4b-e3c0-27b3" scope="parent" affects="self.entries.recursive.4ef9-be9e-522a-68d6.profiles.Melee Weapons"/>
             <modifier type="append" value="+2" field="c1e1-5b88-a353-ca3b" scope="parent" affects="self.entries.recursive.profiles.Melee Weapons"/>
+            <modifier type="increment" value="10" field="999e-9097-31a1-24ba" scope="parent" affects="profiles.Fighter"/>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Power-Assist Legs" hidden="false" id="5923-b898-b6eb-2a9e">
@@ -2964,46 +3404,12 @@ Melee-Resistant: {Attack} actions made against this Fighter have -2 to hit.</cha
             <modifier type="increment" value="1" field="8b03-2b2b-1e3f-9e8c" scope="parent" affects="profiles.Fighter" position="0">
               <comment>Heavy rule</comment>
             </modifier>
+            <modifier type="increment" value="10" field="999e-9097-31a1-24ba" scope="parent" affects="profiles.Fighter"/>
           </modifiers>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Metal Shield" hidden="false" id="6ac1-cc7b-e196-7e96">
-          <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="100"/>
-            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
-            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
-            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="2"/>
-            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
-            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
-            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
-            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
-            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
-            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
-            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
-            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
-            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
-            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="1"/>
-            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
-            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
-            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
-            <cost name="Body" typeId="38ca-4add-42ed-6cb3" value="0"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0387-6f5a-9c9a-0a75"/>
-          </constraints>
-          <profiles>
-            <profile name="Metal Shield" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="87a4-a94a-7c2c-3732">
-              <characteristics>
-                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Shield: Roll Shield Armour Die in addition to the best Armour Die your Fighter has.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Metal Shield" id="51e4-2e78-027b-acbf" hidden="false" type="profile" targetId="1749-4c6d-b5cd-5c9a"/>
-          </infoLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Wargear" id="a734-a608-2f60-0fa8" hidden="false">
+    <selectionEntryGroup name="Wargear" id="a734-a608-2f60-0fa8" hidden="false" collapsible="true">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Comms Pack" hidden="false" id="7152-3342-e2ff-7f52">
           <costs>
@@ -3180,6 +3586,9 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
           <infoLinks>
             <infoLink name="Buckler Shield" id="c54b-fe27-23a1-8f44" hidden="false" type="profile" targetId="d00c-fde9-5843-341f"/>
           </infoLinks>
+          <modifiers>
+            <modifier type="increment" value="2" field="999e-9097-31a1-24ba" scope="parent" affects="profiles.Fighter"/>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Force Shield" hidden="false" id="5d9a-e3b4-e31c-43ff">
           <costs>
@@ -3250,10 +3659,51 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
           <infoLinks>
             <infoLink name="Riot Shield" id="b64c-d71d-c40f-6661" hidden="false" type="profile" targetId="ba35-37af-12e9-3886"/>
           </infoLinks>
+          <modifiers>
+            <modifier type="increment" value="10" field="999e-9097-31a1-24ba" scope="parent" affects="profiles.Fighter"/>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Metal Shield" hidden="false" id="6ac1-cc7b-e196-7e96">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="100"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="2"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="1"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+            <cost name="Body" typeId="38ca-4add-42ed-6cb3" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0387-6f5a-9c9a-0a75"/>
+          </constraints>
+          <profiles>
+            <profile name="Metal Shield" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="87a4-a94a-7c2c-3732">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Shield: Roll Shield Armour Die in addition to the best Armour Die your Fighter has.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Metal Shield" id="51e4-2e78-027b-acbf" hidden="false" type="profile" targetId="1749-4c6d-b5cd-5c9a"/>
+          </infoLinks>
+          <modifiers>
+            <modifier type="increment" value="10" field="999e-9097-31a1-24ba" scope="parent" affects="profiles.Fighter"/>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Melee Weapons" id="febd-38f2-1692-5ed9" hidden="false" defaultSelectionEntryId="none">
+    <selectionEntryGroup name="Melee Weapons" id="febd-38f2-1692-5ed9" hidden="false" defaultSelectionEntryId="none" collapsible="true" flatten="true">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Fists" hidden="false" id="4ef9-be9e-522a-68d6">
           <costs>
@@ -3604,6 +4054,214 @@ Grapplehook: When performing a {Jump} Action gain +2 to the roll, or a {Climb} A
       <categoryLinks>
         <categoryLink targetId="a532-e48d-9b3e-c01f" id="8539-dd4e-1b1c-ed6d" primary="false" name="Ranged Weapons"/>
       </categoryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Vehicle Modifications" id="efa8-f0cb-d1bc-977d" hidden="false" collapsible="true" flatten="true">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Pintle Weapon Mount" hidden="false" id="66e6-ad32-a71c-3595">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="50"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="1"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <entryLinks>
+            <entryLink import="true" name="Ranged Weapons" hidden="false" id="14a1-2a50-ceb8-3d96" type="selectionEntryGroup" targetId="7195-d90d-9bb4-decd">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8e7b-83f4-4d31-b5c8"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <profiles>
+            <profile name="Pintle Weapon Mount" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="f3f4-32bb-5553-be03">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Weapon Mount: You may purchase and mount any ranged weapon from your Weapons list, including any Augmentations, and attach it to the vehicle. Mounting the weapon in such a way ignores the Heavy rule on the weapon.  </characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Pintle Weapon Mount" id="e600-1bda-83f6-6288" hidden="false" type="profile" targetId="55b0-894e-d2a0-11f0"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Spiked Panel" hidden="false" id="c564-0a74-7f87-9ade">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="100"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="1"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Spiked Panel" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="cbe4-004c-0636-522d">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Weak Point Reduction(1): Reduce the Weak Point value of the Vehicle chassis by this amount.
+Ram: You may use the below statline for the Attack Action of the vehicle.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Spiked Panel" id="f2a2-5aaa-2960-9624" hidden="false" type="profile" targetId="b0bc-e058-32b8-8bc3"/>
+            <infoLink name="Spiked Panel Ram" id="8301-aa4d-90d7-8363" hidden="false" type="profile" targetId="745f-e163-94ef-2d3a"/>
+          </infoLinks>
+          <modifiers>
+            <modifier type="decrement" value="1" field="4009-72b9-1af7-94f3" scope="parent" affects="profiles.Vehicle Chassis">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="5" field="8359-3729-b7b9-56c5" scope="parent" affects="profiles.Vehicle Chassis">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Bulldozer Scoop" hidden="false" id="d0de-e118-b5ee-5693">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="200"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="3"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Bulldozer Scoop" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="c4e6-6dc4-6a1f-44a8">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Weak Point Reduction(2): Reduce the Weak Point value of the Vehicle chassis by this amount.
+Bulldozer: The Vehicle may drive over Light and Heavy obstacles as if they were not there
+Ram: You may use the below statline for the Attack Action of the vehicle.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Bulldozer Scoop" id="55b3-fb49-55a2-3eb2" hidden="false" type="profile" targetId="e8fe-3f3c-8632-8bbd"/>
+            <infoLink name="Bulldozer Scoop Ram" id="7cee-4409-090a-c7da" hidden="false" type="profile" targetId="ae76-954b-35f1-cf6e"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="748c-9de3-c239-99a7"/>
+          </constraints>
+          <modifiers>
+            <modifier type="decrement" value="2" field="4009-72b9-1af7-94f3" scope="parent" affects="profiles.Vehicle Chassis"/>
+            <modifier type="increment" value="20" field="8359-3729-b7b9-56c5" scope="parent" affects="profiles.Vehicle Chassis"/>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Armoured Panel" hidden="false" id="39d9-4640-13c0-6943" defaultAmount="">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="50"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="1"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Armoured Panel" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="cf7b-38b9-c6d3-e950">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Weak Point Reduction(1): Reduce the Weak Point value of the Vehicle chassis by this amount.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Armoured Panel" id="f4bf-bd7d-a9ee-7c85" hidden="false" type="profile" targetId="7fbb-fb45-94a9-6e92"/>
+          </infoLinks>
+          <modifiers>
+            <modifier type="decrement" value="1" field="4009-72b9-1af7-94f3" scope="parent" affects="profiles.Vehicle Chassis">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="10" field="8359-3729-b7b9-56c5" scope="parent" affects="profiles.Vehicle Chassis">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Hover Panels" hidden="false" id="aa13-7504-5645-f5e7">
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="200"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="2"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <profiles>
+            <profile name="Hover Panels" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="f9de-ea55-aa57-7e97">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Hover: The Vehicle may fly over Light and Heavy obstacles as if they were not there. The Movement Stat is increased by 6”.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Hover Panels" id="609c-6853-3655-8169" hidden="false" type="profile" targetId="06f8-91de-5dbd-ddef"/>
+          </infoLinks>
+          <modifiers>
+            <modifier type="increment" value="6" field="5601-303a-6360-4765" scope="parent" affects="profiles.Vehicle Chassis"/>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="148c-08c6-e2e0-f021"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <publications>
