@@ -519,7 +519,19 @@
             <characteristic name="Weight" typeId="d25a-1e8c-1f21-07df">0</characteristic>
           </characteristics>
         </profile>
+        <profile name="Bite" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="4f7c-2022-1068-f089">
+          <characteristics>
+            <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Disarm: On Successful Hit, may instead of damaging target perform the {Disarm Action}.
+Suppression: target cannot make {Movement Actions} unless pass FoF(5) check.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
+      <rules>
+        <rule name="Bite" id="89fe-99e4-d7d1-7ffd" hidden="true">
+          <description>Disarm: On Successful Hit, may instead of damaging target perform the {Disarm Action}.
+Suppression: target cannot make {Movement Actions} unless pass FoF(5) check.</description>
+        </rule>
+      </rules>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
@@ -1629,6 +1641,9 @@ Brave Trait | +2 to roll
 Friendly Commander within 12” (Doesn’t stack with Leader modifier) | +2 to roll</description>
       <alias>FoF</alias>
       <alias>Fight or Flight(X)</alias>
+    </rule>
+    <rule name="Disarm" id="ba9e-d397-49f3-73cc" hidden="false">
+      <description>Disarm: On Successful Hit, may instead of damaging target perform the {Disarm Action}.</description>
     </rule>
   </sharedRules>
   <entryLinks>
