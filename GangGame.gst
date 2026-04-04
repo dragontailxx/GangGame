@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-67a0-c9e0-9601-50f0" name="GangGame" battleScribeVersion="2.03" revision="0.37" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" library="false" authorName="Dan Geldorp" authorContact="dangeldorp@hotmail.co.uk" publicationId="ad88-6f5d-213d-7b3f">
+<gameSystem id="sys-67a0-c9e0-9601-50f0" name="GangGame" battleScribeVersion="2.03" revision="0.4" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" library="false" authorName="Dan Geldorp" authorContact="dangeldorp@hotmail.co.uk" publicationId="ad88-6f5d-213d-7b3f">
   <categoryEntries>
     <categoryEntry name="Leadership" id="cb5e-bc93-5d28-9b12" hidden="false"/>
     <categoryEntry name="Heavy Infantry" id="d07e-43b7-5902-29f7" hidden="false"/>
@@ -383,7 +383,7 @@
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Small Car Chassis" hidden="false" id="9c90-0b24-8887-2771" subType="mount">
       <costs>
-        <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="250"/>
+        <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="175"/>
         <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
         <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
         <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
@@ -417,7 +417,7 @@
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Medium Car Chassis" hidden="false" id="b07b-c05d-79b5-c6c4" subType="mount">
       <costs>
-        <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="500"/>
+        <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="275"/>
         <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
         <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
         <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
@@ -451,7 +451,7 @@
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Large Car Chassis" hidden="false" id="89b0-55e3-a3f7-e2e3" subType="mount">
       <costs>
-        <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="750"/>
+        <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="390"/>
         <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
         <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
         <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
@@ -1663,7 +1663,7 @@ Friendly Commander within 12” (Doesn’t stack with Leader modifier) | +2 to r
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Pistol" hidden="false" id="75f3-c4f5-57a6-a597">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="50"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="60"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
@@ -1674,6 +1674,12 @@ Friendly Commander within 12” (Doesn’t stack with Leader modifier) | +2 to r
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <profiles>
             <profile name="Pistol Short Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="8e79-9249-b319-4b24">
@@ -1739,7 +1745,7 @@ Friendly Commander within 12” (Doesn’t stack with Leader modifier) | +2 to r
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Shotgun" hidden="false" id="a698-cbcd-7ddd-e2a5">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="70"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="80"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="2"/>
@@ -1750,6 +1756,12 @@ Friendly Commander within 12” (Doesn’t stack with Leader modifier) | +2 to r
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <profiles>
             <profile name="Shotgun Short Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="f630-d7d1-3b4e-2cd7">
@@ -1822,7 +1834,7 @@ Variable Ammo: Choose what type of Ammo to fire before making the Action.
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Auto Rifle" hidden="true" id="ec08-5ad2-a6bb-ca41">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="80"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="100"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="2"/>
@@ -1833,6 +1845,12 @@ Variable Ammo: Choose what type of Ammo to fire before making the Action.
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <profiles>
             <profile name="Auto Rifle Short Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="98dd-6b32-7843-96bc">
@@ -1911,7 +1929,7 @@ Variable Ammo: Choose what type of Ammo to fire before making the Action.
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Bow" hidden="false" id="2fec-df6d-4d50-b3dc">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="40"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="50"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="2"/>
@@ -1922,6 +1940,12 @@ Variable Ammo: Choose what type of Ammo to fire before making the Action.
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <profiles>
             <profile name="Bow Short Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="7f31-7ed9-367c-cc4c">
@@ -1987,7 +2011,7 @@ Variable Ammo: Choose what type of Ammo to fire before making the Action.
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Bolt Action Rifle" hidden="true" id="41ab-fc3d-b8be-07b6">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="150"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="145"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="2"/>
@@ -1998,6 +2022,12 @@ Variable Ammo: Choose what type of Ammo to fire before making the Action.
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <profiles>
             <profile name="Bolt Action Rifle Short Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="ee9f-8c99-16d7-fa4e">
@@ -2078,7 +2108,7 @@ Armour Piercing(1): When target rolls Armour Die, apply Armour Piercing(X) negat
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Oil Pipe Gun" hidden="false" id="c703-7c97-5879-ca9d">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="80"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="50"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="2"/>
@@ -2089,6 +2119,12 @@ Armour Piercing(1): When target rolls Armour Die, apply Armour Piercing(X) negat
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <profiles>
             <profile name="Oil Pipe Gun Short Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="53c3-7a46-ab8f-b5ae">
@@ -2156,7 +2192,7 @@ Armour Piercing(1): When target rolls Armour Die, apply Armour Piercing(X) negat
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Rail Rifle" hidden="true" id="3200-c34b-f12e-1f0a">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="1000"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="130"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="3"/>
@@ -2167,6 +2203,12 @@ Armour Piercing(1): When target rolls Armour Die, apply Armour Piercing(X) negat
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <profiles>
             <profile name="Rail Rifle Short Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="a7e8-1ca9-7293-848e">
@@ -2251,7 +2293,7 @@ Heavy: -1 Inch to {Movement Actions} and -1 to {Jump Action} rolls</characterist
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Minigun" hidden="true" id="7759-8fd0-d3e7-bfd9">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="500"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="145"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="4"/>
@@ -2262,6 +2304,12 @@ Heavy: -1 Inch to {Movement Actions} and -1 to {Jump Action} rolls</characterist
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <profiles>
             <profile name="Minigun Short Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="0947-d98f-6b3a-5bc4">
@@ -2341,7 +2389,7 @@ Overheat: if 3+ {Shooting Actions} used to fire weapon in a turn, Unstable(3) ro
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="LMG" hidden="true" id="2957-aa79-5ab4-a179">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="200"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="120"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="2"/>
@@ -2352,6 +2400,12 @@ Overheat: if 3+ {Shooting Actions} used to fire weapon in a turn, Unstable(3) ro
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <profiles>
             <profile name="LMG Short Range" typeId="2093-3134-a66d-5e77" typeName="Range Statline" hidden="false" id="8fb1-f093-7fa6-9d9d">
@@ -2435,7 +2489,7 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="HMG" hidden="true" id="57fc-2c18-ca1f-7b9f">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="200"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="135"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="3"/>
@@ -2536,7 +2590,7 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="SMG" hidden="false" id="4762-ff32-3d26-91a2">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="200"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="85"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
@@ -2620,7 +2674,7 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Frag Grenade Bundle" hidden="false" id="406e-a0ca-97c9-0ec8">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="20"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="60"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
@@ -2702,7 +2756,7 @@ Scatter(3): Roll D12, scatter in clock-facing direction 3”, with 6PM facing th
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Smoke Grenade Bundle" hidden="false" id="650a-2ceb-62d6-96fb">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="20"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="50"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
@@ -2785,7 +2839,7 @@ Smoke: Instead of dealing damage, create Radius 3” Smoke at position that last
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Flamethrower" hidden="false" id="83e3-0b2b-fb4b-7ee5">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="600"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="110"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="4"/>
@@ -2877,7 +2931,7 @@ Fire Damage: See Weapon Damage Types Chart.</characteristic>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Molotov Cocktail Bundle" hidden="false" id="3cfc-ad28-3172-99d3">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="20"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="60"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
@@ -2977,7 +3031,7 @@ Fire Damage: See Weapon Damage Types Chart.</characteristic>
             </profile>
           </profiles>
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="30"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="15"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="2"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
@@ -2988,6 +3042,12 @@ Fire Damage: See Weapon Damage Types Chart.</characteristic>
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="db9a-cb39-a69d-0f68" includeChildSelections="false"/>
@@ -3018,7 +3078,7 @@ Fire Damage: See Weapon Damage Types Chart.</characteristic>
             </profile>
           </profiles>
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="20"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="10"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="1"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
@@ -3029,6 +3089,12 @@ Fire Damage: See Weapon Damage Types Chart.</characteristic>
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8386-fb40-28cb-5867" includeChildSelections="false"/>
@@ -3058,7 +3124,7 @@ Fire Damage: See Weapon Damage Types Chart.</characteristic>
             </profile>
           </profiles>
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="20"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="10"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="1"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
@@ -3069,6 +3135,12 @@ Fire Damage: See Weapon Damage Types Chart.</characteristic>
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="69c4-9329-7d24-e83b" includeChildSelections="false"/>
@@ -3099,7 +3171,7 @@ Fire Damage: See Weapon Damage Types Chart.</characteristic>
             </profile>
           </profiles>
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="10"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="5"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="1"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
@@ -3110,6 +3182,12 @@ Fire Damage: See Weapon Damage Types Chart.</characteristic>
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1dd9-0f16-598c-2da8" includeChildSelections="false"/>
@@ -3140,7 +3218,7 @@ Fire Damage: See Weapon Damage Types Chart.</characteristic>
             </profile>
           </profiles>
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="10"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="5"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="1"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
@@ -3151,6 +3229,12 @@ Fire Damage: See Weapon Damage Types Chart.</characteristic>
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0848-6d3b-a433-8895" includeChildSelections="false"/>
@@ -3181,7 +3265,7 @@ Fire Damage: See Weapon Damage Types Chart.</characteristic>
             </profile>
           </profiles>
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="15"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="5"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="2"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
@@ -3192,6 +3276,12 @@ Fire Damage: See Weapon Damage Types Chart.</characteristic>
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e7f6-0944-80cc-26bf" includeChildSelections="false"/>
@@ -3250,7 +3340,7 @@ Weapon Mod: This weapon stat line is for a Weapon Augmentation.</characteristic>
             </profile>
           </profiles>
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="40"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="20"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="3"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
@@ -3261,6 +3351,12 @@ Weapon Mod: This weapon stat line is for a Weapon Augmentation.</characteristic>
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="17f4-0045-e707-1410" includeChildSelections="false"/>
@@ -3332,7 +3428,7 @@ Weapon Mod: This weapon stat line is for a Weapon Augmentation.</characteristic>
             </profile>
           </profiles>
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="20"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="5"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="1"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
@@ -3343,6 +3439,12 @@ Weapon Mod: This weapon stat line is for a Weapon Augmentation.</characteristic>
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="1"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9c1a-4ea0-5fae-fa21" includeChildSelections="false"/>
@@ -3415,7 +3517,7 @@ Weapon Mod: This weapon stat line is for a Weapon Augmentation.</characteristic>
             </profile>
           </profiles>
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="100"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="50"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="1"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
@@ -3426,6 +3528,12 @@ Weapon Mod: This weapon stat line is for a Weapon Augmentation.</characteristic>
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="1"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8106-1c49-7721-c67c" includeChildSelections="false"/>
@@ -3460,7 +3568,7 @@ If this Augmentation is lost in any way, the benefit to the Mount Points value i
             </profile>
           </profiles>
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="20"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="25"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="1"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
@@ -3471,6 +3579,12 @@ If this Augmentation is lost in any way, the benefit to the Mount Points value i
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="69ec-7beb-7c6f-1640" includeChildSelections="false"/>
@@ -3503,7 +3617,7 @@ Add an additional +2 Damage to Medium and Long range Damage rolls, lose any Cove
             </profile>
           </profiles>
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="50"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="20"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="1"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
@@ -3514,6 +3628,12 @@ Add an additional +2 Damage to Medium and Long range Damage rolls, lose any Cove
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="1"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8720-8336-1cbc-b29e" includeChildSelections="false"/>
@@ -3538,7 +3658,7 @@ Add an additional +2 Damage to Medium and Long range Damage rolls, lose any Cove
             </profile>
           </profiles>
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="50"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="10"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="1"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
@@ -3549,6 +3669,12 @@ Add an additional +2 Damage to Medium and Long range Damage rolls, lose any Cove
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="1"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cc6e-4870-efc0-f359" includeChildSelections="false"/>
@@ -3607,7 +3733,7 @@ Add an additional +2 Damage to Medium and Long range Damage rolls, lose any Cove
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Kevlar Helmet" hidden="false" id="7a0b-8a28-ebad-d8fe">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="30"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="20"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
@@ -3645,7 +3771,7 @@ Add an additional +2 Damage to Medium and Long range Damage rolls, lose any Cove
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Combat Membrane" hidden="false" id="34d3-133b-8652-3f23">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="75"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="20"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
@@ -3683,7 +3809,7 @@ Add an additional +2 Damage to Medium and Long range Damage rolls, lose any Cove
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Kevlar Vest" hidden="false" id="878e-8dc6-0ea1-46c8">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="30"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="25"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
@@ -3721,7 +3847,7 @@ Add an additional +2 Damage to Medium and Long range Damage rolls, lose any Cove
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Light Metal Chestplate" hidden="false" id="9d92-e847-ad0b-4549">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="100"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="40"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="2"/>
@@ -3794,7 +3920,7 @@ Add an additional +2 Damage to Medium and Long range Damage rolls, lose any Cove
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Light Metal Helmet" hidden="false" id="ead0-c652-c648-a861">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="70"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="20"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="2"/>
@@ -3832,7 +3958,7 @@ Add an additional +2 Damage to Medium and Long range Damage rolls, lose any Cove
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Composite Chestplate" hidden="false" id="f878-11fc-8080-b629">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="150"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="40"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="3"/>
@@ -3873,7 +3999,7 @@ Add an additional +2 Damage to Medium and Long range Damage rolls, lose any Cove
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Power-Assist Chestplate" hidden="false" id="7f64-45d5-67ed-12eb">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="300"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="45"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="3"/>
@@ -3915,7 +4041,7 @@ Melee-Resistant: {Attack} actions made against this Fighter have -2 to hit.</cha
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Power-Assist Arms" hidden="false" id="f7e5-d120-14fa-effb">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="75"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="35"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
@@ -3955,7 +4081,7 @@ Melee-Resistant: {Attack} actions made against this Fighter have -2 to hit.</cha
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Power-Assist Legs" hidden="false" id="5923-b898-b6eb-2a9e">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="250"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="35"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="3"/>
@@ -4000,7 +4126,7 @@ Melee-Resistant: {Attack} actions made against this Fighter have -2 to hit.</cha
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Comms Pack" hidden="false" id="7152-3342-e2ff-7f52">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="150"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="25"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="2"/>
@@ -4035,7 +4161,7 @@ Melee-Resistant: {Attack} actions made against this Fighter have -2 to hit.</cha
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Hand-Held Lifeform Detector" hidden="false" id="d686-c337-ee24-cd5d">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="120"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="35"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
@@ -4070,7 +4196,7 @@ Melee-Resistant: {Attack} actions made against this Fighter have -2 to hit.</cha
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Personal Teleporter" hidden="false" id="4502-5b82-83ef-df6d">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="200"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="30"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
@@ -4106,7 +4232,7 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Small-Arms Bandolier" hidden="false" id="5f97-aca5-1b96-6708">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="100"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="35"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
@@ -4141,7 +4267,7 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Buckler Shield" hidden="false" id="8769-ff4f-30fa-19d7">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="75"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="25"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
@@ -4179,7 +4305,7 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Force Shield" hidden="false" id="5d9a-e3b4-e31c-43ff">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="200"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="30"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
@@ -4214,7 +4340,7 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Riot Shield" hidden="false" id="0132-1978-fb0e-91fc">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="100"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="10"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="2"/>
@@ -4252,7 +4378,7 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Metal Shield" hidden="false" id="6ac1-cc7b-e196-7e96">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="100"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="35"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="2"/>
@@ -4326,7 +4452,7 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Shiv" hidden="false" id="3522-ee5e-adaa-5023">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="5"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="10"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
@@ -4337,6 +4463,12 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <profiles>
             <profile name="Shiv" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="c323-450a-70b7-3b97">
@@ -4357,7 +4489,7 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Knife" hidden="false" id="9330-0a03-cd58-3908">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="15"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="20"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
@@ -4368,6 +4500,12 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <profiles>
             <profile name="Knife" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="935d-11e2-ad1f-d8c4">
@@ -4388,7 +4526,7 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Sports Equipment" hidden="false" id="9008-9f0f-8e4f-a284">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="10"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="15"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="2"/>
@@ -4399,6 +4537,12 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <profiles>
             <profile name="Sports Equipment" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="e149-126d-5328-afb9">
@@ -4419,7 +4563,7 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Shortsword" hidden="false" id="e757-e15f-01b6-f5a4">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="65"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="20"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="2"/>
@@ -4430,6 +4574,12 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <profiles>
             <profile name="Shortsword" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="48ae-156a-aaa5-2433">
@@ -4450,7 +4600,7 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Longsword" hidden="false" id="8dae-0180-8ad9-51eb">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="70"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="35"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="3"/>
@@ -4461,6 +4611,12 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <profiles>
             <profile name="Longsword" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="91a0-4162-1054-2be2">
@@ -4481,7 +4637,7 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Axe" hidden="false" id="9190-7a94-addf-fe3d">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="90"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="20"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="2"/>
@@ -4492,6 +4648,12 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <profiles>
             <profile name="Axe" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="b341-db77-51e2-3053">
@@ -4512,7 +4674,7 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Baton" hidden="false" id="d2f4-46f7-585c-a78c">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="80"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="35"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
@@ -4523,6 +4685,12 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <profiles>
             <profile name="Baton" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="8f6b-a0dc-fb0f-bd2b">
@@ -4543,7 +4711,7 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Polearm" hidden="false" id="a178-253b-b6e2-5d39">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="100"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="50"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="3"/>
@@ -4554,6 +4722,12 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <profiles>
             <profile name="Polearm" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="6c56-2264-a3f4-0cfc">
@@ -4574,7 +4748,7 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Chainsaw" hidden="false" id="a0a0-21bd-679c-c3f6">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="90"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="45"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="4"/>
@@ -4585,6 +4759,12 @@ Teleport: {Activate Action}: Fighter is immediately removed from the table and c
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <profiles>
             <profile name="Chainsaw" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="39e8-2ba3-288a-f7dd">
@@ -4606,7 +4786,7 @@ Uses(3): This weapon may only be used up to Uses(X) times per game.</characteris
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Whip" hidden="true" id="3c5e-5949-7d48-dda2">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="150"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="80"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="1"/>
@@ -4617,6 +4797,12 @@ Uses(3): This weapon may only be used up to Uses(X) times per game.</characteris
             <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
             <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
             <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
           </costs>
           <profiles>
             <profile name="Whip" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="c7a6-c56a-3387-ec6b">
@@ -4654,7 +4840,7 @@ Grapplehook: When performing a {Jump} Action gain +2 to the roll, or a {Climb} A
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Pintle Weapon Mount" hidden="false" id="66e6-ad32-a71c-3595">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="50"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="25"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="1"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
@@ -4692,7 +4878,7 @@ Grapplehook: When performing a {Jump} Action gain +2 to the roll, or a {Climb} A
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Spiked Panel" hidden="false" id="c564-0a74-7f87-9ade">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="100"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="30"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="1"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
@@ -4737,7 +4923,7 @@ Ram: You may use the below statline for the Attack Action of the vehicle.</chara
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Bulldozer Scoop" hidden="false" id="d0de-e118-b5ee-5693">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="200"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="80"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="3"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
@@ -4778,7 +4964,7 @@ Ram: You may use the below statline for the Attack Action of the vehicle.</chara
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Armoured Panel" hidden="false" id="39d9-4640-13c0-6943">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="50"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="40"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="1"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
@@ -4821,7 +5007,7 @@ Ram: You may use the below statline for the Attack Action of the vehicle.</chara
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Hover Panels" hidden="false" id="aa13-7504-5645-f5e7">
           <costs>
-            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="200"/>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="40"/>
             <cost name="Augments" typeId="1d73-d711-6536-5884" value="2"/>
             <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
             <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
