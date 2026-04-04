@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-67a0-c9e0-9601-50f0" name="GangGame" battleScribeVersion="2.03" revision="0.36" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" library="false" authorName="Dan Geldorp" authorContact="dangeldorp@hotmail.co.uk" publicationId="ad88-6f5d-213d-7b3f">
+<gameSystem id="sys-67a0-c9e0-9601-50f0" name="GangGame" battleScribeVersion="2.03" revision="0.37" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" library="false" authorName="Dan Geldorp" authorContact="dangeldorp@hotmail.co.uk" publicationId="ad88-6f5d-213d-7b3f">
   <categoryEntries>
     <categoryEntry name="Leadership" id="cb5e-bc93-5d28-9b12" hidden="false"/>
     <categoryEntry name="Heavy Infantry" id="d07e-43b7-5902-29f7" hidden="false"/>
@@ -2239,7 +2239,7 @@ Heavy: -1 Inch to {Movement Actions} and -1 to {Jump Action} rolls</characterist
             <modifier type="decrement" value="1" field="8b03-2b2b-1e3f-9e8c" scope="parent" affects="profiles.Fighter">
               <comment>Heavy rule</comment>
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="3200-c34b-f12e-1f0a" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="set" value="false" field="hidden">
@@ -2329,7 +2329,7 @@ Overheat: if 3+ {Shooting Actions} used to fire weapon in a turn, Unstable(3) ro
             <modifier type="decrement" value="1" field="8b03-2b2b-1e3f-9e8c" scope="parent" affects="profiles.Fighter">
               <comment>Heavy rule</comment>
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="7759-8fd0-d3e7-bfd9" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="set" value="false" field="hidden">
@@ -2423,7 +2423,7 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
             <modifier type="decrement" value="1" field="8b03-2b2b-1e3f-9e8c" scope="parent" affects="profiles.Fighter" position="0">
               <comment>Heavy rule</comment>
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="2957-aa79-5ab4-a179" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="set" value="false" field="hidden">
@@ -2524,7 +2524,7 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
             <modifier type="decrement" value="1" field="8b03-2b2b-1e3f-9e8c" scope="parent" affects="profiles.Fighter" position="0">
               <comment>Heavy rule</comment>
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="57fc-2c18-ca1f-7b9f" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
             <modifier type="set" value="false" field="hidden">
@@ -2870,7 +2870,7 @@ Fire Damage: See Weapon Damage Types Chart.</characteristic>
             <modifier type="decrement" value="1" field="8b03-2b2b-1e3f-9e8c" scope="parent" affects="profiles.Fighter">
               <comment>Heavy rule</comment>
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="83e3-0b2b-fb4b-7ee5" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
