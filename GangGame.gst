@@ -1249,8 +1249,8 @@ While a Fighter is Sneaky, they cannot be the target of Shooting or Aim actions.
     <profile name="Large Car Chassis" typeId="95ad-d417-c087-7bc1" typeName="Vehicle Chassis" hidden="false" id="c6b2-2f62-36a1-6145">
       <characteristics>
         <characteristic name="Crew" typeId="16cb-b6e6-1e9c-592f">1 Driver | 0-1 Passengers</characteristic>
-        <characteristic name="Movement" typeId="5601-303a-6360-4765">18</characteristic>
-        <characteristic name="Hit Points" typeId="8359-3729-b7b9-56c5">25</characteristic>
+        <characteristic name="Movement" typeId="5601-303a-6360-4765">12</characteristic>
+        <characteristic name="Hit Points" typeId="8359-3729-b7b9-56c5">150</characteristic>
         <characteristic name="Weak Points" typeId="4009-72b9-1af7-94f3">6</characteristic>
         <characteristic name="Max Turn Angle" typeId="6642-7e63-48bd-cb76">90</characteristic>
         <characteristic name="Armour Die" typeId="554c-177b-0f84-47f6">D4</characteristic>
