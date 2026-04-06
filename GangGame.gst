@@ -3505,7 +3505,7 @@ Weapon Mod: This weapon stat line is for a Weapon Augmentation.</characteristic>
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Armour Piercing Rounds" hidden="true" id="769a-906a-d34f-ccd8">
+        <selectionEntry type="upgrade" import="true" name="Armour Piercing Ammo" hidden="true" id="769a-906a-d34f-ccd8">
           <infoLinks>
             <infoLink name="Armour Piercing Rounds" id="dfcf-b293-534b-0a1a" hidden="false" type="profile" targetId="080e-f6b9-c416-3681"/>
           </infoLinks>
