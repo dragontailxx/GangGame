@@ -1681,7 +1681,7 @@ The Fighter becomes Sneaky again.</description>
     </rule>
   </sharedRules>
   <entryLinks>
-    <entryLink import="true" name="Commander" hidden="false" id="b3ff-839f-a238-896b" targetId="f6d9-387f-ded6-84b3" type="selectionEntry"/>
+    <entryLink import="true" name="Captain" hidden="false" id="b3ff-839f-a238-896b" targetId="f6d9-387f-ded6-84b3" type="selectionEntry"/>
     <entryLink import="true" name="Sergeant" hidden="false" id="f9ef-c52e-f705-a295" targetId="2364-f48f-450a-8563" type="selectionEntry"/>
     <entryLink import="true" name="Brute" hidden="false" id="56b4-6ceb-4291-a4c9" targetId="167d-93b8-64f5-d436" type="selectionEntry"/>
     <entryLink import="true" name="Grunt" hidden="false" id="0278-5933-428d-ecb4" targetId="c948-5c4b-f49d-3580" type="selectionEntry"/>

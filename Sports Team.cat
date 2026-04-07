@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue library="false" id="126b-96ec-4edb-4388" name="Sports Team" gameSystemId="sys-67a0-c9e0-9601-50f0" gameSystemRevision="0.41" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <sharedSelectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Quarterback" hidden="false" id="bc65-128a-4878-d31d">
+      <infoLinks>
+        <infoLink name="Quarterback" id="fa98-3130-d05f-028c" hidden="false" type="profile" targetId="93bd-a0f0-2d33-4ff6"/>
+      </infoLinks>
+      <costs>
+        <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="200"/>
+        <cost name="Augments" typeId="1d73-d711-6536-5884" value="0"/>
+        <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+        <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+        <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+        <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+        <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+        <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+        <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+        <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+        <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+        <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+        <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+        <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+        <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+        <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+        <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+      </costs>
+    </selectionEntry>
+  </sharedSelectionEntries>
+  <sharedProfiles>
+    <profile name="Quarterback" typeId="1d9c-3e34-744d-df69" typeName="Fighter" hidden="false" id="93bd-a0f0-2d33-4ff6">
+      <characteristics>
+        <characteristic name="Movement" typeId="8b03-2b2b-1e3f-9e8c">8</characteristic>
+        <characteristic name="Attacks" typeId="48db-1484-31cc-c897">6</characteristic>
+        <characteristic name="Actions" typeId="770b-5749-fb29-af08">3</characteristic>
+        <characteristic name="Commands" typeId="5300-f1ab-4a01-9177">3</characteristic>
+        <characteristic name="Carry Capacity" typeId="b909-646d-9f9a-e776">10</characteristic>
+        <characteristic name="Hit Points" typeId="999e-9097-31a1-24ba">35</characteristic>
+        <characteristic name="Role" typeId="e80b-30a1-2c7a-4969">Leadership</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Linebacker" typeId="1d9c-3e34-744d-df69" typeName="Fighter" hidden="false" id="77ea-6d31-7da1-95f8">
+      <characteristics>
+        <characteristic name="Movement" typeId="8b03-2b2b-1e3f-9e8c">7</characteristic>
+        <characteristic name="Attacks" typeId="48db-1484-31cc-c897">5</characteristic>
+        <characteristic name="Actions" typeId="770b-5749-fb29-af08">3</characteristic>
+        <characteristic name="Commands" typeId="5300-f1ab-4a01-9177">0</characteristic>
+        <characteristic name="Carry Capacity" typeId="b909-646d-9f9a-e776">4</characteristic>
+        <characteristic name="Hit Points" typeId="999e-9097-31a1-24ba">12</characteristic>
+        <characteristic name="Role" typeId="e80b-30a1-2c7a-4969">Scouts</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Cornerback" typeId="1d9c-3e34-744d-df69" typeName="Fighter" hidden="false" id="c36d-cd70-da97-8376">
+      <characteristics>
+        <characteristic name="Movement" typeId="8b03-2b2b-1e3f-9e8c">4</characteristic>
+        <characteristic name="Attacks" typeId="48db-1484-31cc-c897">4</characteristic>
+        <characteristic name="Actions" typeId="770b-5749-fb29-af08">2</characteristic>
+        <characteristic name="Commands" typeId="5300-f1ab-4a01-9177">0</characteristic>
+        <characteristic name="Carry Capacity" typeId="b909-646d-9f9a-e776">8</characteristic>
+        <characteristic name="Hit Points" typeId="999e-9097-31a1-24ba">20</characteristic>
+        <characteristic name="Role" typeId="e80b-30a1-2c7a-4969">Heavy Infantry</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Lineman" typeId="1d9c-3e34-744d-df69" typeName="Fighter" hidden="false" id="2d74-42e2-8975-da22">
+      <characteristics>
+        <characteristic name="Movement" typeId="8b03-2b2b-1e3f-9e8c">5</characteristic>
+        <characteristic name="Attacks" typeId="48db-1484-31cc-c897">4</characteristic>
+        <characteristic name="Actions" typeId="770b-5749-fb29-af08">2</characteristic>
+        <characteristic name="Commands" typeId="5300-f1ab-4a01-9177">0</characteristic>
+        <characteristic name="Carry Capacity" typeId="b909-646d-9f9a-e776">5</characteristic>
+        <characteristic name="Hit Points" typeId="999e-9097-31a1-24ba">15</characteristic>
+        <characteristic name="Role" typeId="e80b-30a1-2c7a-4969">Troops</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="New Profile" typeId="4f40-6fb0-2015-6c17" typeName="Melee Weapons" hidden="false" id="d1cc-1c26-d019-7749">
+      <characteristics>
+        <characteristic name="Range in Inches" typeId="adcf-9600-a1dc-d5b0"/>
+        <characteristic name="Hit Die" typeId="c1e1-5b88-a353-ca3b"/>
+        <characteristic name="Damage" typeId="bab8-bd4b-e3c0-27b3"/>
+        <characteristic name="Weight" typeId="78b8-63af-31da-bfc6"/>
+        <characteristic name="Rarity" typeId="6b8e-ddd6-8899-7ef7"/>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
+  <entryLinks>
+    <entryLink import="true" name="Quarterback" hidden="false" id="2ced-0809-937a-2763" targetId="bc65-128a-4878-d31d" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="cb5e-bc93-5d28-9b12" id="cf23-6425-e962-2f4a" primary="true" name="Leadership"/>
+      </categoryLinks>
+    </entryLink>
+  </entryLinks>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup name="Melee Weapons" id="07a9-6ec9-2f48-73cd" hidden="false">
+      <categoryLinks>
+        <categoryLink targetId="eb09-0dce-5f22-cf55" id="5b8a-1464-0d1f-49ec" primary="false" name="Melee Weapons"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Melee Weapons" typeId="4f40-6fb0-2015-6c17" typeName="Melee Weapons" hidden="false" id="d75f-e002-d7dd-9477">
+          <characteristics>
+            <characteristic name="Range in Inches" typeId="adcf-9600-a1dc-d5b0"/>
+            <characteristic name="Hit Die" typeId="c1e1-5b88-a353-ca3b"/>
+            <characteristic name="Damage" typeId="bab8-bd4b-e3c0-27b3"/>
+            <characteristic name="Weight" typeId="78b8-63af-31da-bfc6"/>
+            <characteristic name="Rarity" typeId="6b8e-ddd6-8899-7ef7"/>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
+</catalogue>
