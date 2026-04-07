@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-67a0-c9e0-9601-50f0" name="GangGame" battleScribeVersion="2.03" revision="0.4" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" library="false" authorName="Dan Geldorp" authorContact="dangeldorp@hotmail.co.uk" publicationId="ad88-6f5d-213d-7b3f">
+<gameSystem id="sys-67a0-c9e0-9601-50f0" name="GangGame" battleScribeVersion="2.03" revision="0.41" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" library="false" authorName="Dan Geldorp" authorContact="dangeldorp@hotmail.co.uk" publicationId="ad88-6f5d-213d-7b3f">
   <categoryEntries>
     <categoryEntry name="Leadership" id="cb5e-bc93-5d28-9b12" hidden="false"/>
     <categoryEntry name="Heavy Infantry" id="d07e-43b7-5902-29f7" hidden="false"/>
@@ -18,6 +18,8 @@
     <categoryEntry name="Weapons Training" id="c8ef-affe-6532-747e" hidden="false"/>
     <categoryEntry name="Advanced Weapons Training" id="597b-4f6d-e603-d578" hidden="false"/>
     <categoryEntry name="Beast" id="1092-f191-0c34-07c2" hidden="false"/>
+    <categoryEntry name="Primitive" id="ca1d-548c-12e8-8825" hidden="false"/>
+    <categoryEntry name="NoAugments" id="7856-8efe-682e-0793" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="Free-Play" id="674c-d963-0cba-758f" hidden="false">
@@ -169,7 +171,7 @@
     </profileType>
   </profileTypes>
   <sharedSelectionEntries>
-    <selectionEntry type="model" import="true" name="Commander" hidden="false" id="f6d9-387f-ded6-84b3">
+    <selectionEntry type="model" import="true" name="Captain" hidden="false" id="f6d9-387f-ded6-84b3">
       <costs>
         <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="175"/>
       </costs>
@@ -188,7 +190,7 @@
         <entryLink import="true" name="Skills" hidden="false" id="6c4b-a1ca-d243-9d06" type="selectionEntryGroup" targetId="889a-dbfc-b346-64aa" sortIndex="5"/>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Commander" id="6c4f-3d6b-5227-8bea" hidden="false" type="profile" targetId="0760-cf8a-4645-9b6e"/>
+        <infoLink name="Captain" id="6c4f-3d6b-5227-8bea" hidden="false" type="profile" targetId="0760-cf8a-4645-9b6e"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="12" field="e711-c529-9c5c-79e6" scope="self" shared="true" id="6946-666b-369e-c5b6"/>
@@ -544,7 +546,7 @@ Suppression: target cannot make {Movement Actions} unless pass FoF(5) check.</de
         <characteristic name="Augments" typeId="cf6c-640b-32d2-40c9">3</characteristic>
       </characteristics>
     </profile>
-    <profile name="Commander" typeId="1d9c-3e34-744d-df69" typeName="Fighter" hidden="false" id="0760-cf8a-4645-9b6e">
+    <profile name="Captain" typeId="1d9c-3e34-744d-df69" typeName="Fighter" hidden="false" id="0760-cf8a-4645-9b6e">
       <characteristics>
         <characteristic name="Movement" typeId="8b03-2b2b-1e3f-9e8c">6</characteristic>
         <characteristic name="Attacks" typeId="48db-1484-31cc-c897">5</characteristic>
@@ -1350,6 +1352,12 @@ If the Commander dies, all friendly Fighters within 12” of the Commander must 
         <characteristic name="Rarity" typeId="6b8e-ddd6-8899-7ef7">-</characteristic>
       </characteristics>
     </profile>
+    <profile name="Biometric Handle" typeId="c390-b12f-4d8c-da1d" typeName="Weapon Augmentations" hidden="false" id="e354-441f-a5ed-001a">
+      <characteristics>
+        <characteristic name="Equip Location" typeId="b7d8-6364-8381-76a4">-</characteristic>
+        <characteristic name="Augment Cost" typeId="1e5a-e3cc-ec84-9dda">1</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
   <sharedRules>
     <rule name="Freaked" id="2821-3212-682b-aebb" hidden="false">
@@ -1438,16 +1446,18 @@ Roll+X | Effect
       <description>Attack Action, Block Action, Shove Action, Disarm Action</description>
     </rule>
     <rule name="Misc Actions" id="4fef-29dd-d91a-5710" hidden="false">
-      <description>Overwatch Action, Hunker Down Action, Calm Self Action, Calm Ally Action, Activate Action, Patch Up Action, Flee Action, Fight or Flight</description>
+      <description>Overwatch Action, Hunker Down Action, Hide Action, Calm Self Action, Calm Ally Action, Activate Action, Patch Up Action, Flee Action, Fight or Flight</description>
     </rule>
     <rule name="Move Action" id="3383-6166-adf7-cd9e" hidden="false">
-      <description>A standard move action, activated model moves up to its movement stat in inches. Ladders and stairs may be traversed as if they are flat ground, measure distance up/down these.</description>
+      <description>Cost: 1AP
+A standard move action, activated model moves up to its movement stat in inches. Ladders and stairs may be traversed as if they are flat ground, measure distance up/down these.</description>
     </rule>
     <rule name="Sprint Action" id="f8f8-3285-38ef-4e5f" hidden="false">
       <description>A sprinting move action, activated model moves up to its movement stat in inches plus an additional D6 inches. In addition mark the activated model as having Sprinted until its next activation, all shooting actions made against this model until its next activation have a -1 to the Hit roll applied (the -1 is not cumulative)</description>
     </rule>
     <rule name="Jump Action" id="43ec-d9ee-700b-76ce" hidden="false">
-      <description>A jump move action, activated model leaps horizontally to cross a gap greater than 1” in size. Make a D6 die roll, applying the below modifiers to the roll, and get 2 or greater.
+      <description>Cost: 1AP
+A jump move action, activated model leaps horizontally to cross a gap greater than 1” in size. Make a D6 die roll, applying the below modifiers to the roll, and get 2 or greater.
 Condition                                                             | Modifier
 For every full 2” gap between locations               | -1
 Activated model made a Sprint Action this turn   | +1
@@ -1457,10 +1467,12 @@ Grapplehook                                              
 If the roll is failed, the activated model falls straight down, consult the Falling Universal Special Rule to determine damage. (D3 Damage per full Inch fallen vertically)</description>
     </rule>
     <rule name="Climb Action" id="f994-7eab-beea-c822" hidden="false">
-      <description>A climbing action, activated model moves up to its movement stat in inches up or down an obstacle, usually a rough wall or vines or similar grabbable vertical terrain. You must be able to finish this move on a flat standable surface where the model’s base can safely stand to complete a climb.</description>
+      <description>Cost: 2AP
+A climbing action, activated model moves up to its movement stat in inches up or down an obstacle, usually a rough wall or vines or similar grabbable vertical terrain. You must be able to finish this move on a flat standable surface where the model’s base can safely stand to complete a climb.</description>
     </rule>
     <rule name="Drive Action" id="8da0-300f-e2a3-c7cb" hidden="false">
-      <description>A driving action, activated model that is occupying a vehicle may attempt to drive the vehicle.
+      <description>Cost: 1AP
+A driving action, activated model that is occupying a vehicle may attempt to drive the vehicle.
 If the driving model has the Driver skill, no die roll is required to do so, however a model that lacks the Driver skill must roll D6 against the below chart to determine if they succeed in doing so.
 Roll | Result
 6+   | Vehicle moves as defined below.
@@ -1476,7 +1488,8 @@ Drive: The vehicle moves up to its movement stat in inches, and may turn up to i
       <alias>Drive</alias>
     </rule>
     <rule name="Fire Weapon Action" id="348c-dea9-5554-1a08" hidden="false">
-      <description>- Declare the Target(s) of your weapon’s shots, take a number of dice of type and quantity equal to the Weapon’s range chart and Shots value (see Equipment &gt; Ranged Weapons). For example a Pistol at range 0-6 Inches uses a D6 to hit, and has two shots, grab two D6.
+      <description>Cost: 1AP
+- Declare the Target(s) of your weapon’s shots, take a number of dice of type and quantity equal to the Weapon’s range chart and Shots value (see Equipment &gt; Ranged Weapons). For example a Pistol at range 0-6 Inches uses a D6 to hit, and has two shots, grab two D6.
 
 
 - To hit the targeted model roll each Die and apply modifiers to establish the result, a natural roll of 1 always fails. A result of 3+ hits the Target.
@@ -1537,13 +1550,16 @@ Finally, the Shooting Fighter rolls Damage dice as denoted on the Damage portion
 Functions identically to the Fire Weapon Action except you add the Unload value to the Shots value of the weapon. In addition place a Reload token next to the model to indicate a Reload action is required before the weapon can be fired again.</description>
     </rule>
     <rule name="Reload Action" id="ca90-daf7-523e-8304" hidden="false">
-      <description>A reload Action clears any Jam or Reload associated with a weapon, clear any such tokens/effects.</description>
+      <description>Cost: 1AP
+A reload Action clears any Jam or Reload associated with a weapon, clear any such tokens/effects.</description>
     </rule>
     <rule name="Aim Action" id="1d3f-681b-3b0a-0381" hidden="false">
-      <description>The Aim Action allows a Fighter to “aim” at a specific target. Declare what model the Fighter is targeting. All Shooting Actions against the target gains +1 to Hit Rolls (as shown in the Modifiers in that action)</description>
+      <description>Cost: 1AP
+The Aim Action allows a Fighter to “aim” at a specific target. Declare what model the Fighter is targeting. All Shooting Actions against the target gains +1 to Hit Rolls (as shown in the Modifiers in that action)</description>
     </rule>
     <rule name="Attack Action" id="1f0b-cdae-266f-288f" hidden="false">
-      <description>Select Weapon(s) for each Attack your Fighter is making, and declare where these attacks will be directed.
+      <description>Cost: 1AP
+Select Weapon(s) for each Attack your Fighter is making, and declare where these attacks will be directed.
 To hit the Targeted model, roll each Die and apply modifiers to establish the result, a natural roll of 1 always fails. A result of 3+ hits the Target.
 
 
@@ -1563,22 +1579,27 @@ Finally the Attacking Fighter rolls Damage dice as denoted on the Damage portion
       <alias>Attack Actions</alias>
     </rule>
     <rule name="Block Action" id="ffa3-8da0-fca5-ed47" hidden="false">
-      <description>This Action ends the Fighter’s Activation.
+      <description>Cost: 1AP
+This Action ends the Fighter’s Activation.
 
 
 Place a Block Token by the Fighter as a reminder, until this Fighter next activates enemy Fighters get -2 to Hit the Fighter with the Attack Action. Discard the Block Token the next time the Fighter activates.</description>
     </rule>
     <rule name="Shove Action" id="cd64-c060-9f91-046e" hidden="false">
-      <description>The Fighter attempts to shove the target up to 2” away, roll an Attack roll as per the Attack action, using the “Fists” melee weapon, on a successful hit the targeted Fighter is moved up to 2” in a direction of your choice, should this result in them being put in a position where the model cannot stand safely on its base, it must “Fall” to the ground. Consult the Falling Universal Special Rule to determine damage dealt. (D3 Damage per full Inch fallen vertically)</description>
+      <description>Cost: 1AP
+The Fighter attempts to shove the target up to 2” away, roll a single Attack die as per the Attack action rules using a D4, on a successful hit the targeted Fighter is moved up to 2” in a direction of your choice, should this result in them being put in a position where the model cannot stand safely on its base, it must “Fall” to the ground. Consult the Falling Universal Special Rule to determine damage dealt. (D3 Damage per full Inch fallen vertically)</description>
     </rule>
     <rule name="Disarm Action" id="29e0-34a7-d08e-d9ac" hidden="false">
-      <description>This Action may only be used if an Ability, Skill, Trait, or other rule determines you can do so.
+      <description>Cost: 0AP
+This Action may only be used if an Ability, Skill, Trait, or other rule determines you can do so.
+
 
 
 On a successful Hit with a regular Attack with this weapon, you may opt to forego potential damage against the opponent to instead attempt disarming the opponent of their weapon. Instead of moving onto the Damage step of a melee attack, both yours and your opponent’s model in this fight roll off, adding any regular combat modifiers as if performing the Hit step both ways (eg +2 for combat export etc), and the higher total wins, if the attacker has a higher number the player may choose a weapon the opponent has and “disarm” them of it until they perform an Activate action to pick it back up, mark the location the Disarm occurred, the Activate action can only be taken while within 2” of the marker.</description>
     </rule>
     <rule name="Overwatch Action" id="0185-4ad0-9cd0-1bd7" hidden="false">
-      <description>This Action ends the Fighter’s Activation.
+      <description>Cost: 1AP
+This Action ends the Fighter’s Activation.
 
 
 The Fighter gets ready to perform an Action at a to-be-determined moment in the future, place an Overwatch Token next to the Fighter to denote this.
@@ -1587,22 +1608,26 @@ The Fighter gets ready to perform an Action at a to-be-determined moment in the 
 Between any Actions in future turns until this model Activates again, you may declare the Overwatch Action being performed by this model, at the end of the current Action another model is making, you immediately activate this Fighter, discard the Overwatch Token, and declare what Action the Fighter is performing (this can be any Action of cost 1 except another Overwatch Action). Fully resolve the Action, then return control of the turn to the original Activating model.</description>
     </rule>
     <rule name="Hunker Down Action" id="28f0-7bfc-2c3a-e588" hidden="false">
-      <description>This Action ends the Fighter’s Activation.
+      <description>Cost: 1AP
+This Action ends the Fighter’s Activation.
 
 
 Place a Hunker Down token by the Fighter. Until the Fighter next activates they receive +2 to their Cover, as denoted in the Modifiers on Shooting, Unload, and Attack actions “Target has Hunker Down Token | -2”.</description>
     </rule>
     <rule name="Calm Self Action" id="0850-4437-c28a-ca82" hidden="false">
-      <description>This Action may only be attempted once per Activation of the Fighter. 
+      <description>Cost: 1AP
+This Action may only be attempted once per Activation of the Fighter. 
 
 
 Make a FoF(5) roll to attempt to restore a Fighter from their Freaked status. As denoted in the “Fight or Flight” Universal Special Rule, failure causes the model to perform a Flee Action instead.</description>
     </rule>
     <rule name="Calm Ally Action" id="1240-35e6-f12f-a2d6" hidden="false">
-      <description>Target Fighter within 12” makes a FoF(4) roll, if the Fighter using this Action is a Leader add +1 to the roll. As denoted in the “Fight or Flight” Universal Special Rule, failure causes the model to perform a Flee Action instead.</description>
+      <description>Cost: 1AP
+Target Fighter within 12” makes a FoF(4) roll, if the Fighter using this Action is a Leader add +1 to the roll. As denoted in the “Fight or Flight” Universal Special Rule, failure causes the model to perform a Flee Action instead.</description>
     </rule>
     <rule name="Activate Action" id="dd01-036a-fe1a-272e" hidden="false">
-      <description>Fighter interacts with a button, activates a lever, detonates a remote explosive, repairs a car engine, or some other miscellaneous interaction described in the specific instance of the Activate Action. Some Activate Actions may require additional Skills/Traits such as Driver to perform and will be denoted in the specific instance of the Action.
+      <description>Cost: 1AP
+Fighter interacts with a button, activates a lever, detonates a remote explosive, repairs a car engine, or some other miscellaneous interaction described in the specific instance of the Activate Action. Some Activate Actions may require additional Skills/Traits such as Driver to perform and will be denoted in the specific instance of the Action.
 This action may not be performed while in Combat. (a model is considered to be in Combat while it is within the Attack range of a melee weapon equipped by an enemy model).</description>
     </rule>
     <rule name="In Combat" id="b79c-0636-77ec-e321" hidden="false">
@@ -1610,13 +1635,15 @@ This action may not be performed while in Combat. (a model is considered to be i
       <alias>Combat</alias>
     </rule>
     <rule name="Patch Up Action" id="fe6a-d517-15bc-1789" hidden="false">
-      <description>This Action may only be used if a Skill/Trait says the Fighter may use it. 
+      <description>Cost: 1AP
+This Action may only be used if a Skill/Trait says the Fighter may use it. 
 
 
 Target friendly Fighter within 1” of the Activating Fighter, Roll a D3 and restore that many Hit Points to the Target Fighter (this has no effect on Armour Hit Points, and may not exceed the Fighter’s original starting Hit Points).</description>
     </rule>
     <rule name="Flee Action" id="3dfe-0593-4715-4ad6" hidden="false">
-      <description>This action may only be used when another Action/Skill/Trait says it can/must be.
+      <description>Cost: 0AP
+This action may only be used when another Action/Skill/Trait says it can/must be.
 
 
 A Fighter that performs a Flee action must meet the following conditions in order, and failure to meet any of the conditions means the Fighter immediately becomes “Freaked”, place a Freaked token near the model as a reminder.
@@ -1625,7 +1652,8 @@ A Fighter that performs a Flee action must meet the following conditions in orde
 3) The Figher must move its full Movement statistic plus another D3 inches in a direction that does not conflict with the previous conditions, becoming Freaked if this violates the first condition.</description>
     </rule>
     <rule name="Fight or Flight Action" id="97a7-1a6e-9a35-32c0" hidden="false">
-      <description>if a model is called upon to make a ‘Fight or Flight’ or FoF(X) action (Now marked as FoF from here on), they roll a D6, apply the below modifiers, and must beat the number provided (For example FoF(4) would be a 4+ FoF roll) or if failed, the Fighter must make a Flee Action.
+      <description>Cost: 0AP
+If a model is called upon to make a ‘Fight or Flight’ or FoF(X) action (Now marked as FoF from here on), they roll a D6, apply the below modifiers, and must beat the number provided (For example FoF(4) would be a 4+ FoF roll) or if failed, the Fighter must make a Flee Action.
 Listed to the right are modifiers to the FoF roll number.
 
 
@@ -1644,6 +1672,12 @@ Friendly Commander within 12” (Doesn’t stack with Leader modifier) | +2 to r
     </rule>
     <rule name="Disarm" id="ba9e-d397-49f3-73cc" hidden="false">
       <description>Disarm: On Successful Hit, may instead of damaging target perform the {Disarm Action}.</description>
+    </rule>
+    <rule name="Hide Action" id="260c-e4ea-368d-4e74" hidden="false">
+      <description>Cost: 2AP
+This Action ends the Fighter’s Activation.
+This Action may only be used if the Fighter has the Sneaky Skill at the start of the game.
+The Fighter becomes Sneaky again.</description>
     </rule>
   </sharedRules>
   <entryLinks>
@@ -1925,6 +1959,11 @@ Variable Ammo: Choose what type of Ammo to fire before making the Action.
                 <condition type="atLeast" value="1" field="selections" scope="parent" childId="521b-d4ea-16bb-6532" shared="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="primary-category" childId="0ccd-9a15-4543-4e63" shared="true" childName="Support Vehicles" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Bow" hidden="false" id="2fec-df6d-4d50-b3dc">
@@ -2007,6 +2046,7 @@ Variable Ammo: Choose what type of Ammo to fire before making the Action.
             <categoryLink targetId="a532-e48d-9b3e-c01f" id="5714-b99e-14c1-cf5e" primary="false" name="Ranged Weapons"/>
             <categoryLink targetId="e1dd-d417-9193-a481" id="b7c6-1209-f61d-24f6" primary="false" name="Side Rail"/>
             <categoryLink targetId="f231-ef0b-aa88-e585" id="d193-20c9-3314-a807" primary="false" name="Ammo Type"/>
+            <categoryLink targetId="ca1d-548c-12e8-8825" id="4f40-12f1-0867-72f1" primary="false" name="Primitive"/>
           </categoryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Bolt Action Rifle" hidden="true" id="41ab-fc3d-b8be-07b6">
@@ -2102,6 +2142,11 @@ Armour Piercing(1): When target rolls Armour Die, apply Armour Piercing(X) negat
             <modifier type="set" value="false" field="hidden">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="parent" childId="521b-d4ea-16bb-6532" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="primary-category" childId="0ccd-9a15-4543-4e63" shared="true" childName="Support Vehicles" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2276,6 +2321,7 @@ Heavy: -1 Inch to {Movement Actions} and -1 to {Jump Action} rolls</characterist
             <categoryLink targetId="a532-e48d-9b3e-c01f" id="6e26-e492-a804-61df" primary="false" name="Ranged Weapons"/>
             <categoryLink targetId="c8ef-affe-6532-747e" id="d150-832c-b589-d592" primary="false" name="Weapons Training"/>
             <categoryLink targetId="597b-4f6d-e603-d578" id="b992-a883-f9c2-642d" primary="false" name="Advanced Weapons Training"/>
+            <categoryLink targetId="7856-8efe-682e-0793" id="5b03-70ed-4878-50e7" primary="false" name="NoAugments"/>
           </categoryLinks>
           <modifiers>
             <modifier type="decrement" value="1" field="8b03-2b2b-1e3f-9e8c" scope="parent" affects="profiles.Fighter">
@@ -2287,6 +2333,11 @@ Heavy: -1 Inch to {Movement Actions} and -1 to {Jump Action} rolls</characterist
             <modifier type="set" value="false" field="hidden">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="parent" childId="bd1d-4a5c-1b44-5d32" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="primary-category" childId="0ccd-9a15-4543-4e63" shared="true" childName="Support Vehicles" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2372,6 +2423,7 @@ Overheat: if 3+ {Shooting Actions} used to fire weapon in a turn, Unstable(3) ro
           <categoryLinks>
             <categoryLink targetId="a532-e48d-9b3e-c01f" id="742c-5a84-4815-98e0" primary="false" name="Ranged Weapons"/>
             <categoryLink targetId="c8ef-affe-6532-747e" id="7124-0d3c-dfb6-2317" primary="false" name="Weapons Training"/>
+            <categoryLink targetId="7856-8efe-682e-0793" id="a5c6-8cb6-a340-1754" primary="false" name="NoAugments"/>
           </categoryLinks>
           <modifiers>
             <modifier type="decrement" value="1" field="8b03-2b2b-1e3f-9e8c" scope="parent" affects="profiles.Fighter">
@@ -2383,6 +2435,11 @@ Overheat: if 3+ {Shooting Actions} used to fire weapon in a turn, Unstable(3) ro
             <modifier type="set" value="false" field="hidden">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="parent" childId="521b-d4ea-16bb-6532" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="primary-category" childId="0ccd-9a15-4543-4e63" shared="true" childName="Support Vehicles" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2485,6 +2542,11 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
                 <condition type="atLeast" value="1" field="selections" scope="parent" childId="521b-d4ea-16bb-6532" shared="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="primary-category" childId="0ccd-9a15-4543-4e63" shared="true" childName="Support Vehicles" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="HMG" hidden="true" id="57fc-2c18-ca1f-7b9f">
@@ -2584,6 +2646,11 @@ Heavy: -1 Inch to {Movement Actions} and -1 {Jump Action} rolls</characteristic>
             <modifier type="set" value="false" field="hidden">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="parent" childId="521b-d4ea-16bb-6532" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="primary-category" childId="0ccd-9a15-4543-4e63" shared="true" childName="Support Vehicles" includeChildSelections="false" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2919,6 +2986,7 @@ Fire Damage: See Weapon Damage Types Chart.</characteristic>
           </infoLinks>
           <categoryLinks>
             <categoryLink name="Ranged Weapons" hidden="false" id="767a-758c-2bb0-0009" targetId="a532-e48d-9b3e-c01f" primary="false"/>
+            <categoryLink targetId="7856-8efe-682e-0793" id="823b-4b06-fdb9-561d" primary="false" name="NoAugments"/>
           </categoryLinks>
           <modifiers>
             <modifier type="decrement" value="1" field="8b03-2b2b-1e3f-9e8c" scope="parent" affects="profiles.Fighter">
@@ -3688,6 +3756,51 @@ Add an additional +2 Damage to Medium and Long range Damage rolls, lose any Cove
             <modifier type="set" value="false" field="hidden">
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="parent" childId="6f23-0325-dc27-785e" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Biometric Handle" hidden="true" id="6bdb-6796-1e77-b90d">
+          <infoLinks>
+            <infoLink name="Biometric Handle" id="bb8c-fd69-f397-c72b" hidden="false" type="profile" targetId="e354-441f-a5ed-001a"/>
+          </infoLinks>
+          <profiles>
+            <profile name="Biometric Handle" typeId="e743-5edc-19d0-134a" typeName="Rules" hidden="false" id="8ad3-109e-c9b7-4fac">
+              <characteristics>
+                <characteristic name="Rules" typeId="1d75-1c91-283c-7821">Weapon with Biometric Handle may only be used for Actions if it belonged to the Fighter at the start of the game.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="Cost" typeId="3e31-7bcd-0647-b73b" value="35"/>
+            <cost name="Augments" typeId="1d73-d711-6536-5884" value="1"/>
+            <cost name="Modifications" typeId="7416-3b77-25d0-a25b" value="0"/>
+            <cost name="Weight" typeId="e711-c529-9c5c-79e6" value="0"/>
+            <cost name="Top Rail" typeId="4122-7839-8d70-c473" value="0"/>
+            <cost name="Side Rail" typeId="1dcb-84d9-1fa5-f1a6" value="0"/>
+            <cost name="Bottom Rail" typeId="e576-e6dc-cbae-50f6" value="0"/>
+            <cost name="Clip" typeId="0581-24af-f07e-509c" value="0"/>
+            <cost name="Barrel" typeId="ed38-c91c-daa5-ecf5" value="0"/>
+            <cost name="Ammo Type" typeId="8f0c-3a10-3a29-926e" value="0"/>
+            <cost name="Loop Mount" typeId="2b23-4ed4-8c68-b475" value="0"/>
+            <cost name="Head" typeId="2aaf-7d74-1257-9a35" value="0"/>
+            <cost name="Body" typeId="133b-be98-400e-8717" value="0"/>
+            <cost name="Arms" typeId="8e2e-8cb9-7c40-74bf" value="0"/>
+            <cost name="Legs" typeId="ba7d-937a-cac6-5009" value="0"/>
+            <cost name="Back" typeId="25a6-b298-4d5b-927c" value="0"/>
+            <cost name="Other" typeId="0394-a001-b723-150e" value="0"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aa15-4ea6-1b5e-ec34" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Ammo Type" hidden="false" id="f152-4c0e-7c97-6e61" targetId="f231-ef0b-aa88-e585" primary="false"/>
+          </categoryLinks>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="ca1d-548c-12e8-8825" shared="true" includeChildSelections="false" childName="Primitive"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="7856-8efe-682e-0793" shared="true" includeChildSelections="false" childName="NoAugments"/>
               </conditions>
             </modifier>
           </modifiers>
